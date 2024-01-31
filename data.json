@@ -1,0 +1,276 @@
+{
+    "stepData": [
+      {
+        "label": "Age",
+        "id": 1,
+        "fields": [
+          {
+            "id": 1,
+            "title": "How old are you?",
+            "content": "The older you are, the higher your risk for type 2 diabetes.",
+            "img": "./assets/img/quiz-years.webp",
+            "value": "age",
+            "valid": true,
+            "options": [
+              {
+                "answer": "I am younger than 40",
+                "content": "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+                "id": 1.1,
+                "label": "Younger than 40",
+                "score": 0,
+                "value": "Less than 40 years"
+              },
+              {
+                "answer": "I am 40-49 years old.",
+                "content": "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+                "id": 1.2,
+                "label": "40-49 Years",
+                "score": 1,
+                "value": "40-49 years"
+              },
+              {
+                "answer": "I am 50-59 years old.",
+                "content": "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+                "id": 1.3,
+                "label": "50-59 Years",
+                "score": 2,
+                "value": "50-59 years"
+              },
+              {
+                "answer": "I am 60+ years old.",
+                "content": "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+                "id": 1.4,
+                "label": "60+ Years",
+                "score": 3,
+                "value": "60 years or older"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Family History",
+        "id": 2,
+        "fields": [
+          {
+            "id": 2,
+            "title": " Do you have a mother, father, sister, or brother with diabetes?",
+            "content": "A family history of diabetes could contribute to your risk for type 2 diabetes.",
+            "img": "./assets/img/quiz-family.webp",
+            "value": "",
+            "valid": true,
+            "options": [
+              {
+                "answer": "I have a family history with diabetes.",
+                "content": "<p>There is a link between type 2 diabetes and family history. The risk of type 2 diabetes in people with family history of diabetes is related to environmental and lifestyle factors that family members share as well as to genetics.</p>",
+                "id": 2.1,
+                "label": "Yes",
+                "score": 1,
+                "value": "Yes"
+              },
+              {
+                "answer": "I have no family history with diabetes.",
+                "content": "<p>There is a link between type 2 diabetes and family history. The risk of type 2 diabetes in people with family history of diabetes is related to environmental and lifestyle factors that family members share as well as to genetics.</p>",
+                "id": 2.2,
+                "label": "No",
+                "score": 0,
+                "value": "No"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Blood Pressure",
+        "id": 3,
+        "fields": [
+          {
+            "id": 3,
+            "title": "Have you ever been diagnosed with high blood pressure?",
+            "content": "Having high blood pressure contributes to your overall risk for type 2 diabetes.",
+            "img": "./assets/img/quiz-bloodpressure.webp",
+            "value": "",
+            "valid": true,
+            "options": [
+              {
+                "answer": "I have a high blood pressure history.",
+                "content": "<p>High blood pressure not only raises your risk for type 2 diabetes but also increases the risk of heart attack, stroke, eye problems, and kidney disease.</p>",
+                "id": 3.1,
+                "label": "Yes",
+                "score": 1,
+                "value": "Yes"
+              },
+              {
+                "answer": "I have no history of high blood pressure.",
+                "content": "<p>High blood pressure not only raises your risk for type 2 diabetes but also increases the risk of heart attack, stroke, eye problems, and kidney disease.</p>",
+                "id": 3.2,
+                "label": "No",
+                "score": 0,
+                "value": "No"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "RACE/ETHNICITY",
+        "id": 4,
+        "fields": [
+          {
+            "id": 4,
+            "title": "What race or ethnicity best describes you?",
+            "content": "People from certain racial and ethnic groups are more likely to develop type 2 diabetes than others.",
+            "img": "./assets/img/quiz-ethnicity.webp",
+            "value": "",
+            "valid": true,
+            "options": [
+              {
+                "id": 4.5,
+                "label": "American Indian or Alaska Native",
+                "score": 0,
+                "value": "american_indian"
+              },
+              {
+                "id": 4.4,
+                "label": "Asian American",
+                "score": 0,
+                "value": "asian_american"
+              },
+              {
+                "id": 4.3,
+                "label": "Black or African American",
+                "score": 0,
+                "value": "african_american"
+              },
+              {
+                "id": 4.2,
+                "label": "Hispanic or Latino",
+                "score": 0,
+                "value": "latino"
+              },
+              {
+                "id": 4.6,
+                "label": "Native Hawaiian or Other Pacific Islander",
+                "score": 0,
+                "value": "islander"
+              },
+              {
+                "id": 4.1,
+                "label": "White or Caucasian",
+                "score": 0,
+                "value": "white"
+              },
+              {
+                "id": 4.7,
+                "label": "Other",
+                "score": 0,
+                "value": "other"
+              },
+              {
+                "answer": "Don’t Want to Say",
+                "id": 4.8,
+                "label": "Don’t Want to Say",
+                "score": 0,
+                "value": "no_response"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "WELLNESS",
+        "id": 5,
+        "fields": [
+          {
+            "id": 5,
+            "title": "Are you physically active?",
+            "content": "Being inactive can increase your risk for type 2 diabetes.",
+            "img": "./assets/img/quiz-wellness.webp",
+            "value": "",
+            "valid": true,
+            "options": [
+              {
+                "answer": "I am physically active.",
+                "content": "<p>Exercising regularly lowers your risk for prediabetes and type 2 diabetes.</p>",
+                "id": 5.1,
+                "label": "Yes",
+                "score": 0,
+                "value": "Yes"
+              },
+              {
+                "answer": "I am physically inactive.",
+                "content": "<p>Exercising regularly lowers your risk for prediabetes and type 2 diabetes.</p>",
+                "id": 5.2,
+                "label": "No",
+                "score": 1,
+                "value": "No"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "GENDER",
+        "id": 6,
+        "fields": [
+          {
+            "id": 6,
+            "title": "Are you a man or a woman?",
+            "content": "Men are more likely than women to have undiagnosed prediabetes; one reason may be that they are less likely to visit their doctors regularly.",
+            "img": "./assets/img/quiz-gender.webp",
+            "value": "",
+            "valid": true,
+            "options": [
+              {
+                "answer": "I am a man.",
+                "id": 6.1,
+                "label": "Man",
+                "score": 1,
+                "value": "Man"
+              },
+              {
+                "answer": "I am a woman ",
+                "content": "<p>Many women who have gestational diabetes go on to develop type 2 diabetes later in life.</p>",
+                "id": 6.2,
+                "label": "Woman",
+                "score": 0,
+                "value": "Woman",
+                "womanSub": [
+                  {
+                    "answer": "with a history of gestational diabetes.",
+                    "id": 7.1,
+                    "label": "Yes",
+                    "score": 1,
+                    "value": "Yes"
+                  },
+                  {
+                    "answer": "with no history of gestational diabetes.",
+                    "id": 7.2,
+                    "label": "No",
+                    "score": 0,
+                    "value": "No"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "BMI",
+        "id": 7,
+        "fields": [
+          {
+            "id": 7,
+            "title": "Tell us more about yourself",
+            "content": "The combination of your weight and height lets us know your Body Mass Index or BMI. People with higher BMIs are at a higher risk.",
+            "img": "./assets/img/quiz-bmi.webp",
+            "value": "bmi",
+            "valid": true,
+            "weightValue": "",
+            "heightValue": ""
+          }
+        ]
+      }
+    ]
+  }
