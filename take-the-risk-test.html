@@ -18,6 +18,7 @@
 
       <!--  coustom css -->
       <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="./responsive.css" />
       <style>
          #loadingSpinner {
             display: none;
@@ -194,6 +195,10 @@
                      </div>
 
                      <div class="step-from__right-side" v-else>
+                        <div class="d-none justify-content-between align-items-center p-4 sr-step-counter">
+                           <h1 class="text_16 font-semibold text-brand text-uppercase">Take the Risk Test</h1>
+                           <p class="text_16 font-semibold text-brand text-uppercase">Step {{activeStep}} out of 7</p>
+                        </div>
                         <div class="step-from__progress-bar position-relative">
                            <ul>
                               <li v-for=" step in stepData" :key="'step'+ step.id" class=" ">
@@ -204,9 +209,7 @@
                                     </svg>
                                  </div>
 
-                                 <span class="">
-                                    <span class="sr-only d-none">Step 1:</span>
-                                    {{step.label}} </span
+                                 <span class="steplable"> {{step.label}} </span
                                  ><span class="mt-2 h-6 w-6">
                                     <div class="hideden" :class="{'active': step.id === activeStep}">
                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -484,7 +487,7 @@
                            </a>
                            <!-- if 10of10 -->
                            <a
-                              v-if="totalScore >= 5"
+                              v-if="totalScore > 5"
                               class="text_18"
                               :href="`mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${totalScore}of10_en.pdf`"
                            >
@@ -492,7 +495,7 @@
                            </a>
                            <p class="riskTestPowered">
                               Risk test powered by the
-                              <a href="https://www.diabetes.org/" class="email-result">American Diabetes Association</a>.
+                              <a href="https://www.diabetes.org/" class="email-result">American Diabetes Association.</a>
                            </p>
                            <p class="riskTestPowered">
                               <a href="https://doihaveprediabetes.org/uploads/print/DBC_AreYouAtRisk_Flyer_Eng_8.5x11_508.pdf" download="file" class="email-result">Print a PDF copy of the test</a>

@@ -723,6 +723,8 @@ button[disabled] {
 }
 
 .isAllStepsCompleted-content__right h3 {
+    font-family: 'Futura PT' !important;
+
     letter-spacing: -.02em;
     font-weight: 700;
     color: var(--text-color);

@@ -1,0 +1,234 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    h3 {
+        line-height: 36px !important;
+        font-size: 32px !important;
+        margin-bottom: 15px;
+    }
+
+    .step-from__left-side {
+        display: none;
+    }
+
+
+    .sr-step-counter {
+        display: flex !important;
+    }
+
+    .steplable {
+        display: none;
+    }
+
+    .step-from__right-side {
+        width: 100%;
+    }
+
+    .step-from__right-side .indicator {
+        display: none !important;
+    }
+
+    .step-from__progress-bar ul {
+        min-height: auto !important;
+    }
+
+    .step-form__wrapper {
+        flex-direction: column;
+    }
+
+    .step-form__img {
+        width: 50%;
+        margin: 0 auto;
+        padding: 31px 40px;
+    }
+
+    .step-form__container {
+        width: 100%;
+    }
+
+    .step-form__content h2 {
+        font-size: 32px !important;
+        text-wrap: balance;
+    }
+
+    .step-form__option {
+        flex-direction: column;
+    }
+
+    .step-form__option .button {
+        width: 100%;
+    }
+
+    .step-form__content {
+        padding: 24px;
+    }
+
+    .isAllStepsCompleted-content {
+        flex-direction: column;
+    }
+
+    .isAllStepsCompleted-content__left--wrapper {
+        width: 100%;
+    }
+
+    .isAllStepsCompleted-content__left .totalScore {
+        font-size: 80px;
+    }
+
+    .isAllStepsCompleted-content__right--wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .isAllStepsCompleted-content__right h3 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        line-height: 36px;
+    }
+
+    .isAllStepsCompleted-content__right {
+        padding: 20px;
+    }
+
+    #heightSelect,
+    #weightSelect {
+        width: 100%;
+    }
+
+    .tips-btn {
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .rq-section-results-row {
+        margin: 0;
+    }
+
+    .rq-section-results-left-box {
+        padding: 30px;
+        border: 0;
+    }
+
+    .rq-section-results-left-box h3 {
+        font-size: 32px !important;
+        margin-bottom: 15px;
+
+    }
+
+    .rq-section-results-right-box-child {
+        padding: 30px;
+    }
+
+    .rq-section-results-right-box-child h3 {
+        font-size: 32px !important;
+    }
+
+    .erbyd {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .erbyd h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .answers-box {
+        padding: 20px 0;
+        gap: 30px;
+        margin-bottom: 15px;
+    }
+
+    .answers-box__icon {
+        padding-top: 30px;
+    }
+
+    .answers-box__content h3 {
+        font-size: 18px !important;
+    }
+
+    .answers-box__content h2 {
+        font-size: 26px;
+    }
+
+    .answers-box__content p {
+        font-size: 18px;
+    }
+
+    .riskTestPowered {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero-section-box {
+        padding: 30px;
+    }
+
+    .hero-section-box h2 {
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        line-height: 42px;
+    }
+
+    .hero-section-wrapper {
+        margin: 0 20px;
+    }
+
+    .top-img-svg,
+    .bottom-img-svg {
+        width: 85%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -20%)
+    }
+
+    .second-section-box {
+        padding: 30px;
+    }
+
+    .bg-url-hp-stat-bg-arrow {
+        display: none;
+    }
+
+    .third-section-content {
+        width: 100%;
+    }
+
+    .third-section-content h3 {
+        font-size: 310px !important;
+        line-height: 144px !important;
+        margin-bottom: 50px;
+    }
+
+    .third-section-content sup {
+        font-size: 90px;
+        top: -45px;
+        right: 8px;
+    }
+
+    .home-find-a-program-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .home-find-a-program-box {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .explore-health-tips-box {
+        padding: 30px;
+    }
+
+    .takeRisk {
+        width: 70% !important;
+    }
+
+    .explore-health-tips-wrapper .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
