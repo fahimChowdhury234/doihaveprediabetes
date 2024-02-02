@@ -231,4 +231,186 @@
     .explore-health-tips-wrapper .col-md-6 {
         margin-bottom: 20px;
     }
+
+    .find-program-hero-box-first h2 {
+        font-size: 56px;
+        line-height: 47px;
+        text-align: center;
+    }
+
+    .find-program-hero-box-second {
+        display: none;
+    }
+
+    .find-program-sub-wrapper {
+        margin: 10px;
+    }
+
+    .find-program-sub-box {
+        border: none;
+    }
+
+    .find-program-third-box-svg {
+        top: -413px;
+        z-index: -1;
+        transform: scale(1.5);
+        left: -6%;
+    }
+
+    .find-program-third-box h3 {
+        font-size: 26px !important;
+        text-align: center;
+        margin-top: 80px;
+        ;
+    }
+
+    .find-program-third-box {
+        text-align: center;
+    }
+
+    .imagine-yourself-box h3,
+    .getting-started,
+    .question-box h3 {
+        font-size: 26px !important;
+        text-align: center;
+    }
+
+    .imagine-yourself-box {
+        width: 300px;
+    }
+
+    .imagine-yourself-section iframe {
+        height: 250px !important;
+    }
+
+    .question-row {
+        padding: 30px;
+    }
+
+    .question-box-l,
+    .question-box {
+        padding: 0;
+        border: none;
+    }
+
+    .question-box h3 {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .question-box p {
+        font-size: 18px;
+    }
+
+    .question-box {
+        margin-top: 20px;
+    }
+
+    .reverse-tab-content-box .seniors-img {
+        width: 100%;
+    }
+
+    .imagine-yourself-section {
+        padding-bottom: 20px;
+    }
+
+    .reverse-tab-content-box {
+        padding: 30px;
+        margin: 10px;
+    }
+
+    .reverse-tab-content-box .strength {
+        padding: 20px 0;
+    }
+
+    .reverse-tab-content-box .strength h3 {
+        font-size: 26px !important;
+    }
+
+    .reverse-tab-content-box .strength h3 {
+        font-size: 18px;
+    }
+
+    .reverse-hero-section {
+        padding: 30px !important;
+    }
+
+    .reverse-hero-section h2 {
+        font-size: 56px !important;
+        line-height: 47px;
+        text-align: center !important;
+
+    }
+
+    .reverse-hero-section h4 {
+        font-size: 18px !important;
+
+    }
+
+    .reverse-hero-section .col-md-8 {
+        text-align: left !important;
+    }
+
+    .reverse-hero-section p {
+        font-size: 18px !important;
+        text-align: left !important;
+
+    }
+
+    .reverse-hero-row h4,
+    .reverse-hero-row p {
+        width: 100%;
+    }
+
+    .reverse-tab-content-box figure {
+        width: 100%;
+    }
+
+    .reverse-hero-section .reverse-hero-row .w-25 {
+        width: 50% !important;
+    }
+
+    .prediabetes-box h3 {
+        font-size: 26px !important;
+    }
+
+    .prediabetes-box {
+        width: 100% !important;
+    }
+
+    .prediabetes-row {
+        padding: 30px 18px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .prediabetes-three-row {
+        padding: 30px 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .prediabetes-three-row h3,
+    .prediabetes-three-box h2 {
+        font-size: 26px !important;
+    }
+
+    .prediabetes-three-box {
+        width: 100%;
+    }
+
+    .prediabetes-tab-content-box {
+
+        padding: 30px 30px;
+    }
+
+    .prediabetes-tab-content-box h3 {
+        font-size: 26px !important;
+
+    }
+
+    .prediabetes-three-box-find {
+        padding: 0;
+    }
+
 }

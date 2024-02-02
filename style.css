@@ -1058,6 +1058,12 @@ figure {
     padding: 60px 0;
 }
 
+.reverse-hero-row h4,
+.reverse-hero-row p {
+    width: 75%;
+    margin: 0 auto;
+}
+
 .reverse-tab {
     padding: 0px 23px;
     height: 44px;
