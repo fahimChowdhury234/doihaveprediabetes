@@ -17,8 +17,19 @@ html {
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Futura PT';
+    src: url('./assets/2444384440.woff2') format("woff2"),
+        url('./assets/2444384440.woff2') format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
+    /* light blue color */
     --barnd-color: #f6f9fc;
+    /* peach color */
     --secondary-color: #fef4ea;
     --text-color: #202121f5;
 }
@@ -51,6 +62,15 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+.font-WorkSans {
+    font-family: 'Work Sans', sans-serif !important;
+
+}
+
+.text-left {
+    text-align: left !important;
 }
 
 /* text size */
@@ -103,7 +123,7 @@ a {
 }
 
 .text_40 {
-    font-size: 4rem;
+    font-size: 4rem !important;
 }
 
 .text_44 {
@@ -112,6 +132,14 @@ a {
 
 .text_50 {
     font-size: 5rem;
+}
+
+.text_64 {
+    font-size: 6.4rem !important;
+}
+
+.text_104 {
+    font-size: 10.4rem;
 }
 
 /* font weight */
@@ -329,10 +357,11 @@ a {
 }
 
 .step-form__content {
-    padding: 64px 65px 14px 15px;
+    padding: 64px 65px 14px 47px;
 }
 
 .step-form__content h2 {
+    font-family: 'Futura PT' !important;
     font-size: 56px;
     font-weight: 700;
     color: var(--text-color);
@@ -487,7 +516,7 @@ a {
 .tips-btn {
     cursor: pointer;
     z-index: 90;
-    line-height: 16px;
+    line-height: 18px;
     text-align: center;
     position: relative;
     width: 40%;
@@ -699,6 +728,7 @@ button[disabled] {
     color: var(--text-color);
     font-size: 56px;
     margin-bottom: 20px;
+    line-height: 62px;
 }
 
 .isAllStepsCompleted-content__right p {
@@ -731,8 +761,13 @@ button[disabled] {
 
 .answers-wrapper-inficator {
     position: absolute;
-    top: -7px;
+    top: 5px;
     left: 50%;
+    transform: translateY(-50%);
+}
+
+.answers-wrapper-inficator svg path {
+    fill: var(--barnd-color);
 }
 
 figure {
@@ -774,7 +809,7 @@ figure {
 
 .erbyd a {
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 18px;
     border: 1px solid var(--text-color);
     color: var(--text-color);
     font-weight: 600;
@@ -789,7 +824,7 @@ figure {
 }
 
 .email-result {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--text-color);
     text-decoration: underline;
@@ -797,7 +832,7 @@ figure {
 
 .riskTestPowered {
     display: flex;
-    font-size: 14px;
+    font-size: 18px;
 
     align-items: center;
     gap: 10px;
@@ -901,7 +936,7 @@ figure {
 
 .third-section {
     padding: 100px 0;
-    background: linear-gradient(180deg, #fef4ea, #fef4ea 50%, #f6f9fc 0, #f6f9fc);
+    background: linear-gradient(180deg, #fff, #fff 50%, #fff 0, #fff);
     overflow: hidden;
 }
 
@@ -955,12 +990,12 @@ figure {
 }
 
 .home-find-a-program-cta {
-    background: linear-gradient(180deg, #fef4ea, #fef4ea 50%, #f6f9fc 0, #f6f9fc);
+    background: linear-gradient(180deg, #fff, #fff 50%, #fff 0, #fff);
 
 }
 
 .home-find-a-program-wrapper {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 12px;
     margin-top: 20%;
 }
@@ -1015,4 +1050,447 @@ figure {
 
 .explore-health-tips-box figure img {
     max-width: 100%;
+}
+
+.reverse-hero-section {
+    padding: 60px 0;
+}
+
+.reverse-tab {
+    padding: 0px 23px;
+    height: 44px;
+    display: flex !important;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+    position: relative;
+    line-height: 18px;
+}
+
+.reverse-tab-wrapper .active {
+    background-color: var(--text-color);
+    color: #fff;
+    border-radius: 8px;
+}
+
+.reverse-tab-wrapper {
+    background-color: var(--secondary-color);
+    height: 50px;
+    padding: 0 20px;
+}
+
+.reverse-tab-indicator {
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.reverse-tab-indicator path {
+    fill: var(--secondary-color) !important;
+
+}
+
+.reverse-tab-content-box {
+    padding: 32px;
+    border: 1px solid #cccccc;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    height: 100%;
+}
+
+.reverse-tab-content-row .col-md-4,
+.reverse-tab-content-row .col-md-6,
+.reverse-tab-content-row .col-md-12 {
+    margin-bottom: 15px;
+
+}
+
+.reverse-tab-content-box figure {
+    width: 358px;
+    margin: 0 auto;
+}
+
+.reverse-tab-content-section {
+    padding: 60px 0;
+}
+
+.reverse-tab-content-box p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 50px;
+    line-height: 32px;
+}
+
+.reverse-tab-content-box figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.reverse-tab-content-box .seniors-img {
+    min-height: 100%;
+    width: 568px;
+    margin: 0 auto;
+}
+
+.reverse-tab-content-box .seniors-img img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.reverse-tab-content-box .strength {
+    padding-left: 50px;
+}
+
+.reverse-tab-content-box-contact {
+    padding: 90px 0;
+}
+
+.reverse-tab-content-box-contact h3 {
+    line-height: 42px;
+}
+
+.find-program-hero-box {
+    padding: 30px;
+}
+
+.find-program-hero-box figure {
+    max-height: 580px;
+    min-height: 580px;
+
+}
+
+.find-program-hero-box figure img {
+    width: 100%;
+}
+
+.find-program-hero-box-first {
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+}
+
+.find-program-hero-box-first h2 {
+    line-height: 80px;
+}
+
+.find-program-hero-box-first p {
+    line-height: 32px;
+}
+
+
+.find-program-hero-box-second {
+    padding-right: 80px;
+}
+
+.find-program-sub-section {
+    z-index: 99;
+    padding-bottom: 50px;
+}
+
+.find-program-sub-wrapper {
+    background-color: var(--secondary-color);
+}
+
+.find-program-sub-wrapper figure {
+    width: 286px;
+    margin: 0 auto;
+}
+
+.find-program-sub-wrapper figure img {
+    width: 100%;
+}
+
+.find-program-sub-box {
+    padding: 20px;
+    border-right: 2px solid var(--text-color);
+    height: 100%;
+}
+
+.find-program-sub-wrapper>.col-md-4:nth-of-type(3) .find-program-sub-box {
+    border: none;
+}
+
+.find-program-sub-box p {
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: 32px;
+    margin-top: 30px !important;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.find-program-third-sub-section {
+    padding: 60px 0;
+}
+
+.find-program-third-box-svg {
+    position: absolute;
+    top: -235px;
+    z-index: -1;
+    left: -47%;
+    max-width: 100%;
+    pointer-events: none;
+    display: flex;
+}
+
+.find-program-third-box {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+.find-program-third-box h3 {
+    line-height: 42px;
+}
+
+.find-program-third-box p {
+    line-height: 32px;
+}
+
+.imagine-yourself-box {
+    width: 450px;
+    margin: 0 auto;
+}
+
+h3 {
+    line-height: 42px;
+
+}
+
+p {
+    line-height: 32px;
+
+
+}
+
+.imagine-yourself-section {
+    padding: 85px 0;
+    border-top: 1px solid #ddd;
+}
+
+.imagine-yourself-section iframe {
+    width: 100%;
+    height: 540px !important;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.question-row {
+    padding: 60px 50px;
+}
+
+.question-box {
+    padding: 0px 75px;
+
+
+}
+
+.question-box h3 {
+    margin-bottom: 30px;
+}
+
+.question-box-l {
+    border-right: 1px solid var(--text-color);
+}
+
+.question-box a {
+    color: var(--text-color);
+}
+
+figcaption a:hover {
+    text-decoration: underline;
+}
+
+.prediabetes-tab-content-box {
+    padding: 50px 50px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    margin: 0 auto;
+    width: 95%;
+    border: 1px solid var(--text-color);
+    height: 100%;
+}
+
+.prediabetes-tab-content-box ul li {
+    font-size: 18px;
+    font-family: 'Work Sans', sans-serif !important;
+
+}
+
+.prediabetes-tab-content-row .col-md-6 {
+    margin-bottom: 15px;
+}
+
+.prediabetes-box {
+    width: 452px;
+    margin: 0 auto;
+    padding: 35px 0;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.prediabetes-box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.prediabetes-box p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.prediabetes-row {
+    padding: 30px 50px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.prediabetes-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.prediabetes-box ul li {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: 'Work Sans', sans-serif !important;
+    font-weight: 500;
+    color: var(--text-color);
+
+}
+
+.prediabetes-three-row {
+    padding: 30px 50px;
+    border: 2px solid var(--text-color);
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.prediabetes-three-box {
+    width: 452px;
+    margin: 0 auto;
+    padding: 35px 0;
+    border-bottom: 2px solid var(--text-color);
+    height: 100%;
+}
+
+.prediabetes-section-three {
+    padding-bottom: 50px;
+}
+
+.prediabetes-three-box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.prediabetes-three-box p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.prediabetes-three-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.prediabetes-three-box ul li {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: 'Work Sans', sans-serif !important;
+    font-weight: 500;
+    color: var(--text-color);
+
+}
+
+.prediabetes-bloodSugar-box {
+    width: 500px !important;
+    margin: 0 auto;
+}
+
+.ad-section {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.rq-section-results-row {
+    border-radius: 12px;
+    margin: 30px 40px;
+    background-color: var(--secondary-color);
+}
+
+.rq-section-results-row .col-md-6 {
+    padding: 0;
+}
+
+.rq-section-results-left-box {
+    height: 100%;
+    padding: 100px;
+    border-right: 2px solid var(--text-color);
+}
+
+.rq-section-results-left-box h3 {
+    font-size: 40px !important;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-family: 'Futura PT' !important;
+}
+
+.rq-section-results-left-box p {
+    font-size: 18px !important;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.rq-section-results-right-box {
+    padding: 80px;
+
+
+}
+
+.rq-section-results-right-box-child h3 {
+    font-size: 40px !important;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-family: 'Futura PT' !important;
+}
+
+.rq-section-results-right-box-child {
+    padding: 80px;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.rq-section-results-right-box-child h4 {
+    font-size: 16px !important;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: 'Futura PT' !important;
+    text-align: center;
+    margin-top: 10px;
 }

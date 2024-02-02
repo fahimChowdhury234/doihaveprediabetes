@@ -111,13 +111,13 @@
                   <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
                      <ul class="navbar-nav mb-2 mb-lg-0 gap-4 text-uppercase">
                         <li class="nav-item">
-                           <a class="nav-link active" href=".#" target="_self" title="">Find a Program</a>
+                           <a class="nav-link active" href="./find-a-program.html" target="_self" title="">Find a Program</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="./about.html" target="_self" title="">Reverse Prediabetes</a>
+                           <a class="nav-link" href="./reverse-prediabetes/manage-weight.html" target="_self" title="">Reverse Prediabetes</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="./services.html" target="_self" title="">Frequently Asked Questions</a>
+                           <a class="nav-link" href="../faq/prediabetes.html" target="_self" title="">Frequently Asked Questions</a>
                         </li>
                         <li class="nav-item">
                            <a class="takeRisk" href="./take-the-risk-test.html" target="_self" title="">Take the Risk Test</a>
@@ -342,61 +342,66 @@
                </div>
             </div>
             <!-- if result score 5 or gatter trhen 5 -->
-            <!-- <div v-if="isAllStepsCompleted">
+            <div v-if="isAllStepsCompleted" v-if="totalScore >= 5">
                <div class="container mx-auto">
-                  <div class="row">
+                  <div class="row rq-section-results-row">
                      <div class="col-md-6">
-                        <h3>What should I do now?</h3>
-                        <p>
-                           Remember that with early diagnosis, prediabetes can often be reversed.
-                           <br />
-                           <br />
-                           Talk to your doctor about your interest in joining a CDC-recognized National Diabetes Prevention Program lifestyle change program, which is a scientifically proven way to
-                           reverse prediabetes.
-                           <br />
-                           <br />
+                        <div class="rq-section-results-left-box">
+                           <h3>What should I do now?</h3>
+                           <p>
+                              Remember that with early diagnosis, prediabetes can often be reversed.
+                              <br />
+                              <br />
+                              Talk to your doctor about your interest in joining a CDC-recognized National Diabetes Prevention Program lifestyle change program, which is a scientifically proven way to
+                              reverse prediabetes.
+                              <br />
+                              <br />
 
-                           And if you can’t join the meetings in person, that’s okay, because you can join an online program.
-                        </p>
+                              And if you can’t join the meetings in person, that’s okay, because you can join an online program.
+                           </p>
+                        </div>
                      </div>
                      <div class="col-md-6">
-                        <div class="col-md-12">
-                           <div>
-                              <h3>Need to reverse prediabetes?</h3>
-                              <a target="_blank" rel="noopener" class="rq-btn rq-btn--darkblue-white border-darkblue" href="https://www.cdc.gov/diabetes/prevention/find-a-program.html"
-                                 >Find a program</a
-                              >
+                        <div class="">
+                           <div class="col-md-12">
+                              <div class="mb-5 rq-section-results-right-box-child">
+                                 <h3>Need to reverse prediabetes?</h3>
+                                 <a href="../find-a-program" class="takeRisk w-50 d-inline-block mt-4 text-center"> Find a program</a>
+                              </div>
                            </div>
-                        </div>
-                        <div class="col-md-12">
-                           <div class="col-md-6">
-                              <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html" target="_blank" rel="noopener">
-                                 <img src="./assets/img/quiz-results-tips-left.webp" alt="" />
-                                 <h4>Work with trained professionals</h4>
-                              </a>
-                           </div>
-                           <div class="col-md-6">
-                              <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html">
-                                 <img src="./assets/img/quiz-results-tips-right.webp" alt="" />
-                                 <h4>Find an in-person or online program</h4>
-                              </a>
+                           <div class="col-md-12">
+                              <div class="row rq-section-results-right-box-child border-bottom-0">
+                                 <div class="col-md-6">
+                                    <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html" target="_blank" rel="noopener">
+                                       <img src="./assets/img/quiz-results-tips-left.webp" alt="" class="w-100" />
+                                       <h4>Work with trained professionals</h4>
+                                    </a>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html">
+                                       <img src="./assets/img/quiz-results-tips-right.webp" alt="" class="w-100" />
+                                       <h4>Find an in-person or online program</h4>
+                                    </a>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-            </div> -->
+            </div>
             <div class="row justify-content-center" v-if="isAllStepsCompleted">
                <div class="col-md-9">
                   <div class="d-flex align-items-center justify-content-around erbyd">
                      <h3>Email a copy of your results to yourself and bring to your doctor.</h3>
                      <!-- if result less than 5 -->
-
-                     <a href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf" class="">
+                     <a v-if="totalScore <= 5" href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf" class="">
                         Email results to yourself
                      </a>
                      <!-- if 10of10 -->
-                     <!-- <a href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_10of10_en.pdf"> Email results to yourself</a> -->
+                     <a v-if="totalScore >= 5" :href="`mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${totalScore}of10_en.pdf`">
+                        Email results to yourself
+                     </a>
                   </div>
                </div>
             </div>
@@ -450,6 +455,10 @@
                                        <h2>{{ option.answer }} {{ option.womanSub.answer }}</h2>
                                     </div>
                                     <h2 v-if="option.value !== 'Woman' || !option.womanSub">{{ option.answer }}</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 0">I have a healthy body mass index (BMI).</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 1">I have an above normal body mass index.</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 2">I have a high body mass index.</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 3">I have a very high body mass index.</h2>
                                     <p v-html="option.content"></p>
                                  </div>
                               </div>
@@ -466,12 +475,21 @@
                         <div class="d-flex justify-content-center align-items-center flex-column gap-4 py-5">
                            <a href="/dist/#/about" class="tips-btn"> About the Risk Test </a>
                            <!-- if result less than 5 -->
-                           <a href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf" class="email-result">
+                           <a
+                              v-if="totalScore <= 5"
+                              href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf"
+                              class="text_18"
+                           >
                               Email results to yourself
                            </a>
-                           <!-- else -->
-                           <!-- <a href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_10of10_en.pdf"> Email results to yourself</a> -->
-
+                           <!-- if 10of10 -->
+                           <a
+                              v-if="totalScore >= 5"
+                              class="text_18"
+                              :href="`mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${totalScore}of10_en.pdf`"
+                           >
+                              Email results to yourself
+                           </a>
                            <p class="riskTestPowered">
                               Risk test powered by the
                               <a href="https://www.diabetes.org/" class="email-result">American Diabetes Association</a>.
@@ -1550,22 +1568,20 @@
                      // this.selectedValues.find((entry) => entry.step === 7).selectedOptions.push(bmiResult);
 
                      this.isAllStepsCompleted = true;
-                     const totalScore = this.selectedValues.reduce((accumulator, currentValue) => {
+                     const totalS = this.selectedValues.reduce((accumulator, currentValue) => {
                         // Extract the score from the selectedOptions array
                         const score = currentValue.selectedOptions[0].score;
 
                         // Add the score to the accumulator
                         return accumulator + score;
                      }, 0);
-                     this.totalScore = totalScore;
+                     this.totalScore = totalS;
 
                      console.log(this.selectedValues);
                   }
                   this.activeStep += 1;
 
                   console.log(this.selectedValues);
-
-                  console.log(this.totalScore);
                },
 
                areFieldsFilled(fields) {
