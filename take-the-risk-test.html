@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="google" content="notranslate" />
       <title>Take the prediabetes test</title>
       <!-- Font Link -->
       <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -33,6 +34,9 @@
 
    <body>
       <header class="main-header">
+         <nav>
+            <div id="google_translate_element"></div>
+         </nav>
          <nav class="navbar navbar-expand-xl bg-transparent text-brand">
             <a class="navbar-brand text-brand" href="./index.html">
                <h2 class="text-logo">what's prediabetes</h2>
@@ -338,15 +342,15 @@
                            </div>
                            <div class="col-md-12">
                               <div class="row rq-section-results-right-box-child border-bottom-0">
-                                 <div class="col-md-6">
+                                 <div class="col-md-6 noopener">
                                     <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html" target="_blank" rel="noopener">
-                                       <img src="./assets/img/quiz-results-tips-left.webp" alt="" class="w-100" />
+                                       <img src="./assets/img/tinified_Find_Program/Nurse01.png" alt="" class="w-100" />
                                        <h4>Work with trained professionals</h4>
                                     </a>
                                  </div>
-                                 <div class="col-md-6">
+                                 <div class="col-md-6 noopener">
                                     <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html">
-                                       <img src="./assets/img/quiz-results-tips-right.webp" alt="" class="w-100" />
+                                       <img src="./assets/img/tinified_Find_Program/Local_online.png" alt="" class="w-100" />
                                        <h4>Find an in-person or online program</h4>
                                     </a>
                                  </div>
@@ -357,14 +361,18 @@
                   </div>
                </div>
             </div>
-            <div class="row justify-content-center" v-if="isAllStepsCompleted && activeStep > 7">
+            <div class="row justify-content-center" v-if="!isAllStepsCompleted ">
                <div class="col-md-9">
                   <div class="d-flex align-items-center justify-content-around flex-column erbyd">
                      <h3>Email a copy of your results to yourself and bring to your doctor.</h3>
-                     <div class="erbyd-input-wrapper d-flex justify-content-center">
-                        <input type="email" name="" id="" placeholder="Enter your email" />
-                        <button>Submit your result</button>
+                     <div class="w-100 d-flex justify-content-center flex-column align-items-center">
+                        <form id="emailForm" action="#" class="erbyd-input-wrapper d-flex justify-content-center">
+                           <input type="email" id="emailInput" placeholder="Enter your email" />
+                           <button onclick="validateAndSubmit(event)">Submit your result</button>
+                        </form>
+                        <div class="error-message" id="errorMessage"></div>
                      </div>
+
                      <!-- if result less than 5 -->
                      <!-- <a v-if="totalScore <= 5" href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf" class="">
                         Email results to yourself
@@ -445,33 +453,53 @@
                   <div class="row justify-content-center">
                      <div class="col-md-9">
                         <div class="d-flex justify-content-center align-items-center flex-column gap-4 py-5">
-                           <a href="/dist/#/about" class="tips-btn"> About the Risk Test </a>
-                           <!-- if result less than 5 -->
-                           <a
-                              v-if="totalScore <= 5"
-                              href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf"
-                              class="text_18"
-                           >
-                              Email results to yourself
-                           </a>
-                           <!-- if 10of10 -->
-                           <a
-                              v-if="totalScore > 5"
-                              class="text_18"
-                              :href="`mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${totalScore}of10_en.pdf`"
-                           >
-                              Email results to yourself
-                           </a>
+                           <a href="#" class="tips-btn" onclick="showAbout()"> About the Risk Test </a>
+
                            <p class="riskTestPowered">
                               Risk test powered by the
-                              <a href="https://www.diabetes.org/" class="email-result">American Diabetes Association.</a>
+                              <a href="https://www.diabetes.org/" class="email-result" target="_blank">American Diabetes Association.</a>
                            </p>
                            <p class="riskTestPowered">
-                              <a href="https://doihaveprediabetes.org/uploads/print/DBC_AreYouAtRisk_Flyer_Eng_8.5x11_508.pdf" download="file" class="email-result">Print a PDF copy of the test</a>
+                              <a href="https://doihaveprediabetes.org/uploads/print/DBC_AreYouAtRisk_Flyer_Eng_8.5x11_508.pdf" download="file" class="email-result" target="_blank"
+                                 >Print a PDF copy of the test</a
+                              >
                               to take later.
                            </p>
                         </div>
                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="about-risk-test d-none" id="aboutSection">
+         <div class="container mx-auto">
+            <div class="row justify-content-center">
+               <div class="col-md-6">
+                  <h3>About the Risk Test</h3>
+                  <p>
+                     Approximately 98 million (1 in 3) American adults have prediabetes. Prediabetes is a condition where blood glucose levels are higher than normal but not high enough yet for a type
+                     2 diabetes diagnosis. <br />
+                     <br />
+
+                     Nearly 81 percent of people with prediabetes don’t know they have it. People with prediabetes are at risk for developing type 2 diabetes. Talk to your doctor to be screened
+                     regularly, and take the steps necessary to delay or prevent type 2 diabetes and prediabetes.<br />
+                     <br />
+
+                     The American Diabetes Association launched its first risk test in 1993. The risk test was adapted by a published study and validated using data from the Centers for Disease
+                     Control and Prevention.
+                     <br />
+                     <br />
+                     When developing the test, researchers looked for specific characteristics that made a person more likely than average to have undiagnosed type 2 diabetes. To make the tool as easy
+                     to use as possible, they only considered health characteristics that people would know about themselves without needing a blood test or other medical evaluation—such as age,
+                     height and weight, but not including blood glucose or cholesterol levels.
+                     <br />
+                     <br />
+                     A high score on the online risk test (five or higher) means you have a significant risk for having undiagnosed prediabetes or type 2 diabetes; but only a blood test can determine
+                     a diagnosis.
+                  </p>
+                  <div class="py-4 text-center">
+                     <a href="#" class="tips-btn mx-auto" onclick="backToScorePage()"> BACK TO SCORE PAGE </a>
                   </div>
                </div>
             </div>
@@ -486,18 +514,40 @@
                      <a class="footer-a" href="https://doihaveprediabetes.org/es">Sitio en Español</a>
                   </div>
                </div>
-               <div class="col-md-10 mt-5">
+               <div class="col-md-6 mt-4">
+                  <p>Post : бл.2, Tsar Boris III Blvd Sofia 1618 Bulgaria</p>
+               </div>
+               <div class="col-md-10 mt-2">
                   <ul class="footer-ul">
                      <li>
-                        <a href="#">Terms of use</a>
+                        <a href="https://www.google.com/" target="_blank">Terms of use</a>
                      </li>
                      <li>
-                        <a href="#">Contact us</a>
+                        <a href="https://www.google.com/" target="_blank">Privacy Policy</a>
                      </li>
                      <li>
-                        <a href="#">Contact us</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact us</a>
+                        <!-- Button trigger modal -->
+                        <!-- <button type="button" class="btn btn-primary" >This is a bootstrap Modal</button> -->
                      </li>
                   </ul>
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                     <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+                           <div class="modal-body">
+                              <div class="p-5">
+                                 <p class="text_16 font-medium text-brand">
+                                    Contact us email : hello@whatsprediabetes.com <br />
+                                    Post : бл.2, Tsar Boris III Blvd Sofia 1618 Bulgaria
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
                <div class="col-md-6">
                   <p>@2024 whatsprediabetes.com</p>
@@ -505,6 +555,26 @@
             </div>
          </div>
       </footer>
+      <style>
+         .hidden {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: none !important;
+         }
+
+         .visible {
+            display: block !important;
+            opacity: 1 !important;
+         }
+         .error-message {
+            color: red;
+
+            font-weight: 500;
+            font-size: 16px;
+            text-align: left;
+            width: 70%;
+         }
+      </style>
       <!-- js files -->
 
       <script
@@ -512,6 +582,39 @@
          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
          crossorigin="anonymous"
       ></script>
+      <script type="text/javascript">
+         function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+               {
+                  pageLanguage: "en", // Set the default language to English
+                  includedLanguages: "es,en", // Specify the languages to include (Spanish and English)
+               },
+               "google_translate_element"
+            );
+         }
+         function validateAndSubmit(event) {
+            event.preventDefault();
+            // Get the email input element
+            var emailInput = document.getElementById("emailInput");
+
+            // Get the value from the input
+            var emailValue = emailInput.value.trim();
+
+            // Validate the email using a simple regex
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+               // Display error message
+               document.getElementById("errorMessage").innerText = "Please enter a valid email address.";
+               return; // Do not proceed if the email is invalid
+            }
+            console.log(emailValue);
+
+            // Clear previous error message
+            document.getElementById("errorMessage").innerText = "";
+            document.getElementById("emailForm").reset();
+         }
+      </script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       <!-- Include Vue.js from CDN -->
       <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
       <script>
@@ -527,6 +630,21 @@
             // Your jQuery-dependent code here
          };
          document.head.appendChild(script);
+         function showAbout() {
+            hideAllSections();
+            document.getElementById("aboutSection").classList.add("visible");
+         }
+         function backToScorePage() {
+            hideAllSections();
+            // Show the desired section (e.g., Section 1)
+            document.getElementById("app").classList.add("visible");
+            document.getElementById("aboutSection").classList.remove("visible");
+         }
+         function hideAllSections() {
+            // Hide all sections
+            document.getElementById("app").classList.remove("visible");
+            document.getElementById("app").classList.add("hidden");
+         }
       </script>
       <script>
          // Your Vue.js code

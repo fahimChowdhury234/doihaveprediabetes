@@ -823,7 +823,7 @@ button[disabled] {
 .answers-box {
     padding: 60px 40px;
     gap: 40px;
-    margin-bottom: 90px;
+    margin-bottom: 0px;
 }
 
 .answers-wrapper-inficator {
@@ -831,6 +831,18 @@ button[disabled] {
     top: 5px;
     left: 50%;
     transform: translateY(-50%);
+}
+
+.noopener a {
+    display: block;
+    text-align: center;
+}
+
+.noopener a img {
+    height: 130px;
+    object-fit: cover;
+    width: 70% !important;
+    margin: 0 auto;
 }
 
 .answers-wrapper-inficator svg path {
@@ -1175,6 +1187,7 @@ figure {
     background-color: var(--secondary-color);
     border-radius: 12px;
     height: 100%;
+    align-items: center;
 }
 
 .reverse-tab-content-row .col-md-4,
@@ -1220,6 +1233,23 @@ figure {
 
 .reverse-tab-content-box .strength {
     padding-left: 50px;
+}
+
+.strength h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.strength ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: disc;
+}
+
+.strength ul li {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .reverse-tab-content-box-contact {
@@ -1605,4 +1635,24 @@ figcaption a:hover {
     color: #fff;
     font-weight: 600;
     text-align: center;
+    margin: 0;
+}
+
+#aboutSection h3 {
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#aboutSection p {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.about-risk-test {
+    padding: 40px 0;
 }

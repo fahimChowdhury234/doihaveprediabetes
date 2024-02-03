@@ -5,6 +5,10 @@
         overflow-x: hidden;
     }
 
+    .navbar-brand {
+        width: 50%;
+    }
+
     h3 {
         line-height: 36px !important;
         font-size: 32px !important;
@@ -15,6 +19,47 @@
         display: none;
     }
 
+    .offcanvas-end {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        gap: 20px !important;
+        margin-top: 15px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        color: var(--text-color) !important;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        border: 1px solid;
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 6px;
+        padding: 11px;
+    }
+
+    .offcanvas-header {
+        justify-content: flex-end !important;
+        padding: 25px 43px;
+    }
+
+    .offcanvas-header .btn-close {
+        font-size: 16px;
+        color: var(--text-color);
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .nav-item .takeRisk {
+        margin: 0 auto;
+        width: 60% !important;
+        display: block;
+
+    }
 
     .sr-step-counter {
         display: flex !important;
@@ -166,13 +211,18 @@
 
     .hero-section-box {
         padding: 30px;
+        text-align: center;
     }
 
     .hero-section-box h2 {
-        font-size: 44px;
+        font-size: 36px;
         font-weight: 700;
         margin-bottom: 30px;
         line-height: 42px;
+    }
+
+    .forth-section h2 {
+        font-size: 30px !important;
     }
 
     .hero-section-wrapper {
@@ -225,7 +275,7 @@
     }
 
     .takeRisk {
-        width: 70% !important;
+        width: 100% !important;
     }
 
     .explore-health-tips-wrapper .col-md-6 {
@@ -413,4 +463,44 @@
         padding: 0;
     }
 
+    .noopener a img {
+        width: 100%;
+        height: auto;
+    }
+
+    .isAllStepsCompleted-bar {
+        padding: 0 18px;
+    }
+
+    .isAllStepsCompleted-bar h1 {
+        font-size: 18px;
+    }
+
+    .isAllStepsCompleted-bar button {
+        padding: 8px 20px;
+    }
+
+    .erbyd-input-wrapper {
+        width: 100%;
+        flex-direction: column;
+        border: none;
+        border-radius: 0;
+        gap: 10px;
+    }
+
+    .erbyd-input-wrapper input {
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid var(--text-color);
+        border-radius: 6px !important;
+
+    }
+
+    .erbyd-input-wrapper button {
+        width: 100%;
+        border-radius: 6px !important;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
 }
