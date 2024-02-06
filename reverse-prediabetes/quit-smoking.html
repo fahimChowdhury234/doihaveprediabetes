@@ -35,15 +35,12 @@
 
    <body>
       <header class="main-header">
-         <nav>
-            <div id="google_translate_element"></div>
-         </nav>
          <nav class="navbar navbar-expand-xl bg-transparent text-brand">
             <a class="navbar-brand text-brand" href="../index.html">
                <h2 class="text-logo">what's prediabetes</h2>
             </a>
             <button
-               class="navbar-toggler bg-dark text-white px-3 py-2"
+               class="navbar-toggler bg-transparent text-black px-3 py-2"
                type="button"
                data-bs-toggle="offcanvas"
                data-bs-target="#navbarOffcanvas"
@@ -51,7 +48,7 @@
                aria-expanded="false"
                aria-label="Toggle navigation"
             >
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                </svg>
             </button>
@@ -62,6 +59,9 @@
                <div class="offcanvas-body">
                   <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
                      <ul class="navbar-nav mb-2 mb-lg-0 gap-4 text-uppercase">
+                        <li class="nav-item d-lg-none">
+                           <a class="nav-link" href="../index.html" target="_self" title="">Home</a>
+                        </li>
                         <li class="nav-item">
                            <a class="nav-link active" href="../find-a-program.html" target="_self" title="">Find a Program</a>
                         </li>
@@ -107,6 +107,27 @@
                            <path d="M14.1256 17L0.00129085 -2.46958e-06L28.25 0L14.1256 17Z" fill="#171717"></path>
                         </svg>
                      </a>
+                  </div>
+                  <div class="select-dropdown-wrapper">
+                     <div class="select-dropdown">
+                        <button href="#" role="button" data-value="" class="select-dropdown__button">
+                           <span> QUIT SMOKING</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                           </svg>
+                        </button>
+                        <ul class="select-dropdown__list">
+                           <li data-value="1" class="select-dropdown__list-item">
+                              <a href="./manage-weight.html" class="">Manage Weight</a>
+                           </li>
+                           <li data-value="2" class="select-dropdown__list-item">
+                              <a href="./get-active.html" class="">GET ACTIVE</a>
+                           </li>
+                           <li data-value="3" class="select-dropdown__list-item">
+                              <a href="./eat-healthier.html" class="">EAT HEALTHIER</a>
+                           </li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
@@ -161,11 +182,12 @@
                   <div class="reverse-tab-content-box row">
                      <div class="col-md-6">
                         <div class="strength">
-                           <p class="text_20 font-medium text-left mt-4">
-                              α-MTPC - Metabolism Booster and GI Support. A customized supplement blend with carefully balanced ingredients for maintaining heathy metabolism* , glucose balance* as
-                              well as weight management* for individuals with metabolic concerns*.
+                           <h3 class="mb-0">Advertisement:</h3>
+                           <p class="text_20 font-medium text-left mt-0 mb-0">
+                              <strong> A-MTPC - Metabolism Booster and GI Support.</strong> A customized supplement blend with carefully balanced ingredients for maintaining heathy metabolism* ,
+                              glucose balance* as well as weight management* for individuals with metabolic concerns*.
                            </p>
-                           <h3>Benefits</h3>
+                           <h3 class="mb-0">Benefits</h3>
                            <ul>
                               <li>7 Clinically proven compounds</li>
                               <li>No Magnesium Stearate</li>
@@ -214,22 +236,19 @@
                <div class="col-md-10">
                   <div class="d-flex align-items-center gap-4 justify-content-center">
                      <a class="footer-a" href="https://www.cdc.gov/diabetes/prevention/details-about-the-program.html" target="_blank">Provider Resources</a>
-                     <a class="footer-a" href="https://doihaveprediabetes.org/es">Sitio en Español</a>
                   </div>
                </div>
-               <div class="col-md-6 mt-4">
-                  <p>Post : бл.2, Tsar Boris III Blvd Sofia 1618 Bulgaria</p>
-               </div>
+
                <div class="col-md-10 mt-2">
                   <ul class="footer-ul">
                      <li>
-                        <a href="https://www.google.com/" target="_blank">Terms of use</a>
+                        <a href="https://www.google.com/" target="_blank">Terms </a>
                      </li>
                      <li>
-                        <a href="https://www.google.com/" target="_blank">Privacy Policy</a>
+                        <a href="https://www.google.com/" target="_blank">Privacy </a>
                      </li>
                      <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact us</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact </a>
                         <!-- Button trigger modal -->
                         <!-- <button type="button" class="btn btn-primary" >This is a bootstrap Modal</button> -->
                      </li>
@@ -258,7 +277,11 @@
             </div>
          </div>
       </footer>
-
+      <a class="bottomToTop" href="#body">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+         </svg>
+      </a>
       <!-- js files -->
 
       <script
@@ -266,31 +289,20 @@
          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
          crossorigin="anonymous"
       ></script>
-      <script type="text/javascript">
-         function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-               {
-                  pageLanguage: "en", // Set the default language to English
-                  includedLanguages: "es,en", // Specify the languages to include (Spanish and English)
-               },
-               "google_translate_element"
-            );
-         }
-      </script>
+      <script type="text/javascript"></script>
       <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-      <script>
-         // Show loading spinner while jQuery is being loaded
-         document.getElementById("loadingSpinner").style.display = "block";
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-         // Load jQuery
-         var script = document.createElement("script");
-         script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
-         script.onload = function () {
-            // jQuery is loaded, you can now use it
-            document.getElementById("loadingSpinner").style.display = "none";
-            // Your jQuery-dependent code here
-         };
-         document.head.appendChild(script);
+      <script>
+         $(".select-dropdown__button").on("click", function () {
+            $(".select-dropdown__list").toggleClass("active");
+         });
+         $(".select-dropdown__list-item").on("click", function () {
+            var itemValue = $(this).data("value");
+            console.log(itemValue);
+            $(".select-dropdown__button span").text($(this).text()).parent().attr("data-value", itemValue);
+            $(".select-dropdown__list").toggleClass("active");
+         });
       </script>
    </body>
 </html>

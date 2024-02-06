@@ -210,7 +210,7 @@
     }
 
     .hero-section-box {
-        padding: 30px;
+        padding: 30px 14px;
         text-align: center;
     }
 
@@ -221,12 +221,21 @@
         line-height: 42px;
     }
 
+    .forth-section {
+        padding-top: 44px;
+    }
+
     .forth-section h2 {
         font-size: 30px !important;
     }
 
     .hero-section-wrapper {
         margin: 0 20px;
+    }
+
+    .text-logo {
+        font-size: 30px;
+        line-height: 25px;
     }
 
     .top-img-svg,
@@ -237,12 +246,20 @@
         transform: translate(-50%, -20%)
     }
 
+    .second-section {
+        padding-top: 40px;
+    }
+
     .second-section-box {
         padding: 30px;
     }
 
     .bg-url-hp-stat-bg-arrow {
         display: none;
+    }
+
+    .third-section {
+        padding-bottom: 0;
     }
 
     .third-section-content {
@@ -259,6 +276,19 @@
         font-size: 90px;
         top: -45px;
         right: 8px;
+    }
+
+    .reverse-tab-wrapper {
+        display: none !important;
+    }
+
+    .home-find-a-program-box figure {
+        width: 100% !important;
+    }
+
+    .home-find-a-program-box figure img {
+        width: 60%;
+        margin: 0 auto;
     }
 
     .home-find-a-program-wrapper {
@@ -373,12 +403,16 @@
         padding: 20px 0;
     }
 
-    .reverse-tab-content-box .strength h3 {
-        font-size: 26px !important;
-    }
+
 
     .reverse-tab-content-box .strength h3 {
-        font-size: 18px;
+        font-size: 35px;
+        text-align: center;
+    }
+
+
+    .reverse-tab-content-box .strength p {
+        text-align: center !important;
     }
 
     .reverse-hero-section {
@@ -502,5 +536,9 @@
         text-align: center;
         display: flex;
         justify-content: center;
+    }
+
+    .select-dropdown-wrapper {
+        display: flex !important;
     }
 }

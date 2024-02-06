@@ -34,17 +34,14 @@
       </style>
    </head>
 
-   <body>
+   <body id="body">
       <header class="main-header">
-         <nav>
-            <div id="google_translate_element"></div>
-         </nav>
          <nav class="navbar navbar-expand-xl bg-transparent text-brand">
             <a class="navbar-brand text-brand" href="./index.html">
                <h2 class="text-logo">what's prediabetes</h2>
             </a>
             <button
-               class="navbar-toggler bg-dark text-white px-3 py-2"
+               class="navbar-toggler bg-transparent text-black px-3 py-2"
                type="button"
                data-bs-toggle="offcanvas"
                data-bs-target="#navbarOffcanvas"
@@ -52,7 +49,7 @@
                aria-expanded="false"
                aria-label="Toggle navigation"
             >
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                </svg>
             </button>
@@ -63,8 +60,11 @@
                <div class="offcanvas-body">
                   <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
                      <ul class="navbar-nav mb-2 mb-lg-0 gap-4 text-uppercase">
+                        <li class="nav-item d-lg-none">
+                           <a class="nav-link active" href="./index.html" target="_self" title="">Home</a>
+                        </li>
                         <li class="nav-item">
-                           <a class="nav-link active" href="./find-a-program.html" target="_self" title="">Find a Program</a>
+                           <a class="nav-link" href="./find-a-program.html" target="_self" title="">Find a Program</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="./reverse-prediabetes/manage-weight.html" target="_self" title="">Reverse Prediabetes</a>
@@ -272,7 +272,8 @@
                            <div class="home-find-a-program-box p-5">
                               <h3>Get the Support You Need</h3>
                               <p>
-                                 Get the Support You Need If your risk test score is high, consult your doctor and consider joining the National Diabetes Prevention Program.
+                                 If you scored high on the risk test, consult your doctor and consider joining the National Diabetes Prevention Program.
+
                                  <br />
                                  <br />
                                  A trained coach can assist you, in - person or virtually, in making dietary adjustments, increasing physical activity, and managing stress to prevent type 2 diabetes.
@@ -311,7 +312,7 @@
                   <div class="explore-health-tips-box">
                      <h3 class="text_34 text-brand mb-4">How is type 2 diabetes treated?</h3>
                      <p class="text_20 font-medium text-brand mb-5">
-                        Individuals with type 2 diabetes must daily attend to their health.
+                        Individuals with type 2 diabetes need to manage their health daily
                         <br /><br />
                         Your doctor might recommend managing diabetes through healthy eating and exercise, and could prescribe insulin and other medications to maintain blood sugar within target
                         levels.
@@ -330,22 +331,19 @@
                <div class="col-md-10">
                   <div class="d-flex align-items-center gap-4 justify-content-center">
                      <a class="footer-a" href="https://www.cdc.gov/diabetes/prevention/details-about-the-program.html" target="_blank">Provider Resources</a>
-                     <a class="footer-a" href="https://doihaveprediabetes.org/es">Sitio en Español</a>
                   </div>
                </div>
-               <div class="col-md-6 mt-4">
-                  <p>Post : бл.2, Tsar Boris III Blvd Sofia 1618 Bulgaria</p>
-               </div>
+
                <div class="col-md-10 mt-2">
                   <ul class="footer-ul">
                      <li>
-                        <a href="https://www.google.com/" target="_blank">Terms of use</a>
+                        <a href="https://www.google.com/" target="_blank">Terms </a>
                      </li>
                      <li>
-                        <a href="https://www.google.com/" target="_blank">Privacy Policy</a>
+                        <a href="https://www.google.com/" target="_blank">Privacy</a>
                      </li>
                      <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact us</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact </a>
                         <!-- Button trigger modal -->
                         <!-- <button type="button" class="btn btn-primary" >This is a bootstrap Modal</button> -->
                      </li>
@@ -375,25 +373,18 @@
          </div>
       </footer>
       <!-- js files -->
-
+      <a class="bottomToTop" href="#body">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+         </svg>
+      </a>
       <script
          src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
          crossorigin="anonymous"
       ></script>
-      <script type="text/javascript">
-         function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-               {
-                  pageLanguage: "en", // Set the default language to English
-                  includedLanguages: "es,en", // Specify the languages to include (Spanish and English)
-               },
-               "google_translate_element"
-            );
-         }
-      </script>
+      <script type="text/javascript"></script>
 
-      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       <script>
          // Show loading spinner while jQuery is being loaded
          document.getElementById("loadingSpinner").style.display = "block";
