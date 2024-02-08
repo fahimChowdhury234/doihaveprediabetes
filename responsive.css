@@ -69,6 +69,10 @@
         display: none;
     }
 
+    .step-from-section {
+        padding-top: 0;
+    }
+
     .step-from__right-side {
         width: 100%;
     }
@@ -88,7 +92,7 @@
     .step-form__img {
         width: 50%;
         margin: 0 auto;
-        padding: 31px 40px;
+        padding: 20px 0;
     }
 
     .step-form__container {
@@ -109,7 +113,7 @@
     }
 
     .step-form__content {
-        padding: 24px;
+        padding: 10px 24px;
     }
 
     .isAllStepsCompleted-content {
@@ -328,6 +332,11 @@
 
     .find-program-sub-box {
         border: none;
+        border-bottom: 2px solid var(--text-color);
+    }
+
+    .find-program-sub-wrapper>.col-md-4:nth-of-type(3) .find-program-sub-box {
+        border: none;
     }
 
     .find-program-third-box-svg {
@@ -386,8 +395,17 @@
         margin-top: 20px;
     }
 
+    .reverse-tab-content-section h2 {
+        margin-top: 0 !important;
+    }
+
     .reverse-tab-content-box .seniors-img {
         width: 100%;
+    }
+
+    .reverse-tab-content-box p {
+        margin-top: 10px;
+        padding: 10px 20px;
     }
 
     .imagine-yourself-section {
@@ -395,14 +413,25 @@
     }
 
     .reverse-tab-content-box {
-        padding: 30px;
-        margin: 10px;
+        padding: 0 !important;
+
+        margin: 0px 10px 0px 10px;
+    }
+
+    .reverse-tab-content-box .seniors-img img {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+
     }
 
     .reverse-tab-content-box .strength {
-        padding: 20px 0;
+        padding: 20px 25px;
     }
 
+    .reverse-tab-content-box .col-md-6 {
+        padding: 0 !important;
+        margin-top: 0 !important;
+    }
 
 
     .reverse-tab-content-box .strength h3 {
@@ -410,9 +439,19 @@
         text-align: center;
     }
 
+    .strength-ad h3 {
+        text-align: left !important;
+    }
+
+    .reverse-tab-content-box .strength-ad p {
+        text-align: left !important;
+    }
+
+
 
     .reverse-tab-content-box .strength p {
-        text-align: center !important;
+        text-align: center;
+        padding: 0 !important;
     }
 
     .reverse-hero-section {
@@ -454,6 +493,10 @@
         width: 50% !important;
     }
 
+    .accordion {
+        display: block;
+    }
+
     .prediabetes-box h3 {
         font-size: 26px !important;
     }
@@ -463,9 +506,30 @@
     }
 
     .prediabetes-row {
-        padding: 30px 18px;
+        padding: 30px 25px;
         margin-right: 10px;
         margin-left: 10px;
+    }
+
+    .prediabetes-row h3 {
+        font-size: 26px !important;
+        text-align: left !important;
+        font-family: 'Futura PT' !important;
+        width: 80%;
+        line-height: 32px !important;
+    }
+
+    .prediabetes-row .col-md-6 {
+        display: none;
+    }
+
+    .prediabetes-three-row .col-md-6 {
+        display: none;
+    }
+
+    .prediabetes-row-two .col-md-6,
+    .prediabetes-three-row-block .col-md-6 {
+        display: block !important;
     }
 
     .prediabetes-three-row {
@@ -481,6 +545,10 @@
 
     .prediabetes-three-box {
         width: 100%;
+    }
+
+    .prediabetes-tab-content-section {
+        padding-top: 30px;
     }
 
     .prediabetes-tab-content-box {
@@ -540,5 +608,9 @@
 
     .select-dropdown-wrapper {
         display: flex !important;
+    }
+
+    .subpageVisit {
+        display: flex;
     }
 }

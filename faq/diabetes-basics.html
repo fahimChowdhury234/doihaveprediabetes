@@ -34,7 +34,7 @@
       </style>
    </head>
 
-   <body>
+   <body id="body">
       <header class="main-header">
          <nav class="navbar navbar-expand-xl bg-transparent text-brand">
             <a class="navbar-brand text-brand" href="../index.html">
@@ -110,6 +110,24 @@
                      <a href="./blood-sugar-glucose.html" class="reverse-tab">Blood suger (glucose)</a>
                   </div>
                </div>
+               <div class="select-dropdown-wrapper">
+                  <div class="select-dropdown">
+                     <button href="#" role="button" data-value="" class="select-dropdown__button">
+                        <span> Diabetes-basics </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                     </button>
+                     <ul class="select-dropdown__list">
+                        <li data-value="1" class="select-dropdown__list-item">
+                           <a href="./prediabetes.html" class="">PREDIABETES</a>
+                        </li>
+                        <li data-value="2" class="select-dropdown__list-item">
+                           <a href="./blood-sugar-glucose.html" class="">Blood suger (glucose)</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
@@ -118,7 +136,7 @@
             <div class="row prediabetes-tab-content-row pt-5">
                <div class="col-md-6">
                   <div class="prediabetes-tab-content-box">
-                     <h3 class="text_40 fw-bold text-brand">What is the difference b etween type 1 diabetes and type 2 diabetes?</h3>
+                     <h3 class="text_40 fw-bold text-brand">What is the difference between type 1 diabetes and type 2 diabetes?</h3>
                      <ul class="font-medium text-brand mt-5 p-0 d-flex flex-column gap-3">
                         <li>
                            Type 1 diabetes is characterized by the body producing minimal or no insulin, typically diagnosed during childhood or adolescence. Individuals with type 1 diabetes rely on
@@ -138,7 +156,7 @@
                   <div class="prediabetes-tab-content-box bg-transparent">
                      <h3 class="text_40 fw-bold text-brand">Is type 1 or type 2 diabetes more common.</h3>
                      <ul class="font-medium text-brand mt-5 p-0 d-flex flex-column gap-3">
-                        <li>ype 2 diabetes makes up about 90% of all diabetes cases.</li>
+                        <li>Type 2 diabetes makes up about 90% of all diabetes cases.</li>
                      </ul>
                   </div>
                </div>
@@ -198,26 +216,99 @@
                      </p>
                   </div>
                </div>
-               <!-- <div class="col-md-12">
-                  <div class="reverse-tab-content-box row">
-                     <div class="col-md-6">
-                        <figure class="seniors-img">
-                           <img src="../assets/img/Seniors.png" alt="" />
-                        </figure>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="strength">
-                           <h3 class="text_40 text-brand fw-bold pb-3">There’s Strength in Numbers</h3>
-                           <p class="text_20 font-medium text-left mt-4">
-                              Join a National Diabetes Prevention Program lifestyle change program today and get more guidance and support. This program teaches you how to make gradual lifestyle
-                              changes that increase your chances of reversing prediabetes. You’ll have access to professional guidance and a community of others on a similar journey to prevent or
-                              delay type 2 diabetes.
-                           </p>
-                           <a href="../find-a-program" class="takeRisk w-50 d-inline-block mt-4 text-center"> Find a program</a>
+               <div class="accordion" id="accordionExample">
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                           <span> What is diabetes?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>Diabetes is a condition characterized by elevated blood sugar levels beyond the normal range</li>
+                              <li>
+                                 In the process of utilizing the food we consume for energy, our body transforms it into sugar. The pancreas, an organ in our body, produces a hormone called insulin to
+                                 facilitate the use of sugar by our bodies
+                              </li>
+                              <li>
+                                 In cases of diabetes, the body faces challenges either in producing sufficient insulin, known as type 1 diabetes, or in utilizing its own insulin effectively, referred
+                                 to as type 2 diabetes. This imbalance leads to an accumulation of sugar in the bloodstream
+                              </li>
+                           </ul>
                         </div>
                      </div>
                   </div>
-               </div> -->
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           <span> How common is diabetes?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                           <p>More than 50 million Americans have diabetes. 1 in 5 of them doesn ’ t know they have it.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           <span> What are the most common long - term complications of type 2 diabetes? </span>
+                        </button>
+                     </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>
+                                 Individuals with type 2 diabetes face an inc reased risk of enduring long - term complications, including heart attack, stroke, kidney failure, blindness, and the
+                                 potential for lower - limb amputation (surgical removal of a toe, foot, or leg).
+                              </li>
+                              <li>Moreover, adults diagnosed with type 2 diabetes confront a 50 percent higher risk of early mortality compared to those without diabetes.</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           <span>Can diabetes lead to death?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <p>Yes. Diabetes is the eighth leading cause of death in the United States.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                           <span> What is the diabetes blood sugar number?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <p>Typically, an A1C level of 6.5 or higher means you have diabetes.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                           <span>Am I at high risk of type 2 diabetes if I have a close family member with it?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <p>
+                              Certain genetic factors may elevate your susceptibility to type 2 diabetes; however, adopting healthy lifestyle changes can often prevent or delay its onset. If you have
+                              a close family member with type 2 diabetes, your risk is higher
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
@@ -227,13 +318,18 @@
                <div class="col-md-12">
                   <div class="reverse-tab-content-box row">
                      <div class="col-md-6">
-                        <div class="strength">
+                        <figure class="seniors-img">
+                           <img src="../assets/img/tinfied-ad/Ad5.png" alt="" />
+                        </figure>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="strength strength-ad">
                            <h3 class="mb-0">Advertisement:</h3>
                            <p class="text_20 font-medium text-left mt-0 mb-0">
                               <strong> A-MTPC - Metabolism Booster and GI Support.</strong> A customized supplement blend with carefully balanced ingredients for maintaining heathy metabolism* ,
                               glucose balance* as well as weight management* for individuals with metabolic concerns*.
                            </p>
-                           <h3 class="mb-0">Benefits</h3>
+                           <h4 class="mb-0">Benefits</h4>
                            <ul>
                               <li>7 Clinically proven compounds</li>
                               <li>No Magnesium Stearate</li>
@@ -246,11 +342,6 @@
                            <a href="https://wellnessbay.xyz/products/%CE%B1-mtpc" class="takeRisk w-50 d-inline-block mt-4 text-center" target="_blank"> Try Risk Free </a>
                         </div>
                      </div>
-                     <div class="col-md-6">
-                        <figure class="seniors-img">
-                           <img src="../assets/img/tinfied-ad/Ad5.png" alt="" />
-                        </figure>
-                     </div>
                   </div>
                </div>
             </div>
@@ -258,10 +349,10 @@
       </section>
       <section class="prediabetes-section-three">
          <div class="container mx-auto">
-            <div class="row prediabetes-three-row">
+            <div class="row prediabetes-three-row prediabetes-three-row-block">
                <div class="col-md-6">
                   <div class="prediabetes-three-box border-bottom-0">
-                     <h2 class="text_64">How can I prevent type 2 diabetes?</h2>
+                     <h2 class="text_64">prevent type 2 diabetes?</h2>
                   </div>
                </div>
                <div class="col-md-6">
@@ -312,12 +403,42 @@
                      </p>
                   </div>
                </div>
+               <div class="accordion" id="accordionExample">
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                           <span> Will I notice symptoms of type 2 diabetes?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                           <p>You may not notice any symptoms. That is why it is important to talk to your doctor.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                           <span> How is type 2 diabetes diagnosed?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                           <p>
+                              Type 2 diabetes is diagnosed using blood tests. These blood tests are the same as those used for prediabetes, A1C, and fasting blood glucose. <br />
+                              Want to be tested for diabetes?
+                              <a target="_blank" href="https://www.cdc.gov/diabetes/basics/getting-tested.html" rel="noreferrer noopener">The CDC has all you need to know.</a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
       <section class="prediabetes-section-three">
          <div class="container mx-auto">
-            <div class="row prediabetes-three-row">
+            <div class="row prediabetes-three-row prediabetes-three-row-block">
                <div class="col-md-6">
                   <div class="prediabetes-three-box">
                      <h3 class="">How is type 2 diabetes treated?</h3>
@@ -328,15 +449,15 @@
                            prescribe insulin and other medications to maintain your blood sugar within the target range, preventing complications.
                         </li>
                         <li>
-                           n this comprehensive approach, it's essential to actively manage not only blood sugar but also blood pressure and cholesterol. Regularly undergoing necessary tests is also a
-                           vital component of maintaining overall health for those with type 2 diabetes
+                           In this comprehensive approach, it's essential to actively manage not only blood sugar but also blood pressure and cholesterol. Regularly undergoing necessary tests is also
+                           a vital component of maintaining overall health for those with type 2 diabetes
                         </li>
                      </ul>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="prediabetes-three-box">
-                     <h3>How can s tress affect type 2 diabetes?</h3>
+                     <h3>How can stress affect type 2 diabetes?</h3>
                      <ul>
                         <li>High stress levels can make dealing with type 2 diabetes harder.</li>
                      </ul>
@@ -427,12 +548,128 @@
                      </ul>
                   </div>
                </div>
+               <div class="accordion" id="accordionExample">
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                           <span> What is gestational diabetes?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>Gestational diabetes is a form of diabetes that may develop in pregnant women who did not have diabetes prior to pregnancy.</li>
+                              <li>Annually, gestational diabetes impacts 2% to 10% of pregnancies in the United States. It is occasionally referred to as GDM</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingTen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                           <span> If I have or had gestational diabetes, am I more likely to get prediabetes or type 2 diabetes?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>
+                                 Experiencing gestational diabetes increases the risk of developing prediab etes and type 2 diabetes in the future. Notably, this risk persists even though gestational
+                                 diabetes commonly resolves after childbirth
+                              </li>
+                              <li>Approximately 50 percent of women who had gestational diabetes later develop type 2 diabetes.</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingEleven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                           <span>What causes gestational diabetes? </span>
+                        </button>
+                     </h2>
+                     <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>
+                                 Gestational diabetes arises when your body struggles to produce sufficient insulin during pregnancy. Throughout pregnancy, hormonal shifts and changes, including
+                                 weight gain, occur.
+                              </li>
+                              <li>
+                                 These alterations lead to decreased effectiveness of insulin in the body's cells, a condition known as insulin resistance. While all pregnant women experience some
+                                 level of insulin resistance in late pregnancy, certain women may already have insulin resistance before becoming pregnan
+                              </li>
+                              <li>Beginning pregnancy with an elev ated need for insulin, these women are more prone to developing gestational diabetes.</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingTwelve">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                           <span> If I have gestational diabetes, how can I lower my risk of prediabetes or type 2 diabetes</span>
+                        </button>
+                     </h2>
+                     <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>Lowering your risk involves prioritizing rest and maintaining a healthy body w eight after giving birth</li>
+                              <li>
+                                 It is advisable to schedule a visit to your doctor for a blood sugar test 6 to 12 weeks postpartum and subsequently every 1 to 3 years to ensure your blood sugar
+                                 levels remain within the target range
+                              </li>
+                              <li>
+                                 For additional information ab out gestational diabetes, you can explore the resources available on the CDC's website <br />
+                                 <a target="_blank" href="https://www.cdc.gov/diabetes/basics/gestational.html" rel="noreferrer noopener" class="">visit the CDC’s website.</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingThirteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                           <span> What is gestational diabetes?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>Gestational diabetes is a form of diabetes that may develop in pregnant women who did not have diabetes prior to pregnancy.</li>
+                              <li>Annually, gestational diabetes impacts 2% to 10% of pregnancies in the United States. It is occasionally referred to as GDM</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingFourteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                           <span> If I have or had gestational diabetes, am I more likely to get prediabetes or type 2 diabetes?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>
+                                 Experiencing gestational diabetes increases the risk of developing prediab etes and type 2 diabetes in the future. Notably, this risk persists even though gestational
+                                 diabetes commonly resolves after childbirth
+                              </li>
+                              <li>Approximately 50 percent of women who had gestational diabetes later develop type 2 diabetes.</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
       <section class="prediabetes-section-three">
          <div class="container mx-auto">
-            <div class="row prediabetes-three-row">
+            <div class="row prediabetes-three-row prediabetes-three-row-block">
                <div class="col-md-6">
                   <div class="prediabetes-three-box prediabetes-three-box-find border-bottom-0">
                      <h2 class="text_64 fw-bold text-brand">Find a National Diabetes Prevention Program Near You?</h2>
@@ -468,7 +705,8 @@
                         <a href="https://www.google.com/" target="_blank">Terms </a>
                      </li>
                      <li>
-                        <a href="https://www.google.com/" target="_blank">Privacy</a>
+                        <a href="https://pastebin.com/dxawUgHW target="_blank">Privacy</a>
+
                      </li>
                      <li>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact </a>
@@ -501,6 +739,11 @@
          </div>
       </footer>
       <!-- js files -->
+      <a class="bottomToTop" href="#body">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+         </svg>
+      </a>
 
       <script
          src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -508,19 +751,17 @@
          crossorigin="anonymous"
       ></script>
 
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script>
-         // Show loading spinner while jQuery is being loaded
-         document.getElementById("loadingSpinner").style.display = "block";
-
-         // Load jQuery
-         var script = document.createElement("script");
-         script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
-         script.onload = function () {
-            // jQuery is loaded, you can now use it
-            document.getElementById("loadingSpinner").style.display = "none";
-            // Your jQuery-dependent code here
-         };
-         document.head.appendChild(script);
+         $(".select-dropdown__button").on("click", function () {
+            $(".select-dropdown__list").toggleClass("active");
+         });
+         $(".select-dropdown__list-item").on("click", function () {
+            var itemValue = $(this).data("value");
+            console.log(itemValue);
+            $(".select-dropdown__button span").text($(this).text()).parent().attr("data-value", itemValue);
+            $(".select-dropdown__list").toggleClass("active");
+         });
       </script>
    </body>
 </html>

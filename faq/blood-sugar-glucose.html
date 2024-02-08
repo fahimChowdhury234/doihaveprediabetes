@@ -34,7 +34,7 @@
       </style>
    </head>
 
-   <body>
+   <body id="body">
       <header class="main-header">
          <nav class="navbar navbar-expand-xl bg-transparent text-brand">
             <a class="navbar-brand text-brand" href="../index.html">
@@ -110,13 +110,31 @@
                      </a>
                   </div>
                </div>
+               <div class="select-dropdown-wrapper">
+                  <div class="select-dropdown">
+                     <button href="#" role="button" data-value="" class="select-dropdown__button">
+                        <span>Blood Sugar (Glucose) </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                     </button>
+                     <ul class="select-dropdown__list">
+                        <li data-value="1" class="select-dropdown__list-item">
+                           <a href="./prediabetes.html" class="">PREDIABETES</a>
+                        </li>
+                        <li data-value="2" class="select-dropdown__list-item">
+                           <a href="./diabetes-basics.html" class="">diabetes-basics</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
 
       <section class="prediabetes-section-two mt-4 pt-4">
          <div class="container mx-auto">
-            <div class="row prediabetes-row mt-0 justify-content-center">
+            <div class="row prediabetes-row prediabetes-row-two mt-0 justify-content-center">
                <div class="col-md-6">
                   <div class="prediabetes-box prediabetes-bloodSugar-box border-bottom-0">
                      <h3 class="text_40">What is blood sugar?</h3>
@@ -151,7 +169,7 @@
                </div>
                <div class="col-md-6">
                   <div class="prediabetes-three-box">
-                     <h3>Are there symptoms of high blood sug ar?</h3>
+                     <h3>Are there symptoms of high blood sugar?</h3>
                      <ul>
                         <li>Signs of high blood sugar may not always be evident, underscoring the importance of discussing your risk for type 2 diabetes with your doctor</li>
                         <li>
@@ -163,7 +181,7 @@
                </div>
                <div class="col-md-6">
                   <div class="prediabetes-three-box">
-                     <h3>What are the effects of high blood suga r?</h3>
+                     <h3>What are the effects of high blood sugar?</h3>
                      <ul>
                         <li>Prolonged high blood sugar levels can lead to severe health complications, including heart disease, vision loss, and kidney disease</li>
                         <li>In the case of diabetes, the body faces challenges either in producing sufficient insulin or utilizing the insulin it pr oduces effectively</li>
@@ -185,6 +203,92 @@
                      </ul>
                   </div>
                </div>
+
+               <div class="accordion" id="accordionExample">
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingFifteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                           <span> What is the normal range for blood sugar?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>A normal level for an A1C test is below 5.7.</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingSixteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                           <span> What is the normal level for blood sugar in a blood glucose test?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>Normal levels for a fasting blood glucose test are 99 mg/dL or below.</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingSeventeen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                           <span> Are there symptoms of high blood sugar?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>Signs of high blood sugar may not always be evident, underscoring the importance of discussing your risk for type 2 diabetes with your doctor</li>
+                              <li>
+                                 Individuals with elevated blood sugar levels may experience symptoms such as blurry vision, increased thirst, fatigue, and frequent urination. However, relying solely
+                                 on symptoms is not a reliable indicator of whether one has type 2 diabetes. It is essential to consult with your doctor for accurate assessment and guidance.
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingEighteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                           <span>What are the effects of high blood sugar? </span>
+                        </button>
+                     </h2>
+                     <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>Prolonged high blood sugar levels can lead to severe health complications, including heart disease, vision loss, and kidney disease</li>
+                              <li>In the case of diabetes, the body faces challenges either in producing sufficient insulin or utilizing the insulin it pr oduces effectively</li>
+                              <li>
+                                 Insulin plays a crucial role in regulating the amount of glucose in your bloodstream at any given time. When there is an insufficient amount of insulin, it results in
+                                 elevated blood sugar levels
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item prediabetes-box">
+                     <h2 class="accordion-header" id="headingNineteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+                           <span> How can you lower your blood sugar?</span>
+                        </button>
+                     </h2>
+                     <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <ul>
+                              <li>
+                                 You can lower your blood sugar (and risk for prediabetes and type 2 diabetes) by making healthy lifestyle changes. These include losing weight, eating healthier, and
+                                 getting regular physical activity. The CDC - led National Diabetes Prevention Program lifestyle change program can help you make healthy changes that last
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
@@ -194,13 +298,18 @@
                <div class="col-md-12">
                   <div class="reverse-tab-content-box row">
                      <div class="col-md-6">
-                        <div class="strength">
+                        <figure class="seniors-img">
+                           <img src="../assets/img/tinfied-ad/Ad4.png" alt="" />
+                        </figure>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="strength strength-ad">
                            <h3 class="mb-0">Advertisement:</h3>
                            <p class="text_20 font-medium text-left mt-0 mb-0">
                               <strong> A-MTPC - Metabolism Booster and GI Support.</strong> A customized supplement blend with carefully balanced ingredients for maintaining heathy metabolism* ,
                               glucose balance* as well as weight management* for individuals with metabolic concerns*.
                            </p>
-                           <h3 class="mb-0">Benefits</h3>
+                           <h4 class="mb-0">Benefits</h4>
                            <ul>
                               <li>7 Clinically proven compounds</li>
                               <li>No Magnesium Stearate</li>
@@ -212,11 +321,6 @@
                            </ul>
                            <a href="https://wellnessbay.xyz/products/%CE%B1-mtpc" class="takeRisk w-50 d-inline-block mt-4 text-center" target="_blank"> Try Risk Free </a>
                         </div>
-                     </div>
-                     <div class="col-md-6">
-                        <figure class="seniors-img">
-                           <img src="../assets/img/tinfied-ad/Ad4.png" alt="" />
-                        </figure>
                      </div>
                   </div>
                </div>
@@ -235,10 +339,11 @@
                <div class="col-md-10 mt-2">
                   <ul class="footer-ul">
                      <li>
-                        <a href="https://www.google.com/" target="_blank">Terms </a>
+                        <a href="https://pastebin.com/9k2Sj7D0" target="_blank">Terms </a>
                      </li>
                      <li>
-                        <a href="https://www.google.com/" target="_blank">Privacy</a>
+                        <a href="https://pastebin.com/dxawUgHW target="_blank">Privacy</a>
+
                      </li>
                      <li>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact </a>
@@ -272,25 +377,27 @@
       </footer>
       <!-- js files -->
 
+      <a class="bottomToTop" href="#body">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+         </svg>
+      </a>
       <script
          src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
          crossorigin="anonymous"
       ></script>
-
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script>
-         // Show loading spinner while jQuery is being loaded
-         document.getElementById("loadingSpinner").style.display = "block";
-
-         // Load jQuery
-         var script = document.createElement("script");
-         script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
-         script.onload = function () {
-            // jQuery is loaded, you can now use it
-            document.getElementById("loadingSpinner").style.display = "none";
-            // Your jQuery-dependent code here
-         };
-         document.head.appendChild(script);
+         $(".select-dropdown__button").on("click", function () {
+            $(".select-dropdown__list").toggleClass("active");
+         });
+         $(".select-dropdown__list-item").on("click", function () {
+            var itemValue = $(this).data("value");
+            console.log(itemValue);
+            $(".select-dropdown__button span").text($(this).text()).parent().attr("data-value", itemValue);
+            $(".select-dropdown__list").toggleClass("active");
+         });
       </script>
    </body>
 </html>
