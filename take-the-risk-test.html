@@ -1,99 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="google" content="notranslate" />
+      <title>Take the prediabetes test</title>
+      <!-- Font Link -->
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta name="google" content="notranslate" />
-   <title>Take the prediabetes test</title>
-   <!-- Font Link -->
-   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+      <!-- bootstrap link -->
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+         crossorigin="anonymous"
+      />
 
-   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-   <!-- bootstrap link -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+      <!--  coustom css -->
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="./responsive.css" />
+   </head>
 
-   <!--  coustom css -->
-   <link rel="stylesheet" href="./style.css" />
-   <link rel="stylesheet" href="./responsive.css" />
-   <style>
-      #loadingSpinner {
-         display: none;
-         position: fixed;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         z-index: 1000;
-      }
-   </style>
-</head>
-
-<body id="body">
-   <header class="main-header">
-      <nav class="navbar navbar-expand-xl bg-transparent text-brand">
-         <a class="navbar-brand text-brand" href="./index.html">
-            <h2 class="text-logo">what's prediabetes</h2>
-         </a>
-         <button class="navbar-toggler bg-transparent text-black px-3 py-2" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30px" viewBox="0 0 24 24" stroke-width="1.5"
-               stroke="currentColor" class="w-6 h-6">
-               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-         </button>
-         <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-               <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <ul class="navbar-nav mb-2 mb-lg-0 gap-4 text-uppercase">
-                     <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="./index.html" target="_self" title="">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="./find-a-program.html" target="_self" title="">Find a Program</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="./reverse-prediabetes/manage-weight.html" target="_self"
-                           title="">Reverse Prediabetes</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../faq/prediabetes.html" target="_self" title="">Frequently Asked
-                           Questions</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="takeRisk" href="./take-the-risk-test.html" target="_self" title="">Take the Risk
-                           Test</a>
-                     </li>
-                  </ul>
+   <body id="body">
+      <header class="main-header">
+         <nav class="navbar navbar-expand-xl bg-transparent text-brand">
+            <a class="navbar-brand text-brand" href="./index.html">
+               <h2 class="text-logo">what's prediabetes</h2>
+            </a>
+            <button
+               class="navbar-toggler bg-transparent text-black px-3 py-2"
+               type="button"
+               data-bs-toggle="offcanvas"
+               data-bs-target="#navbarOffcanvas"
+               aria-controls="navbarOffcanvas"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+            >
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="30px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+               </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+               <div class="offcanvas-header">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+               </div>
+               <div class="offcanvas-body">
+                  <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                     <ul class="navbar-nav mb-2 mb-lg-0 gap-4 text-uppercase">
+                        <li class="nav-item d-lg-none">
+                           <a class="nav-link" href="./index.html" target="_self" title="">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="./find-a-program.html" target="_self" title="">Find a Program</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="./reverse-prediabetes/manage-weight.html" target="_self" title="">Reverse Prediabetes</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../faq/prediabetes.html" target="_self" title="">Frequently Asked Questions</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="takeRisk" href="./take-the-risk-test.html" target="_self" title="">Take the Risk Test</a>
+                        </li>
+                     </ul>
+                  </div>
                </div>
             </div>
-         </div>
-      </nav>
-   </header>
+         </nav>
+      </header>
 
-   <div id="loadingSpinner">Loading...</div>
-   <section class="step-from-section" id="app">
-      <div class="container mx-auto">
-         <div class="row justify-content-center">
-            <div class="col-lg-11">
-               <div class="step-from-wrapper">
-                  <div class="step-from__left-side">
-                     <div class="text">
-                        <h1>Take the Risk Test</h1>
+      <section class="step-from-section" id="app">
+         <div class="container mx-auto">
+            <div class="row justify-content-center">
+               <div class="col-lg-11">
+                  <div class="step-from-wrapper">
+                     <div class="step-from__left-side">
+                        <div class="text">
+                           <h1>Take the Risk Test</h1>
+                        </div>
+                        <div class="hash-repect"></div>
                      </div>
-                     <div class="hash-repect"></div>
-                  </div>
 
-                  <div v-if="isAllStepsCompleted && activeStep > 7" class="isAllStepsCompleted">
-                     <!-- Display your message here -->
-                     <div class="isAllStepsCompleted-bar">
-                        <h1>YOUR RISK TEST RESULTS</h1>
-                        <!-- <button @click.prevent="goToPreviousStep">
+                     <div v-if="isAllStepsCompleted && activeStep > 7" class="isAllStepsCompleted">
+                        <!-- Display your message here -->
+                        <div class="isAllStepsCompleted-bar">
+                           <h1>YOUR RISK TEST RESULTS</h1>
+                           <!-- <button @click.prevent="goToPreviousStep">
                               <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                  <g clip-path="url(#a)">
                                     <path
@@ -111,267 +104,246 @@
 
                               Go back
                            </button> -->
-                     </div>
-                     <div class="isAllStepsCompleted-content d-flex">
-                        <div class="isAllStepsCompleted-content__left--wrapper">
-                           <div
-                              class="isAllStepsCompleted-content__left d-flex justify-content-center align-items-center flex-column">
-                              <h3>Your Risk Level</h3>
-                              <svg width="48" height="2" viewBox="0 0 48 2" fill="none">
-                                 <rect width="48" height="2" fill="currentColor"></rect>
-                              </svg>
-                              <span class="totalScore">{{totalScore}}</span>
-                              <span class="">out of 10</span>
-                           </div>
                         </div>
-                        <div class="isAllStepsCompleted-content__right--wrapper">
-                           <div class="isAllStepsCompleted-content__right">
-                              <div v-if="totalScore >=5">
-                                 <h3>You’re at high risk and likely to have prediabetes.</h3>
-                                 <p>                                       
-                                 You are at a high risk, indicating a likelihood of having prediabetes. These results suggest a heightened risk for type 2 diabetes. It's crucial to note that only your doctor can provide a definitive diagnosis of diabetes or prediabetes.
-                                 <br> <br>
-                                 Rather than waiting for symptoms to arise, it's advisable to take proactive measures now. Email a copy of the detailed results to yourself.  <br><br>
-                                 Share these results with your doctor and request a straightforward blood test to confirm the presence of prediabetes. Collaborate with your doctor to develop an action plan and take immediate steps toward addressing this risk.
-                                 </p>
-                              </div>
-                              <div v-else>
-                                 <h3> You’re at low risk for prediabetes.
-                                 </h3>
-                                 <p>
-                                    You're currently at a low risk for prediabetes. Your efforts to date have been
-                                    effective.
-                                    <br />
-                                    <br />
-                                    Keep up the positive momentum by incorporating more physical activity into your
-                                    daily routine and making healthier food choices.
-                                    <br />
-                                    <br />
-                                    Remember, only your doctor can provide a definitive diagnosis of diabetes or
-                                    prediabetes. If you remain concerned about prediabetes, consider sharing your risk
-                                    test results with your doctor and requesting a simple blood test for confirmation.
-                                    <br />
-                                    <br />
-                                    Drop in your email below to get a detailed test result
-                                 </p>
-                              </div>
-                              <a href="./reverse-prediabetes/manage-weight.html" class="tips-btn"
-                                 v-if="totalScore > 5">See tips</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="step-from__right-side" v-else>
-                     <div class="d-none justify-content-between align-items-center p-4 sr-step-counter">
-                        <h1 class="text_16 font-semibold text-brand text-uppercase">Take the Risk Test</h1>
-                        <p class="text_16 font-semibold text-brand text-uppercase">Step {{activeStep}} out of 7</p>
-                     </div>
-                     <div class="step-from__progress-bar position-relative">
-                        <ul>
-                           <li v-for=" step in stepData" :key="'step'+ step.id" class=" ">
-                              <!-- current -->
-                              <div class="hideden indicator" :class="{'active': step.id === activeStep}">
-                                 <svg width="29" height="17" viewBox="0 0 29 17" fill="none" aria-hidden="true"
-                                    class="">
-                                    <path d="M14.1256 17L0.00129085 -2.46958e-06L28.25 0L14.1256 17Z" fill="#171717">
-                                    </path>
+                        <div class="isAllStepsCompleted-content d-flex">
+                           <div class="isAllStepsCompleted-content__left--wrapper">
+                              <div class="isAllStepsCompleted-content__left d-flex justify-content-center align-items-center flex-column">
+                                 <h3>Your Risk Level</h3>
+                                 <svg width="48" height="2" viewBox="0 0 48 2" fill="none">
+                                    <rect width="48" height="2" fill="currentColor"></rect>
                                  </svg>
+                                 <span class="totalScore">{{totalScore}}</span>
+                                 <span class="">out of 10</span>
                               </div>
-
-                              <span class="steplable"> {{step.label}} </span>
-                              <span class="mt-2 h-6 w-6 z-10">
-                                 <div class="hideden" :class="{'active': step.id === activeStep}">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <circle cx="12" cy="12" r="11" fill="#fff" stroke="#171717" stroke-width="2">
-                                       </circle>
-                                       <circle cx="12" cy="12" r="4" fill="#171717"></circle>
-                                    </svg>
-                                 </div>
-
-                                 <div class="hideden" :class="{ 'incompleted': step.id > activeStep }">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <circle cx="12" cy="12" r="11" fill="#fff" stroke="#171717" stroke-width="2">
-                                       </circle>
-                                    </svg>
-                                 </div>
-                                 <div class="hideden" :class="{ 'completed': step.id < activeStep}">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <circle cx="12" cy="12" r="12" fill="#171717"></circle>
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M18.4774 9.14417L16.9175 7.58789L10.364 14.1266L7.55982 11.3288L6 12.885L10.3694 17.2445L11.9292 15.6882L11.9238 15.6829L18.4774 9.14417Z"
-                                          fill="#fff"></path>
-                                    </svg>
-                                 </div>
-                              </span>
-                           </li>
-                        </ul>
-                     </div>
-                     <form action="#" class="step-main-form">
-                        <div class="step-form__wrapper" v-for="field in activeStepFields" :key="field.id"
-                           :key="'field'+field.id">
-                           <div class="step-form__img">
-                              <img :src="field.img" alt="" />
                            </div>
-                           <div class="step-form__container">
-                              <div class="step-form__content">
-                                 <h2>{{ field.title }}</h2>
-                                 <p>{{ field.content }}</p>
+                           <div class="isAllStepsCompleted-content__right--wrapper">
+                              <div class="isAllStepsCompleted-content__right">
+                                 <div v-if="totalScore >=5">
+                                    <h3>You’re at high risk and likely to have prediabetes.</h3>
+                                    <p>
+                                       You are at a high risk, indicating a likelihood of having prediabetes. These results suggest a heightened risk for type 2 diabetes. It's crucial to note that
+                                       only your doctor can provide a definitive diagnosis of diabetes or prediabetes.
+                                       <br />
+                                       <br />
+                                       Rather than waiting for symptoms to arise, it's advisable to take proactive measures now. Email a copy of the detailed results to yourself. <br /><br />
+                                       Share these results with your doctor and request a straightforward blood test to confirm the presence of prediabetes. Collaborate with your doctor to develop an
+                                       action plan and take immediate steps toward addressing this risk.
+                                    </p>
+                                 </div>
+                                 <div v-else>
+                                    <h3>You’re at low risk for prediabetes.</h3>
+                                    <p>
+                                       You're currently at a low risk for prediabetes. Your efforts to date have been effective.
+                                       <br />
+                                       <br />
+                                       Keep up the positive momentum by incorporating more physical activity into your daily routine and making healthier food choices.
+                                       <br />
+                                       <br />
+                                       Remember, only your doctor can provide a definitive diagnosis of diabetes or prediabetes. If you remain concerned about prediabetes, consider sharing your risk
+                                       test results with your doctor and requesting a simple blood test for confirmation.
+                                       <br />
+                                       <br />
+                                       Drop in your email below to get a detailed test result
+                                    </p>
+                                 </div>
+                                 <a href="./reverse-prediabetes/manage-weight.html" class="tips-btn" v-if="totalScore > 5">See tips</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
 
-                                 <div class="step-form__option row">
-                                    <!-- Render main options -->
-                                    <div class="button col-md-6" v-for="option in field.options" :key="option.id">
-                                       <input type="radio" :id="option.id" :value="option.value"
-                                          @change="handleOptionChange(option)" v-model="field.value"
-                                          :name="'mainOption-' + field.id" />
-                                       <label :for="option.id">{{ option.label }}</label>
+                     <div class="step-from__right-side" v-else>
+                        <div class="d-none justify-content-between align-items-center p-4 sr-step-counter">
+                           <h1 class="text_16 font-semibold text-brand text-uppercase">Take the Risk Test</h1>
+                           <p class="text_16 font-semibold text-brand text-uppercase">Step {{activeStep}} out of 7</p>
+                        </div>
+                        <div class="step-from__progress-bar position-relative">
+                           <ul>
+                              <li v-for=" step in stepData" :key="'step'+ step.id" class=" ">
+                                 <!-- current -->
+                                 <div class="hideden indicator" :class="{'active': step.id === activeStep}">
+                                    <svg width="29" height="17" viewBox="0 0 29 17" fill="none" aria-hidden="true" class="">
+                                       <path d="M14.1256 17L0.00129085 -2.46958e-06L28.25 0L14.1256 17Z" fill="#171717"></path>
+                                    </svg>
+                                 </div>
+
+                                 <span class="steplable"> {{step.label}} </span>
+                                 <span class="mt-2 h-6 w-6 z-10">
+                                    <div class="hideden" :class="{'active': step.id === activeStep}">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <circle cx="12" cy="12" r="11" fill="#fff" stroke="#171717" stroke-width="2"></circle>
+                                          <circle cx="12" cy="12" r="4" fill="#171717"></circle>
+                                       </svg>
                                     </div>
 
-                                    <!-- Render womanSubOptions based on the selected main option -->
-                                    <div v-if="field.value === 'Woman'" class="py-2 my-2">
-                                       <h2 class="mb-3">Have you ever been diagnosed with gestational diabetes?</h2>
-                                       <p>
-                                          Gestational diabetes is a type of diabetes that develops in women during
-                                          pregnancy. It usually goes away after pregnancy, but women who have had
-                                          gestational diabetes have an increased risk of developing type 2 diabetes.
-                                       </p>
+                                    <div class="hideden" :class="{ 'incompleted': step.id > activeStep }">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <circle cx="12" cy="12" r="11" fill="#fff" stroke="#171717" stroke-width="2"></circle>
+                                       </svg>
                                     </div>
-                                    <div v-if="field.value === 'Woman'" class="womanSubOptionbutton row">
-                                       <div
-                                          v-for="womanSubOption in field.options.find(opt => opt.value === 'Woman').womanSub"
-                                          :key="womanSubOption.id" class="col-md-6">
-                                          <input type="radio" :id="womanSubOption.id" :value="womanSubOption.value"
-                                             v-model="field.womanSubValue" :name="'womanSubOption-' + field.id" />
-                                          <label :for="womanSubOption.id">{{ womanSubOption.label }}</label>
+                                    <div class="hideden" :class="{ 'completed': step.id < activeStep}">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <circle cx="12" cy="12" r="12" fill="#171717"></circle>
+                                          <path
+                                             fill-rule="evenodd"
+                                             clip-rule="evenodd"
+                                             d="M18.4774 9.14417L16.9175 7.58789L10.364 14.1266L7.55982 11.3288L6 12.885L10.3694 17.2445L11.9292 15.6882L11.9238 15.6829L18.4774 9.14417Z"
+                                             fill="#fff"
+                                          ></path>
+                                       </svg>
+                                    </div>
+                                 </span>
+                              </li>
+                           </ul>
+                        </div>
+                        <form action="#" class="step-main-form">
+                           <div class="step-form__wrapper" v-for="field in activeStepFields" :key="field.id" :key="'field'+field.id">
+                              <div class="step-form__img">
+                                 <img :src="field.img" alt="" />
+                              </div>
+                              <div class="step-form__container">
+                                 <div class="step-form__content">
+                                    <h2>{{ field.title }}</h2>
+                                    <p>{{ field.content }}</p>
+
+                                    <div class="step-form__option row">
+                                       <!-- Render main options -->
+                                       <div class="button col-md-6" v-for="option in field.options" :key="option.id">
+                                          <input type="radio" :id="option.id" :value="option.value" @change="handleOptionChange(option)" v-model="field.value" :name="'mainOption-' + field.id" />
+                                          <label :for="option.id">{{ option.label }}</label>
                                        </div>
-                                    </div>
-                                    <div v-if="activeStep === 7" class="heightOptions">
-                                       <div style="color: black">
-                                          <!-- <input type="radio" :id="h.id" :value="h.label"
+
+                                       <!-- Render womanSubOptions based on the selected main option -->
+                                       <div v-if="field.value === 'Woman'" class="py-2 my-2">
+                                          <h2 class="mb-3">Have you ever been diagnosed with gestational diabetes?</h2>
+                                          <p>
+                                             Gestational diabetes is a type of diabetes that develops in women during pregnancy. It usually goes away after pregnancy, but women who have had
+                                             gestational diabetes have an increased risk of developing type 2 diabetes.
+                                          </p>
+                                       </div>
+                                       <div v-if="field.value === 'Woman'" class="womanSubOptionbutton row">
+                                          <div v-for="womanSubOption in field.options.find(opt => opt.value === 'Woman').womanSub" :key="womanSubOption.id" class="col-md-6">
+                                             <input type="radio" :id="womanSubOption.id" :value="womanSubOption.value" v-model="field.womanSubValue" :name="'womanSubOption-' + field.id" />
+                                             <label :for="womanSubOption.id">{{ womanSubOption.label }}</label>
+                                          </div>
+                                       </div>
+                                       <div v-if="activeStep === 7" class="heightOptions">
+                                          <div style="color: black">
+                                             <!-- <input type="radio" :id="h.id" :value="h.label"
                                                             v-model="field.heightValue"
                                                             :name="'heightOption-' + field.id" />
                                                         <label :for="h.id">{{ h.label }}</label> -->
-                                          <div class="selectHeight mb-4">
-                                             <label for="heightSelect " class="hideden">Select Height:</label>
-                                             <select v-model="field.heightValue" class="form-select"
-                                                :class="{ 'selectdBg': field.heightValue}" id="heightSelect"
-                                                aria-label="Select Height">
-                                                <option value="" disabled>Select a height</option>
-                                                <option v-for="h in height" :key="h.id" :value="h.label">{{ h.label }}
-                                                </option>
-                                             </select>
-                                          </div>
+                                             <div class="selectHeight mb-4">
+                                                <label for="heightSelect " class="hideden">Select Height:</label>
+                                                <select v-model="field.heightValue" class="form-select" :class="{ 'selectdBg': field.heightValue}" id="heightSelect" aria-label="Select Height">
+                                                   <option value="" disabled>Select a height</option>
+                                                   <option v-for="h in height" :key="h.id" :value="h.label">{{ h.label }}</option>
+                                                </select>
+                                             </div>
 
-                                          <!-- Render weight options based on the selected height -->
-                                          <div v-if="field.heightValue" class="selectWeight">
-                                             <label for="weightSelect " class="hideden">Select Weight:</label>
-                                             <select v-model="field.weightValue" class="form-select"
-                                                @change="handelSelect(field)" :class="{ 'selectdBg': field.weightValue}"
-                                                id="weightSelect" aria-label="Select Weight">
-                                                <option value="" disabled>Select a weight</option>
-                                                <option v-for="option in getFieldOptions(field.heightValue)"
-                                                   :key="option.id" :value="option.value">{{ option.label }}</option>
-                                             </select>
+                                             <!-- Render weight options based on the selected height -->
+                                             <div v-if="field.heightValue" class="selectWeight">
+                                                <label for="weightSelect " class="hideden">Select Weight:</label>
+                                                <select
+                                                   v-model="field.weightValue"
+                                                   class="form-select"
+                                                   @change="handelSelect(field)"
+                                                   :class="{ 'selectdBg': field.weightValue}"
+                                                   id="weightSelect"
+                                                   aria-label="Select Weight"
+                                                >
+                                                   <option value="" disabled>Select a weight</option>
+                                                   <option v-for="option in getFieldOptions(field.heightValue)" :key="option.id" :value="option.value">{{ option.label }}</option>
+                                                </select>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                              </div>
 
-                              <div class="controler">
-                                 <button type="button" v-if="activeStep > 1" class="previous"
-                                    @click.prevent="previousStep">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <g clip-path="url(#clip0_268_3926)">
-                                          <path
-                                             d="M12.1125 16.5L9.18001 16.5C8.88165 16.5 8.5955 16.3815 8.38452 16.1705C8.17354 15.9595 8.05501 15.6734 8.05501 15.375C8.05501 15.0766 8.17354 14.7905 8.38452 14.5795C8.5955 14.3685 8.88165 14.25 9.18001 14.25L12.1125 14.25C13.0496 14.2075 13.9343 13.8052 14.5824 13.127C15.2305 12.4488 15.5922 11.5468 15.5922 10.6087C15.5922 9.67065 15.2305 8.76867 14.5824 8.09046C13.9343 7.41226 13.0496 7.01004 12.1125 6.9675L5.36251 6.9675C5.31278 6.9675 5.26509 6.98725 5.22993 7.02242C5.19477 7.05758 5.17501 7.10527 5.17501 7.155L5.17501 9.5475C5.17588 9.69647 5.13236 9.84232 5.05001 9.96646C4.96766 10.0906 4.85021 10.1874 4.71262 10.2445C4.57504 10.3017 4.42356 10.3165 4.2775 10.2872C4.13144 10.2579 3.99742 10.1858 3.89251 10.08L0.217512 6.4125C0.148001 6.34242 0.0930067 6.25931 0.0556832 6.16793C0.0183598 6.07655 -0.000559054 5.97871 1.16073e-05 5.88C0.000840056 5.68325 0.0789535 5.49469 0.217512 5.355L3.88501 1.6875C3.95509 1.61799 4.0382 1.56299 4.12958 1.52567C4.22096 1.48835 4.31881 1.46943 4.41751 1.47C4.51356 1.46159 4.61032 1.47177 4.70251 1.5C4.84934 1.55981 4.97344 1.66462 5.05699 1.79937C5.14053 1.93412 5.17923 2.09189 5.16751 2.25L5.16751 4.5675C5.16751 4.61723 5.18727 4.66492 5.22243 4.70008C5.25759 4.73525 5.30528 4.755 5.35501 4.755L12.105 4.755C13.5738 4.88275 14.9415 5.55628 15.9382 6.64273C16.9349 7.72918 17.4883 9.14969 17.4892 10.6241C17.4902 12.0984 16.9386 13.5196 15.9433 14.6074C14.948 15.6951 13.5812 16.3704 12.1125 16.5Z"
-                                             fill="#171717"></path>
-                                       </g>
-                                       <defs>
-                                          <clipPath id="clip0_268_3926">
-                                             <rect width="18" height="18" fill="white"
-                                                transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 0 18)"></rect>
-                                          </clipPath>
-                                       </defs>
-                                    </svg>
-                                    Previous
-                                 </button>
-                                 <button type="submit" class="next-btn" @click.prevent="nextStep"
-                                    :disabled="isNextDisabled && isNextButtonEnabled ">
-                                    Next
-                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <g clip-path="url(#clip0_795_228)">
-                                          <path
-                                             d="M6.54165 16.5L9.79999 16.5C10.1315 16.5 10.4494 16.3815 10.6839 16.1705C10.9183 15.9595 11.05 15.6734 11.05 15.375C11.05 15.0766 10.9183 14.7905 10.6839 14.5795C10.4494 14.3685 10.1315 14.25 9.79999 14.25L6.54165 14.25C5.5004 14.2075 4.51745 13.8052 3.79732 13.127C3.07719 12.4488 2.67532 11.5468 2.67532 10.6087C2.67532 9.67065 3.07719 8.76867 3.79732 8.09046C4.51745 7.41226 5.5004 7.01004 6.54165 6.9675L14.0417 6.9675C14.0969 6.9675 14.1499 6.98725 14.189 7.02242C14.228 7.05758 14.25 7.10527 14.25 7.155L14.25 9.5475C14.249 9.69647 14.2974 9.84232 14.3889 9.96646C14.4804 10.0906 14.6109 10.1874 14.7638 10.2445C14.9166 10.3017 15.0849 10.3165 15.2472 10.2872C15.4095 10.2579 15.5584 10.1858 15.675 10.08L19.7583 6.4125C19.8356 6.34242 19.8967 6.25931 19.9381 6.16793C19.9796 6.07655 20.0006 5.97871 20 5.88C19.9991 5.68325 19.9123 5.49469 19.7583 5.355L15.6833 1.6875C15.6055 1.61799 15.5131 1.56299 15.4116 1.52567C15.31 1.48835 15.2013 1.46943 15.0917 1.47C14.9849 1.46159 14.8774 1.47177 14.775 1.5C14.6118 1.55981 14.474 1.66462 14.3811 1.79937C14.2883 1.93412 14.2453 2.09189 14.2583 2.25L14.2583 4.5675C14.2583 4.61723 14.2364 4.66492 14.1973 4.70008C14.1582 4.73525 14.1052 4.755 14.05 4.755L6.54999 4.755C4.91795 4.88275 3.39835 5.55628 2.29091 6.64273C1.18346 7.72918 0.568581 9.14969 0.567536 10.6241C0.566489 12.0984 1.17936 13.5196 2.28526 14.6074C3.39116 15.6951 4.9098 16.3704 6.54165 16.5Z"
-                                             fill="#171717"></path>
-                                       </g>
-                                       <defs>
-                                          <clipPath id="clip0_795_228">
-                                             <rect width="20" height="18" fill="white"
-                                                transform="translate(20 18) rotate(-180)"></rect>
-                                          </clipPath>
-                                       </defs>
-                                    </svg>
-                                 </button>
+                                 <div class="controler">
+                                    <button type="button" v-if="activeStep > 1" class="previous" @click.prevent="previousStep">
+                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g clip-path="url(#clip0_268_3926)">
+                                             <path
+                                                d="M12.1125 16.5L9.18001 16.5C8.88165 16.5 8.5955 16.3815 8.38452 16.1705C8.17354 15.9595 8.05501 15.6734 8.05501 15.375C8.05501 15.0766 8.17354 14.7905 8.38452 14.5795C8.5955 14.3685 8.88165 14.25 9.18001 14.25L12.1125 14.25C13.0496 14.2075 13.9343 13.8052 14.5824 13.127C15.2305 12.4488 15.5922 11.5468 15.5922 10.6087C15.5922 9.67065 15.2305 8.76867 14.5824 8.09046C13.9343 7.41226 13.0496 7.01004 12.1125 6.9675L5.36251 6.9675C5.31278 6.9675 5.26509 6.98725 5.22993 7.02242C5.19477 7.05758 5.17501 7.10527 5.17501 7.155L5.17501 9.5475C5.17588 9.69647 5.13236 9.84232 5.05001 9.96646C4.96766 10.0906 4.85021 10.1874 4.71262 10.2445C4.57504 10.3017 4.42356 10.3165 4.2775 10.2872C4.13144 10.2579 3.99742 10.1858 3.89251 10.08L0.217512 6.4125C0.148001 6.34242 0.0930067 6.25931 0.0556832 6.16793C0.0183598 6.07655 -0.000559054 5.97871 1.16073e-05 5.88C0.000840056 5.68325 0.0789535 5.49469 0.217512 5.355L3.88501 1.6875C3.95509 1.61799 4.0382 1.56299 4.12958 1.52567C4.22096 1.48835 4.31881 1.46943 4.41751 1.47C4.51356 1.46159 4.61032 1.47177 4.70251 1.5C4.84934 1.55981 4.97344 1.66462 5.05699 1.79937C5.14053 1.93412 5.17923 2.09189 5.16751 2.25L5.16751 4.5675C5.16751 4.61723 5.18727 4.66492 5.22243 4.70008C5.25759 4.73525 5.30528 4.755 5.35501 4.755L12.105 4.755C13.5738 4.88275 14.9415 5.55628 15.9382 6.64273C16.9349 7.72918 17.4883 9.14969 17.4892 10.6241C17.4902 12.0984 16.9386 13.5196 15.9433 14.6074C14.948 15.6951 13.5812 16.3704 12.1125 16.5Z"
+                                                fill="#171717"
+                                             ></path>
+                                          </g>
+                                          <defs>
+                                             <clipPath id="clip0_268_3926">
+                                                <rect width="18" height="18" fill="white" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 0 18)"></rect>
+                                             </clipPath>
+                                          </defs>
+                                       </svg>
+                                       Previous
+                                    </button>
+                                    <button type="submit" class="next-btn" @click.prevent="nextStep" :disabled="isNextDisabled && isNextButtonEnabled ">
+                                       Next
+                                       <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g clip-path="url(#clip0_795_228)">
+                                             <path
+                                                d="M6.54165 16.5L9.79999 16.5C10.1315 16.5 10.4494 16.3815 10.6839 16.1705C10.9183 15.9595 11.05 15.6734 11.05 15.375C11.05 15.0766 10.9183 14.7905 10.6839 14.5795C10.4494 14.3685 10.1315 14.25 9.79999 14.25L6.54165 14.25C5.5004 14.2075 4.51745 13.8052 3.79732 13.127C3.07719 12.4488 2.67532 11.5468 2.67532 10.6087C2.67532 9.67065 3.07719 8.76867 3.79732 8.09046C4.51745 7.41226 5.5004 7.01004 6.54165 6.9675L14.0417 6.9675C14.0969 6.9675 14.1499 6.98725 14.189 7.02242C14.228 7.05758 14.25 7.10527 14.25 7.155L14.25 9.5475C14.249 9.69647 14.2974 9.84232 14.3889 9.96646C14.4804 10.0906 14.6109 10.1874 14.7638 10.2445C14.9166 10.3017 15.0849 10.3165 15.2472 10.2872C15.4095 10.2579 15.5584 10.1858 15.675 10.08L19.7583 6.4125C19.8356 6.34242 19.8967 6.25931 19.9381 6.16793C19.9796 6.07655 20.0006 5.97871 20 5.88C19.9991 5.68325 19.9123 5.49469 19.7583 5.355L15.6833 1.6875C15.6055 1.61799 15.5131 1.56299 15.4116 1.52567C15.31 1.48835 15.2013 1.46943 15.0917 1.47C14.9849 1.46159 14.8774 1.47177 14.775 1.5C14.6118 1.55981 14.474 1.66462 14.3811 1.79937C14.2883 1.93412 14.2453 2.09189 14.2583 2.25L14.2583 4.5675C14.2583 4.61723 14.2364 4.66492 14.1973 4.70008C14.1582 4.73525 14.1052 4.755 14.05 4.755L6.54999 4.755C4.91795 4.88275 3.39835 5.55628 2.29091 6.64273C1.18346 7.72918 0.568581 9.14969 0.567536 10.6241C0.566489 12.0984 1.17936 13.5196 2.28526 14.6074C3.39116 15.6951 4.9098 16.3704 6.54165 16.5Z"
+                                                fill="#171717"
+                                             ></path>
+                                          </g>
+                                          <defs>
+                                             <clipPath id="clip0_795_228">
+                                                <rect width="20" height="18" fill="white" transform="translate(20 18) rotate(-180)"></rect>
+                                             </clipPath>
+                                          </defs>
+                                       </svg>
+                                    </button>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-                     </form>
+                        </form>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-         <!-- if result score 5 or gatter then 5 -->
-         <div v-if="isAllStepsCompleted && totalScore > 5 && activeStep > 7">
-            <div class="container mx-auto">
-               <div class="row rq-section-results-row">
-                  <div class="col-md-6">
-                     <div class="rq-section-results-left-box">
-                        <h3>What should I do now?</h3>
-                        <p>
-                           Remember that with early diagnosis, prediabetes can often be reversed.
-                           <br />
-                           <br />
-                           Talk to your doctor about your interest in joining a CDC-recognized National Diabetes
-                           Prevention Program lifestyle change program, which is a scientifically proven way to
-                           reverse prediabetes.
-                           <br />
-                           <br />
+            <!-- if result score 5 or gatter then 5 -->
+            <div v-if="isAllStepsCompleted && totalScore > 5 && activeStep > 7">
+               <div class="container mx-auto">
+                  <div class="row rq-section-results-row">
+                     <div class="col-md-6">
+                        <div class="rq-section-results-left-box">
+                           <h3>What should I do now?</h3>
+                           <p>
+                              Remember that with early diagnosis, prediabetes can often be reversed.
+                              <br />
+                              <br />
+                              Talk to your doctor about your interest in joining a CDC-recognized National Diabetes Prevention Program lifestyle change program, which is a scientifically proven way to
+                              reverse prediabetes.
+                              <br />
+                              <br />
 
-                           And if you can’t join the meetings in person, that’s okay, because you can join an online
-                           program.
-                        </p>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="">
-                        <div class="col-md-12">
-                           <div class="mb-5 rq-section-results-right-box-child">
-                              <h3>Need to reverse prediabetes?</h3>
-                              <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html"
-                                 class="takeRisk w-50 d-inline-block mt-4 text-center"> Find a program</a>
-                           </div>
+                              And if you can’t join the meetings in person, that’s okay, because you can join an online program.
+                           </p>
                         </div>
-                        <div class="col-md-12">
-                           <div class="row rq-section-results-right-box-child border-bottom-0">
-                              <div class="col-md-6 noopener">
-                                 <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html" target="_blank"
-                                    rel="noopener">
-                                    <img src="./assets/img/tinified_Find_Program/Nurse01.png" alt="" class="w-100" />
-                                    <h4>Work with trained professionals</h4>
-                                 </a>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="">
+                           <div class="col-md-12">
+                              <div class="mb-5 rq-section-results-right-box-child">
+                                 <h3>Need to reverse prediabetes?</h3>
+                                 <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html" class="takeRisk w-50 d-inline-block mt-4 text-center"> Find a program</a>
                               </div>
-                              <div class="col-md-6 noopener">
-                                 <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html">
-                                    <img src="./assets/img/tinified_Find_Program/Local_online.png" alt=""
-                                       class="w-100" />
-                                    <h4>Find an in-person or online program</h4>
-                                 </a>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="row rq-section-results-right-box-child border-bottom-0">
+                                 <div class="col-md-6 noopener">
+                                    <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html" target="_blank" rel="noopener">
+                                       <img src="./assets/img/tinified_Find_Program/Nurse01.png" alt="" class="w-100" />
+                                       <h4>Work with trained professionals</h4>
+                                    </a>
+                                 </div>
+                                 <div class="col-md-6 noopener">
+                                    <a href="https://www.cdc.gov/diabetes/prevention/find-a-program.html">
+                                       <img src="./assets/img/tinified_Find_Program/Local_online.png" alt="" class="w-100" />
+                                       <h4>Find an in-person or online program</h4>
+                                    </a>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -379,125 +351,123 @@
                   </div>
                </div>
             </div>
-         </div>
-         <div class="row justify-content-center" v-if="isAllStepsCompleted && activeStep > 7">
-            <div class="col-md-9">
-               <div class="d-flex align-items-center justify-content-around flex-column erbyd">
-                  <h3>Email yourself a detailed copy of your results to share with your physician</h3>
-                  <div class="w-100 d-flex justify-content-center flex-column align-items-center">
-                     <form id="emailForm" action="#" class="erbyd-input-wrapper d-flex justify-content-center">
-                        <input type="email" id="emailInput" placeholder="Enter your email" />
-                        <button onclick="validateAndSubmit(event)">Send me my result</button>
-                     </form>
-                     <div class="error-message" id="errorMessage"></div>
-                  </div>
+            <div class="row justify-content-center" v-if="isAllStepsCompleted && activeStep > 7">
+               <div class="col-md-9">
+                  <div class="d-flex align-items-center justify-content-around flex-column erbyd">
+                     <h3>Email yourself a detailed copy of your results to share with your physician</h3>
+                     <div class="w-100 d-flex justify-content-center flex-column align-items-center">
+                        <form id="emailForm" action="#" class="erbyd-input-wrapper d-flex justify-content-center">
+                           <input type="email" id="emailInput" placeholder="Enter your email" />
+                           <button onclick="validateAndSubmit(event)">Send me my result</button>
+                        </form>
+                        <div class="error-message" id="errorMessage"></div>
+                     </div>
 
-                  <!-- if result less than 5 -->
-                  <!-- <a v-if="totalScore <= 5" href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf" class="">
+                     <!-- if result less than 5 -->
+                     <!-- <a v-if="totalScore <= 5" href="mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf" class="">
                         Email results to yourself
                      </a> -->
-                  <!-- if 10of10 -->
-                  <!-- <a v-if="totalScore > 5" :href="`mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${totalScore}of10_en.pdf`">
+                     <!-- if 10of10 -->
+                     <!-- <a v-if="totalScore > 5" :href="`mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${totalScore}of10_en.pdf`">
                         Email results to yourself
                      </a> -->
+                  </div>
                </div>
             </div>
-         </div>
-         <section class="ad-section" v-if="isAllStepsCompleted">
-            <div class="container mx-auto">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="reverse-tab-content-box row align-items-center">
-                        <div class="col-md-6">
-                           <figure class="seniors-img">
-                              <img src="./assets/img/tinfied-ad/Ad1.png" alt="" />
-                           </figure>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="strength strength-ad">
-                              <h3 class="mb-0">Advertisement:</h3>
-                              <p class="text_20 font-medium text-left mt-0 mb-0">
-                                 <strong> A-MTPC - Metabolism Booster and GI Support.</strong> A customized supplement
-                                 blend with carefully balanced ingredients for maintaining heathy metabolism* ,
-                                 glucose balance* as well as weight management* for individuals with metabolic
-                                 concerns*.
-                              </p>
-                              <h4 class="mb-0">Benefits</h4>
-                              <ul>
-                                 <li>7 Clinically proven compounds</li>
-                                 <li>No Magnesium Stearate</li>
-                                 <li>Detoxifies</li>
-                                 <li>Assists with excess fat elimination</li>
-                                 <li>Helps normalize metabolism</li>
-                                 <li>Provides essential vitamins and minerals</li>
-                                 <li>Easy on Stomach</li>
-                              </ul>
-                              <a href="https://wellnessbay.xyz/products/%CE%B1-mtpc"
-                                 class="takeRisk w-50 d-inline-block mt-4 text-center" target="_blank"> Try Risk Free
-                              </a>
+            <section class="ad-section" v-if="isAllStepsCompleted">
+               <div class="container mx-auto">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="reverse-tab-content-box row align-items-center">
+                           <div class="col-md-6">
+                              <figure class="seniors-img">
+                                 <img src="./assets/img/tinfied-ad/Ad1.png" alt="" />
+                              </figure>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="strength strength-ad">
+                                 <h3 class="mb-0">Advertisement:</h3>
+                                 <p class="text_20 font-medium text-left mt-0 mb-0">
+                                    <strong> A-MTPC - Metabolism Booster and GI Support.</strong> A customized supplement blend with carefully balanced ingredients for maintaining heathy metabolism* ,
+                                    glucose balance* as well as weight management* for individuals with metabolic concerns*.
+                                 </p>
+                                 <h4 class="mb-0">Benefits</h4>
+                                 <ul>
+                                    <li>7 Clinically proven compounds</li>
+                                    <li>No Magnesium Stearate</li>
+                                    <li>Detoxifies</li>
+                                    <li>Assists with excess fat elimination</li>
+                                    <li>Helps normalize metabolism</li>
+                                    <li>Provides essential vitamins and minerals</li>
+                                    <li>Easy on Stomach</li>
+                                 </ul>
+                                 <a href="https://wellnessbay.xyz/products/%CE%B1-mtpc" class="takeRisk w-50 d-inline-block mt-4 text-center" target="_blank"> Try Risk Free </a>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-            </div>
-         </section>
-         <div v-if="isAllStepsCompleted && activeStep > 7">
-            <div class="container">
-               <div class="row justify-content-center">
-                  <div class="answers-wrapper col-md-11 d-flex justify-content-center flex-column align-items-center">
-                     <div class="answers-wrapper-inficator">
-                        <svg width="20" height="20" viewBox="0 0 29 17" fill="none" aria-hidden="true">
-                           <path d="M14.1256 17L0.00129085 -2.46958e-06L28.25 0L14.1256 17Z" fill="#171717"></path>
-                        </svg>
-                     </div>
-                     <div>
-                        <h3>DETAILS ON YOUR ANSWERS</h3>
-                     </div>
-                     <div class="answers col-md-6">
-                        <div v-for="(stepData, index) in selectedValues" :key="index">
-                           <div class="answers-box d-flex" v-for="(option, optionIndex) in stepData.selectedOptions"
-                              :key="optionIndex" v-if="stepData.step !== 4">
-                              <div class="answers-box__icon">
-                                 <figure>
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" class="trueValue" v-if="(stepData.step === 1 && option.score === 0) ||
+            </section>
+            <div v-if="isAllStepsCompleted && activeStep > 7">
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="answers-wrapper col-md-11 d-flex justify-content-center flex-column align-items-center">
+                        <div class="answers-wrapper-inficator">
+                           <svg width="20" height="20" viewBox="0 0 29 17" fill="none" aria-hidden="true">
+                              <path d="M14.1256 17L0.00129085 -2.46958e-06L28.25 0L14.1256 17Z" fill="#171717"></path>
+                           </svg>
+                        </div>
+                        <div>
+                           <h3>DETAILS ON YOUR ANSWERS</h3>
+                        </div>
+                        <div class="answers col-md-6">
+                           <div v-for="(stepData, index) in selectedValues" :key="index">
+                              <div class="answers-box d-flex" v-for="(option, optionIndex) in stepData.selectedOptions" :key="optionIndex" v-if="stepData.step !== 4">
+                                 <div class="answers-box__icon">
+                                    <figure>
+                                       <svg
+                                          width="60"
+                                          height="60"
+                                          viewBox="0 0 60 60"
+                                          fill="none"
+                                          class="trueValue"
+                                          v-if="(stepData.step === 1 && option.score === 0) ||
                                           (stepData.step === 2 && option.score === 0) ||
                                           (stepData.step === 3 && option.score === 0) || 
                                           (stepData.step === 5 && option.score === 0) ||
                                           (stepData.step === 6 && option.label === 'Woman' && option.womanSub.score === 0)||
                                           (stepData.step === 7 && option.score === 0) 
-                                       ">
-                                       <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"></circle>
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M46.1945 22.8604L42.2949 18.9697L25.9105 35.317L18.8995 28.322L15 32.2127L25.9234 43.1113L29.823 39.2206L29.81 39.2077L46.1945 22.8604Z"
-                                          fill="currentColor"></path>
-                                    </svg>
+                                       "
+                                       >
+                                          <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"></circle>
+                                          <path
+                                             fill-rule="evenodd"
+                                             clip-rule="evenodd"
+                                             d="M46.1945 22.8604L42.2949 18.9697L25.9105 35.317L18.8995 28.322L15 32.2127L25.9234 43.1113L29.823 39.2206L29.81 39.2077L46.1945 22.8604Z"
+                                             fill="currentColor"
+                                          ></path>
+                                       </svg>
 
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" class="falseValue"
-                                       v-else>
-                                       <circle cx="30" cy="30" r="29" fill="#fef4ea" stroke="currentColor"
-                                          stroke-width="2"></circle>
-                                       <path
-                                          d="M27 17C27 15.8954 27.8954 15 29 15H31C32.1046 15 33 15.8954 33 17V36H27V17Z"
-                                          fill="#171717"></path>
-                                       <rect x="27" y="39" width="6" height="6" fill="#171717"></rect>
-                                    </svg>
-                                 </figure>
-                              </div>
-                              <div class="answers-box__content">
-                                 <h3>{{ option.question }}</h3>
-                                 <div v-if="option.value === 'Woman' && option.womanSub">
-                                    <h2>{{ option.answer }} {{ option.womanSub.answer }}</h2>
+                                       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" class="falseValue" v-else>
+                                          <circle cx="30" cy="30" r="29" fill="#fef4ea" stroke="currentColor" stroke-width="2"></circle>
+                                          <path d="M27 17C27 15.8954 27.8954 15 29 15H31C32.1046 15 33 15.8954 33 17V36H27V17Z" fill="#171717"></path>
+                                          <rect x="27" y="39" width="6" height="6" fill="#171717"></rect>
+                                       </svg>
+                                    </figure>
                                  </div>
-                                 <h2 v-if="option.value !== 'Woman' || !option.womanSub">{{ option.answer }}</h2>
-                                 <h2 v-if="option.id === 7 && option.score === 0">I have a healthy body mass index
-                                    (BMI).</h2>
-                                 <h2 v-if="option.id === 7 && option.score === 1">I have an above normal body mass
-                                    index.</h2>
-                                 <h2 v-if="option.id === 7 && option.score === 2">I have a high body mass index.</h2>
-                                 <h2 v-if="option.id === 7 && option.score === 3">I have a very high body mass index.
-                                 </h2>
-                                 <p v-html="option.content"></p>
+                                 <div class="answers-box__content">
+                                    <h3>{{ option.question }}</h3>
+                                    <div v-if="option.value === 'Woman' && option.womanSub">
+                                       <h2>{{ option.answer }} {{ option.womanSub.answer }}</h2>
+                                    </div>
+                                    <h2 v-if="option.value !== 'Woman' || !option.womanSub">{{ option.answer }}</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 0">I have a healthy body mass index (BMI).</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 1">I have an above normal body mass index.</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 2">I have a high body mass index.</h2>
+                                    <h2 v-if="option.id === 7 && option.score === 3">I have a very high body mass index.</h2>
+                                    <p v-html="option.content"></p>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -505,1011 +475,992 @@
                   </div>
                </div>
             </div>
-         </div>
-         <div v-if="isAllStepsCompleted && activeStep > 7">
-            <div class="container mx-auto">
-               <div class="row justify-content-center">
-                  <div class="col-md-9">
-                     <div class="d-flex justify-content-center align-items-center flex-column gap-4 py-5">
-
-                        <p class="riskTestPowered">
-                           Risk test powered by the
-                           <a href="https://www.diabetes.org/" class="email-result" target="_blank">American Diabetes
-                              Association.</a>
-                        </p>
-
+            <div v-if="isAllStepsCompleted && activeStep > 7">
+               <div class="container mx-auto">
+                  <div class="row justify-content-center">
+                     <div class="col-md-9">
+                        <div class="d-flex justify-content-center align-items-center flex-column gap-4 py-5">
+                           <p class="riskTestPowered">
+                              Risk test powered by the
+                              <a href="https://www.diabetes.org/" class="email-result" target="_blank">American Diabetes Association.</a>
+                           </p>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-   </section>
-   <section class="about-risk-test d-none" id="aboutSection">
-      <div class="container mx-auto">
-         <div class="row justify-content-center">
-            <div class="col-md-6">
-               <h3>About the Risk Test</h3>
-               <p>
-                  Approximately 98 million (1 in 3) American adults have prediabetes. Prediabetes is a condition where
-                  blood glucose levels are higher than normal but not high enough yet for a type
-                  2 diabetes diagnosis. <br />
-                  <br />
+      </section>
+      <section class="about-risk-test d-none" id="aboutSection">
+         <div class="container mx-auto">
+            <div class="row justify-content-center">
+               <div class="col-md-6">
+                  <h3>About the Risk Test</h3>
+                  <p>
+                     Approximately 98 million (1 in 3) American adults have prediabetes. Prediabetes is a condition where blood glucose levels are higher than normal but not high enough yet for a type
+                     2 diabetes diagnosis. <br />
+                     <br />
 
-                  Nearly 81 percent of people with prediabetes don’t know they have it. People with prediabetes are at
-                  risk for developing type 2 diabetes. Talk to your doctor to be screened
-                  regularly, and take the steps necessary to delay or prevent type 2 diabetes and prediabetes.<br />
-                  <br />
+                     Nearly 81 percent of people with prediabetes don’t know they have it. People with prediabetes are at risk for developing type 2 diabetes. Talk to your doctor to be screened
+                     regularly, and take the steps necessary to delay or prevent type 2 diabetes and prediabetes.<br />
+                     <br />
 
-                  The American Diabetes Association launched its first risk test in 1993. The risk test was adapted by a
-                  published study and validated using data from the Centers for Disease
-                  Control and Prevention.
-                  <br />
-                  <br />
-                  When developing the test, researchers looked for specific characteristics that made a person more
-                  likely than average to have undiagnosed type 2 diabetes. To make the tool as easy
-                  to use as possible, they only considered health characteristics that people would know about
-                  themselves without needing a blood test or other medical evaluation—such as age,
-                  height and weight, but not including blood glucose or cholesterol levels.
-                  <br />
-                  <br />
-                  A high score on the online risk test (five or higher) means you have a significant risk for having
-                  undiagnosed prediabetes or type 2 diabetes; but only a blood test can determine
-                  a diagnosis.
-               </p>
-               <div class="py-4 text-center">
-                  <a href="#" class="tips-btn mx-auto" onclick="backToScorePage()"> BACK TO SCORE PAGE </a>
+                     The American Diabetes Association launched its first risk test in 1993. The risk test was adapted by a published study and validated using data from the Centers for Disease
+                     Control and Prevention.
+                     <br />
+                     <br />
+                     When developing the test, researchers looked for specific characteristics that made a person more likely than average to have undiagnosed type 2 diabetes. To make the tool as easy
+                     to use as possible, they only considered health characteristics that people would know about themselves without needing a blood test or other medical evaluation—such as age,
+                     height and weight, but not including blood glucose or cholesterol levels.
+                     <br />
+                     <br />
+                     A high score on the online risk test (five or higher) means you have a significant risk for having undiagnosed prediabetes or type 2 diabetes; but only a blood test can determine
+                     a diagnosis.
+                  </p>
+                  <div class="py-4 text-center">
+                     <a href="#" class="tips-btn mx-auto" onclick="backToScorePage()"> BACK TO SCORE PAGE </a>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
-   </section>
-   <footer class="footer">
-      <div class="container mx-auto">
-         <div class="row justify-content-center">
-            <div class="col-md-10">
-               <div class="d-flex align-items-center gap-4 justify-content-center">
-                  <a class="footer-a" href="https://www.cdc.gov/diabetes/prevention/details-about-the-program.html"
-                     target="_blank">Provider Resources</a>
+      </section>
+      <footer class="footer">
+         <div class="container mx-auto">
+            <div class="row justify-content-center">
+               <div class="col-md-10">
+                  <div class="d-flex align-items-center gap-4 justify-content-center">
+                     <a class="footer-a" href="https://www.cdc.gov/diabetes/prevention/details-about-the-program.html" target="_blank">Provider Resources</a>
+                  </div>
                </div>
-            </div>
 
-            <div class="col-md-10 mt-2">
-               <ul class="footer-ul">
-                  <li>
-                     <a href="https://www.google.com/" target="_blank">Terms </a>
-                  </li>
-                  <li>
-                     <a href="https://pastebin.com/dxawUgHW target=" _blank">Privacy</a>
-                  </li>
-                  <li>
-                     <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact </a>
-                     <!-- Button trigger modal -->
-                     <!-- <button type="button" class="btn btn-primary" >This is a bootstrap Modal</button> -->
-                  </li>
-               </ul>
-               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                           <div class="p-5">
-                              <p class="text_16 font-medium text-brand">
-                                 Contact us email : hello@whatsprediabetes.com <br />
-                                 Post : бл.2, Tsar Boris III Blvd Sofia 1618 Bulgaria
-                              </p>
+               <div class="col-md-10 mt-2">
+                  <ul class="footer-ul">
+                     <li>
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Terms</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Terms of Service</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <p>
+                                       These Terms of Service ("Terms") govern your use of the Whatsprediabetes website (the "Site") and any services offered by Whatsprediabetes (referred to as "we,"
+                                       "us," or "our"). By accessing or using the Site or our services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the
+                                       Site or our services.
+                                    </p>
+                                    <ul>
+                                       <li>
+                                          1. **Use of the Site**: You must be at least 18 years old to use the Site. By using the Site, you represent and warrant that you are at least 18 years old and
+                                          have the legal capacity to enter into these Terms.
+                                       </li>
+                                       <li>
+                                          2. **User Account**: To access certain features of the Site, you may be required to create an account. You are responsible for maintaining the confidentiality
+                                          of your account and password and for restricting access to your computer or device. You agree to accept responsibility for all activities that occur under
+                                          your account.
+                                       </li>
+                                       <li>
+                                          3. **User Content**: You may be able to post, upload, or otherwise submit content to the Site (referred to as "User Content"). By posting User Content, you
+                                          grant us a non-exclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create
+                                          derivative works from, distribute, and display such User Content throughout the world in any media.
+                                       </li>
+                                       <li>
+                                          4. **Prohibited Conduct**: You agree not to engage in any of the following prohibited activities:
+                                          <ul class="px-4">
+                                             <li>- Violating any laws or regulations</li>
+                                             <li>- Infringing upon the rights of others</li>
+                                             <li>- Impersonating any person or entity</li>
+                                             <li>- Interfering with or disrupting the Site or our services</li>
+                                             <li>- Posting or transmitting viruses or other malicious code</li>
+                                             <li>- Collecting or harvesting any information from the Site</li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          5. **Intellectual Property**: All content on the Site, including text, graphics, logos, images, audio clips, and software, is the property of Whatsprediabetes
+                                          or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not use, copy, reproduce, modify, distribute,
+                                          transmit, display, perform, or create derivative works of any such content without our prior written consent.
+                                       </li>
+                                       <li>
+                                          6. **Disclaimer of Warranties**: The Site and our services are provided on an "as is" and "as available" basis, without any warranties of any kind, either
+                                          express or implied. We do not warrant that the Site or our services will be uninterrupted, secure, or error-free, or that any defects will be corrected.
+                                       </li>
+                                       <li>
+                                          7. **Limitation of Liability**: In no event shall Whatsprediabetes, its officers, directors, employees, or agents be liable to you or any third party for any
+                                          indirect, incidental, consequential, special, or punitive damages arising out of or in connection with your use of the Site or our services.
+                                       </li>
+                                       <li>
+                                          8. **Indemnification**: You agree to indemnify and hold harmless Whatsprediabetes, its officers, directors, employees, and agents from and against any and all
+                                          claims, liabilities, damages, losses, costs, or expenses arising out of or in connection with your use of the Site or our services or your violation of these
+                                          Terms.
+                                       </li>
+                                       <li>
+                                          9. **Governing Law**: These Terms shall be governed by and construed in accordance with the laws of [insert country name], without regard to its conflict of
+                                          law provisions.
+                                       </li>
+                                       <li>
+                                          10. **Changes to These Terms**: We reserve the right to update or change these Terms at any time. Any changes will be effective immediately upon posting the
+                                          revised Terms on the Site. Your continued use of the Site or our services after the posting of any revised Terms constitutes your acceptance of such changes.
+                                       </li>
+                                       <li>11. **Contact Us**: If you have any questions or concerns about these Terms, please contact us at [insert contact email].</li>
+                                    </ul>
+                                    <p>Effective Date: [Insert Effective Date] These Terms were last updated on [Insert Last Updated Date].</p>
+                                 </div>
+                              </div>
                            </div>
                         </div>
-                     </div>
-                  </div>
+                     </li>
+                     <li>
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Privacy</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel2">Privacy Policy</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <p>
+                                       whatsprediabetes (referred to as "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy
+                                       outlines how we collect, use, disclose, and protect information obtained from users (referred to as "you" or "your") of our services, regardless of their
+                                       location.
+                                    </p>
+                                    <ul>
+                                       <li>
+                                          1. **Information We Collect**: We may collect personal information from you when you interact with our services, such as when you visit our website, use our
+                                          mobile applications, or communicate with us. This information may include your name, email address, mailing address, phone number, payment information, and
+                                          any other information you provide to us.
+                                       </li>
+                                       <li>
+                                          2. **How We Use Your Information**: We may use the information we collect from you to:
+                                          <ul class="px-4">
+                                             <li>- Provide and personalize our services</li>
+                                             <li>- Process transactions</li>
+                                             <li>- Send communications, including newsletters, updates, and promotional offers</li>
+                                             <li>- Respond to your inquiries, questions, and requests</li>
+                                             <li>- Improve our services and develop new features</li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          3. **Information Sharing and Disclosure**: We do not sell, trade, or rent your personal information to third parties. However, we may share your information
+                                          with trusted service providers who assist us in operating our business, conducting our services, or servicing you, as long as those parties agree to keep this
+                                          information confidential.
+                                       </li>
+                                       <li>
+                                          4. **Data Security**: We implement reasonable security measures to protect the confidentiality, integrity, and availability of your personal information.
+                                          However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+                                       </li>
+                                       <li>
+                                          5. **Cookies and Tracking Technologies**: We may use cookies, web beacons, and similar tracking technologies to enhance your experience with our services. You
+                                          can set your browser to refuse all or some browser cookies or to alert you when websites set or access cookies. If you disable or refuse cookies, please note
+                                          that some parts of our services may become inaccessible or not function properly.
+                                       </li>
+                                       <li>
+                                          6. **Third-party Links**: Our services may contain links to third-party websites, products, or services. We are not responsible for the privacy practices or
+                                          content of these third parties. We encourage you to review the privacy policies of those websites before providing any personal information.
+                                       </li>
+                                       <li>
+                                          7. **Children's Privacy**: Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children.
+                                          If you are a parent or guardian and believe that your child has provided us with personal information, please contact us so that we can delete the
+                                          information.
+                                       </li>
+                                       <li>
+                                          8. **Changes to This Privacy Policy**: We reserve the right to update or change this Privacy Policy at any time. Any changes will be posted on this page with
+                                          a revised effective date. We encourage you to review this Privacy Policy periodically for any updates or changes.
+                                       </li>
+                                       <li>
+                                          9. **Contact Us**: If you have any questions or concerns about this Privacy Policy or our practices regarding your personal information, please contact us at
+                                          [Your Contact Email].
+                                       </li>
+                                    </ul>
+                                    <p>Effective Date: [Insert Effective Date] This Privacy Policy was last updated on [Insert Last Updated Date].</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Contact</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+                           <div class="modal-dialog">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel3">Address:</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <ul>
+                                       <li>Sofia Center, Vitosha Blvd 48, 1000 Sofia, Bulgaria</li>
+                                       <li>email : info@whatsprediabetes.com</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-6">
+                  <p>@2024 whatsprediabetes.com</p>
                </div>
             </div>
-            <div class="col-md-6">
-               <p>@2024 whatsprediabetes.com</p>
-            </div>
          </div>
-      </div>
-   </footer>
-   <a class="bottomToTop" href="#body">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" viewBox="0 0 24 24" stroke-width="1.5"
-         stroke="currentColor" class="w-6 h-6">
-         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-      </svg>
-   </a>
-   <style>
-      .hidden {
-         opacity: 0;
-         transition: opacity 0.5s ease-in-out;
-         display: none !important;
-      }
-
-      .visible {
-         display: block !important;
-         opacity: 1 !important;
-      }
-
-      .error-message {
-         color: red;
-
-         font-weight: 500;
-         font-size: 16px;
-         text-align: left;
-         width: 70%;
-      }
-   </style>
-   <!-- js files -->
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-   </script>
-   <script type="text/javascript">
-      function validateAndSubmit(event) {
-         event.preventDefault();
-         // Get the email input element
-         var emailInput = document.getElementById("emailInput");
-
-         // Get the value from the input
-         var emailValue = emailInput.value.trim();
-
-         // Validate the email using a simple regex
-         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-         if (!emailRegex.test(emailValue)) {
-            // Display error message
-            document.getElementById("errorMessage").innerText = "Please enter a valid email address.";
-            return; // Do not proceed if the email is invalid
+      </footer>
+      <a class="bottomToTop" href="#body">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+         </svg>
+      </a>
+      <style>
+         .hidden {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: none !important;
          }
-         console.log(emailValue);
 
-         // Clear previous error message
-         document.getElementById("errorMessage").innerText = "";
-         document.getElementById("emailForm").reset();
-      }
-   </script>
-   <script type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-   <!-- Include Vue.js from CDN -->
-   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-   <script>
-      // Show loading spinner while jQuery is being loaded
-      document.getElementById("loadingSpinner").style.display = "block";
+         .visible {
+            display: block !important;
+            opacity: 1 !important;
+         }
 
-      // Load jQuery
-      var script = document.createElement("script");
-      script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
-      script.onload = function () {
-         // jQuery is loaded, you can now use it
-         document.getElementById("loadingSpinner").style.display = "none";
-         // Your jQuery-dependent code here
-      };
-      document.head.appendChild(script);
+         .error-message {
+            color: red;
 
-      function showAbout() {
-         hideAllSections();
-         document.getElementById("aboutSection").classList.add("visible");
-      }
+            font-weight: 500;
+            font-size: 16px;
+            text-align: left;
+            width: 70%;
+         }
+      </style>
+      <!-- js files -->
 
-      function backToScorePage() {
-         hideAllSections();
-         // Show the desired section (e.g., Section 1)
-         document.getElementById("app").classList.add("visible");
-         document.getElementById("aboutSection").classList.remove("visible");
-      }
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"
+      ></script>
+      <script type="text/javascript">
+         function validateAndSubmit(event) {
+            event.preventDefault();
+            // Get the email input element
+            var emailInput = document.getElementById("emailInput");
 
-      function hideAllSections() {
-         // Hide all sections
-         document.getElementById("app").classList.remove("visible");
-         document.getElementById("app").classList.add("hidden");
-      }
-   </script>
-   <script>
-      // Your Vue.js code
-      new Vue({
-         el: "#app",
-         data: {
-            activeStep: 1,
-            isNextButtonEnabled: true,
-            womanSubValue: "",
-            heightValue: "",
-            allFieldValues: {},
-            isAllStepsCompleted: false,
-            selectedValues: [],
-            totalScore: null,
-            result: [],
-            height: [{
-                  id: 1.1,
-                  label: "4' 10\" (147cm)",
-                  options: [{
-                        id: "1.1-1",
-                        label: "< 119 lbs. (54kg)",
-                        value: "<119",
-                        score: 0,
-                     },
-                     {
-                        id: "1.1-2",
-                        label: "119-142 lbs. (54-64kg)",
-                        value: "119-142",
-                        score: 1,
-                     },
-                     {
-                        id: "1.1-3",
-                        label: "143-190 lbs. (65-86kg)",
-                        value: "143-190",
-                        score: 2,
-                     },
-                     {
-                        id: "1.1-4",
-                        label: "191+ lbs. (87kg)",
-                        value: "191+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.2,
-                  label: "4' 11\" (150cm)",
-                  options: [{
-                        id: "1.2-1",
-                        label: "< 124 lbs. (56kg)",
-                        value: "<124",
-                        score: 0,
-                     },
-                     {
-                        id: "1.2-2",
-                        label: "124-147 lbs. (56-67kg)",
-                        value: "124-147",
-                        score: 1,
-                     },
-                     {
-                        id: "1.2-3",
-                        label: "148-197 lbs. (76-89kg)",
-                        value: "148-197",
-                        score: 2,
-                     },
-                     {
-                        id: "1.2-4",
-                        label: "198+ lbs. (90kg)",
-                        value: "198+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.3,
-                  label: "5' 0\" (152cm)",
-                  options: [{
-                        id: "1.3-1",
-                        label: "< 128 lbs. (58kg)",
-                        value: "<128",
-                        score: 0,
-                     },
-                     {
-                        id: "1.3-2",
-                        label: "128-152 lbs. (58-69kg)",
-                        value: "128-152",
-                        score: 1,
-                     },
-                     {
-                        id: "1.3-3",
-                        label: "153-203 lbs. (69-92kg)",
-                        value: "153-203",
-                        score: 2,
-                     },
-                     {
-                        id: "1.3-4",
-                        label: "204+ lbs. (93kg)",
-                        value: "204+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.4,
-                  label: "5' 1\" (155cm)",
-                  options: [{
-                        id: "1.4-1",
-                        label: "< 132 lbs. (60kg)",
-                        value: "<132",
-                        score: 0,
-                     },
-                     {
-                        id: "1.4-2",
-                        label: "132-157 lbs. (60-71kg)",
-                        value: "132-157",
-                        score: 1,
-                     },
-                     {
-                        id: "1.4-3",
-                        label: "158-210 lbs. (72-95kg)",
-                        value: "158-210",
-                        score: 2,
-                     },
-                     {
-                        id: "1.4-4",
-                        label: "211+ lbs. (96kg)",
-                        value: "211+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.5,
-                  label: "5' 2\" (157cm)",
-                  options: [{
-                        id: "1.5-1",
-                        label: "< 136 lbs. (62kg)",
-                        value: "<136",
-                        score: 0,
-                     },
-                     {
-                        id: "1.5-2",
-                        label: "136-163 lbs. (62-74kg)",
-                        value: "136-163",
-                        score: 1,
-                     },
-                     {
-                        id: "1.5-3",
-                        label: "164-217 lbs. (74-98kg)",
-                        value: "164-217",
-                        score: 2,
-                     },
-                     {
-                        id: "1.5-4",
-                        label: "218+ lbs. (99kg)",
-                        value: "218+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.6,
-                  label: "5' 3\" (160cm)",
-                  options: [{
-                        id: "1.6-1",
-                        label: "< 141 lbs. (66kg)",
-                        value: "<141",
-                        score: 0,
-                     },
-                     {
-                        id: "1.6-2",
-                        label: "141-168 lbs. (66-78kg)",
-                        value: "141-168",
-                        score: 1,
-                     },
-                     {
-                        id: "1.6-3",
-                        label: "169-224 lbs. (79-105kg)",
-                        value: "169-224",
-                        score: 2,
-                     },
-                     {
-                        id: "1.6-4",
-                        label: "225+ lbs. (105kg)",
-                        value: "225+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.7,
-                  label: "5' 4\" (163cm)",
-                  options: [{
-                        id: "1.7-1",
-                        label: "< 145 lbs. (66kg)",
-                        value: "<145",
-                        score: 0,
-                     },
-                     {
-                        id: "1.7-2",
-                        label: "145-173 lbs. (66-78kg)",
-                        value: "145-173",
-                        score: 1,
-                     },
-                     {
-                        id: "1.7-3",
-                        label: "174-231 lbs. (79-105kg)",
-                        value: "174-231",
-                        score: 2,
-                     },
-                     {
-                        id: "1.7-4",
-                        label: "232+ lbs. (105kg)",
-                        value: "232+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.8,
-                  label: "5' 5\" (165cm)",
-                  options: [{
-                        id: "1.8-1",
-                        label: "< 150 lbs. (68kg)",
-                        value: "<150",
-                        score: 0,
-                     },
-                     {
-                        id: "1.8-2",
-                        label: "150-179 lbs. (68-81kg)",
-                        value: "150-179",
-                        score: 1,
-                     },
-                     {
-                        id: "1.8-3",
-                        label: "180-239 lbs. (82-108kg)",
-                        value: "180-239",
-                        score: 2,
-                     },
-                     {
-                        id: "1.8-4",
-                        label: "240+ lbs. (109kg)",
-                        value: "240+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.9,
-                  label: "5' 6\" (168cm)",
-                  options: [{
-                        id: "1.9-1",
-                        label: "< 155 lbs. (70kg)",
-                        value: "<155",
-                        score: 0,
-                     },
-                     {
-                        id: "1.9-2",
-                        label: "155-185 lbs. (70-84kg)",
-                        value: "155-185",
-                        score: 1,
-                     },
-                     {
-                        id: "1.9-3",
-                        label: "186-246 lbs. (84-112kg)",
-                        value: "186-246",
-                        score: 2,
-                     },
-                     {
-                        id: "1.9-4",
-                        label: "247+ lbs. (112kg)",
-                        value: "247+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.1,
-                  label: "5' 7\" (170cm)",
-                  options: [{
-                        id: "1.10-1",
-                        label: "< 159 lbs. (72kg)",
-                        value: "<159",
-                        score: 0,
-                     },
-                     {
-                        id: "1.10-2",
-                        label: "159-190 lbs. (72-86kg)",
-                        value: "159-190",
-                        score: 1,
-                     },
-                     {
-                        id: "1.10-3",
-                        label: "191-254 lbs. (87-115kg)",
-                        value: "191-254",
-                        score: 2,
-                     },
-                     {
-                        id: "1.10-4",
-                        label: "255+ lbs. (116kg)",
-                        value: "255+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.11,
-                  label: "5' 8\" (173cm)",
-                  options: [{
-                        id: "1.11-1",
-                        label: "< 164 lbs. (74kg)",
-                        value: "<164",
-                        score: 0,
-                     },
-                     {
-                        id: "1.11-2",
-                        label: "164-196 lbs. (74-89kg)",
-                        value: "164-196",
-                        score: 1,
-                     },
-                     {
-                        id: "1.11-3",
-                        label: "197-261 lbs. (89-118kg)",
-                        value: "197-261",
-                        score: 2,
-                     },
-                     {
-                        id: "1.11-4",
-                        label: "262+ lbs. (119kg)",
-                        value: "262+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.12,
-                  label: "5' 9\" (175cm)",
-                  options: [{
-                        id: "1.12-1",
-                        label: "< 169 lbs. (77kg)",
-                        value: "<169",
-                        score: 0,
-                     },
-                     {
-                        id: "1.12-2",
-                        label: "169-202 lbs. (77-92kg)",
-                        value: "169-202 lbs",
-                        score: 1,
-                     },
-                     {
-                        id: "1.12-3",
-                        label: "203-269 lbs. (92-122kg)",
-                        value: "203-269 lbs",
-                        score: 2,
-                     },
-                     {
-                        id: "1.12-4",
-                        label: "270+ lbs. (122kg)",
-                        value: "270+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.13,
-                  label: "5' 10\" (178cm)",
-                  options: [{
-                        id: "1.13-1",
-                        label: "< 174 lbs. (79kg)",
-                        value: "<174",
-                        score: 0,
-                     },
-                     {
-                        id: "1.13-2",
-                        label: "174-208 lbs. (79-94kg)",
-                        value: "174-208",
-                        score: 1,
-                     },
-                     {
-                        id: "1.13-3",
-                        label: "209-277 lbs. (95-126kg)",
-                        value: "209-277",
-                        score: 2,
-                     },
-                     {
-                        id: "1.13-4",
-                        label: "278+ lbs. (126kg)",
-                        value: "278+ lbs",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.14,
-                  label: "5' 11\" (180cm)",
-                  options: [{
-                        id: "1.14-1",
-                        label: "< 179 lbs. (81kg)",
-                        value: "<179",
-                        score: 0,
-                     },
-                     {
-                        id: "1.14-2",
-                        label: "179-214 lbs. (81-97kg)",
-                        value: "179-214",
-                        score: 1,
-                     },
-                     {
-                        id: "1.14-3",
-                        label: "215-285 lbs. (98-129kg)",
-                        value: "215-285",
-                        score: 2,
-                     },
-                     {
-                        id: "1.14-4",
-                        label: "286+ lbs. (130kg)",
-                        value: "286+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.15,
-                  label: "6' 0\" (183cm)",
-                  options: [{
-                        id: "1.15-1",
-                        label: "< 184 lbs. (83kg)",
-                        value: "<184",
-                        score: 0,
-                     },
-                     {
-                        id: "1.15-2",
-                        label: "184-220 lbs. (83-100kg)",
-                        value: "184-220",
-                        score: 1,
-                     },
-                     {
-                        id: "1.15-3",
-                        label: "221-293 lbs. (100-133kg)",
-                        value: "221-293",
-                        score: 2,
-                     },
-                     {
-                        id: "1.15-4",
-                        label: "294+ lbs. (133kg)",
-                        value: "294+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.16,
-                  label: "6' 1\" (185cm)",
-                  options: [{
-                        id: "1.16-1",
-                        label: "< 189 lbs. (86kg)",
-                        value: "<189",
-                        score: 0,
-                     },
-                     {
-                        id: "1.16-2",
-                        label: "189-226 lbs. (86-103kg)",
-                        value: "189-226",
-                        score: 1,
-                     },
-                     {
-                        id: "1.16-3",
-                        label: "227-301 lbs. (103-137kg)",
-                        value: "227-301",
-                        score: 2,
-                     },
-                     {
-                        id: "1.16-4",
-                        label: "302+ lbs. (137kg)",
-                        value: "302+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.17,
-                  label: "6' 2\" (188cm)",
-                  options: [{
-                        id: "1.17-1",
-                        label: "< 194 lbs. (88kg)",
-                        value: "<194",
-                        score: 0,
-                     },
-                     {
-                        id: "1.17-2",
-                        label: "194-232 lbs. (88-105kg)",
-                        value: "194-232",
-                        score: 1,
-                     },
-                     {
-                        id: "1.17-3",
-                        label: "233-310 lbs. (106-141kg)",
-                        value: "233-310",
-                        score: 2,
-                     },
-                     {
-                        id: "1.17-4",
-                        label: "311+ lbs. (141kg)",
-                        value: "311+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.18,
-                  label: "6' 3\" (191cm)",
-                  options: [{
-                        id: "1.18-1",
-                        label: "< 200 lbs. (91kg)",
-                        value: "<200",
-                        score: 0,
-                     },
-                     {
-                        id: "1.18-2",
-                        label: "200-239 lbs. (91-108kg)",
-                        value: "200-239",
-                        score: 1,
-                     },
-                     {
-                        id: "1.18-3",
-                        label: "240-318 lbs. (109-144kg)",
-                        value: "240-318",
-                        score: 2,
-                     },
-                     {
-                        id: "1.18-4",
-                        label: "319+ lbs. (145kg)",
-                        value: "319+",
-                        score: 3,
-                     },
-                  ],
-               },
-               {
-                  id: 1.19,
-                  label: "6' 4\" (193cm)",
-                  options: [{
-                        id: "1.19-1",
-                        label: "< 205 lbs. (93kg)",
-                        value: "<205",
-                        score: 0,
-                     },
-                     {
-                        id: "1.19-2",
-                        label: "205-245 lbs. (93-111kg)",
-                        value: "205-245",
-                        score: 1,
-                     },
-                     {
-                        id: "1.19-3",
-                        label: "246-327 lbs. (112-148kg)",
-                        value: "246-327",
-                        score: 2,
-                     },
-                     {
-                        id: "1.19-4",
-                        label: "328+ lbs. (149kg)",
-                        value: "328+",
-                        score: 3,
-                     },
-                  ],
-               },
-            ],
+            // Get the value from the input
+            var emailValue = emailInput.value.trim();
 
-            stepData: [{
-                  label: "Age",
-                  id: 1,
-                  fields: [{
-                     id: 1,
-                     title: "How old are you?",
-                     content: "The older you are, the higher your risk for type 2 diabetes.",
-                     img: "./assets/img/Birthday.png",
-                     value: "",
-                     valid: true,
+            // Validate the email using a simple regex
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+               // Display error message
+               document.getElementById("errorMessage").innerText = "Please enter a valid email address.";
+               return; // Do not proceed if the email is invalid
+            }
+            console.log(emailValue);
 
-                     options: [{
-                           answer: "I am younger than 40",
-                           content: "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
-                           id: "1.1",
-                           label: "Younger than 40",
+            // Clear previous error message
+            document.getElementById("errorMessage").innerText = "";
+            document.getElementById("emailForm").reset();
+         }
+      </script>
+      <!-- Include Vue.js from CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+         // Show loading spinner while jQuery is being loaded
+
+         function showAbout() {
+            hideAllSections();
+            document.getElementById("aboutSection").classList.add("visible");
+         }
+
+         function backToScorePage() {
+            hideAllSections();
+            // Show the desired section (e.g., Section 1)
+            document.getElementById("app").classList.add("visible");
+            document.getElementById("aboutSection").classList.remove("visible");
+         }
+
+         function hideAllSections() {
+            // Hide all sections
+            document.getElementById("app").classList.remove("visible");
+            document.getElementById("app").classList.add("hidden");
+         }
+      </script>
+      <script>
+         // Your Vue.js code
+         new Vue({
+            el: "#app",
+            data: {
+               activeStep: 1,
+               isNextButtonEnabled: true,
+               womanSubValue: "",
+               heightValue: "",
+               allFieldValues: {},
+               isAllStepsCompleted: false,
+               selectedValues: [],
+               totalScore: null,
+               result: [],
+               height: [
+                  {
+                     id: 1.1,
+                     label: "4' 10\" (147cm)",
+                     options: [
+                        {
+                           id: "1.1-1",
+                           label: "< 119 lbs. (54kg)",
+                           value: "<119",
                            score: 0,
-                           value: "Less than 40 years",
                         },
                         {
-                           answer: "I am 40-49 years old.",
-                           content: "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
-
-                           id: "1.2",
-                           label: "40-49 Years",
+                           id: "1.1-2",
+                           label: "119-142 lbs. (54-64kg)",
+                           value: "119-142",
                            score: 1,
-                           value: "40-49 years",
                         },
                         {
-                           answer: "I am 50-59 years old.",
-                           content: "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
-                           id: "1.3",
-                           label: "50-59 Years",
+                           id: "1.1-3",
+                           label: "143-190 lbs. (65-86kg)",
+                           value: "143-190",
                            score: 2,
-                           value: "50-59 years",
                         },
                         {
-                           answer: "I am 60+ years old.",
-                           content: "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
-                           id: "1.4",
-                           label: "60+ Years",
+                           id: "1.1-4",
+                           label: "191+ lbs. (87kg)",
+                           value: "191+",
                            score: 3,
-                           value: "60 years or older",
                         },
                      ],
-                  }, ],
-               },
-               {
-                  label: "Family History",
-                  id: 2,
+                  },
+                  {
+                     id: 1.2,
+                     label: "4' 11\" (150cm)",
+                     options: [
+                        {
+                           id: "1.2-1",
+                           label: "< 124 lbs. (56kg)",
+                           value: "<124",
+                           score: 0,
+                        },
+                        {
+                           id: "1.2-2",
+                           label: "124-147 lbs. (56-67kg)",
+                           value: "124-147",
+                           score: 1,
+                        },
+                        {
+                           id: "1.2-3",
+                           label: "148-197 lbs. (76-89kg)",
+                           value: "148-197",
+                           score: 2,
+                        },
+                        {
+                           id: "1.2-4",
+                           label: "198+ lbs. (90kg)",
+                           value: "198+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.3,
+                     label: "5' 0\" (152cm)",
+                     options: [
+                        {
+                           id: "1.3-1",
+                           label: "< 128 lbs. (58kg)",
+                           value: "<128",
+                           score: 0,
+                        },
+                        {
+                           id: "1.3-2",
+                           label: "128-152 lbs. (58-69kg)",
+                           value: "128-152",
+                           score: 1,
+                        },
+                        {
+                           id: "1.3-3",
+                           label: "153-203 lbs. (69-92kg)",
+                           value: "153-203",
+                           score: 2,
+                        },
+                        {
+                           id: "1.3-4",
+                           label: "204+ lbs. (93kg)",
+                           value: "204+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.4,
+                     label: "5' 1\" (155cm)",
+                     options: [
+                        {
+                           id: "1.4-1",
+                           label: "< 132 lbs. (60kg)",
+                           value: "<132",
+                           score: 0,
+                        },
+                        {
+                           id: "1.4-2",
+                           label: "132-157 lbs. (60-71kg)",
+                           value: "132-157",
+                           score: 1,
+                        },
+                        {
+                           id: "1.4-3",
+                           label: "158-210 lbs. (72-95kg)",
+                           value: "158-210",
+                           score: 2,
+                        },
+                        {
+                           id: "1.4-4",
+                           label: "211+ lbs. (96kg)",
+                           value: "211+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.5,
+                     label: "5' 2\" (157cm)",
+                     options: [
+                        {
+                           id: "1.5-1",
+                           label: "< 136 lbs. (62kg)",
+                           value: "<136",
+                           score: 0,
+                        },
+                        {
+                           id: "1.5-2",
+                           label: "136-163 lbs. (62-74kg)",
+                           value: "136-163",
+                           score: 1,
+                        },
+                        {
+                           id: "1.5-3",
+                           label: "164-217 lbs. (74-98kg)",
+                           value: "164-217",
+                           score: 2,
+                        },
+                        {
+                           id: "1.5-4",
+                           label: "218+ lbs. (99kg)",
+                           value: "218+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.6,
+                     label: "5' 3\" (160cm)",
+                     options: [
+                        {
+                           id: "1.6-1",
+                           label: "< 141 lbs. (66kg)",
+                           value: "<141",
+                           score: 0,
+                        },
+                        {
+                           id: "1.6-2",
+                           label: "141-168 lbs. (66-78kg)",
+                           value: "141-168",
+                           score: 1,
+                        },
+                        {
+                           id: "1.6-3",
+                           label: "169-224 lbs. (79-105kg)",
+                           value: "169-224",
+                           score: 2,
+                        },
+                        {
+                           id: "1.6-4",
+                           label: "225+ lbs. (105kg)",
+                           value: "225+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.7,
+                     label: "5' 4\" (163cm)",
+                     options: [
+                        {
+                           id: "1.7-1",
+                           label: "< 145 lbs. (66kg)",
+                           value: "<145",
+                           score: 0,
+                        },
+                        {
+                           id: "1.7-2",
+                           label: "145-173 lbs. (66-78kg)",
+                           value: "145-173",
+                           score: 1,
+                        },
+                        {
+                           id: "1.7-3",
+                           label: "174-231 lbs. (79-105kg)",
+                           value: "174-231",
+                           score: 2,
+                        },
+                        {
+                           id: "1.7-4",
+                           label: "232+ lbs. (105kg)",
+                           value: "232+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.8,
+                     label: "5' 5\" (165cm)",
+                     options: [
+                        {
+                           id: "1.8-1",
+                           label: "< 150 lbs. (68kg)",
+                           value: "<150",
+                           score: 0,
+                        },
+                        {
+                           id: "1.8-2",
+                           label: "150-179 lbs. (68-81kg)",
+                           value: "150-179",
+                           score: 1,
+                        },
+                        {
+                           id: "1.8-3",
+                           label: "180-239 lbs. (82-108kg)",
+                           value: "180-239",
+                           score: 2,
+                        },
+                        {
+                           id: "1.8-4",
+                           label: "240+ lbs. (109kg)",
+                           value: "240+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.9,
+                     label: "5' 6\" (168cm)",
+                     options: [
+                        {
+                           id: "1.9-1",
+                           label: "< 155 lbs. (70kg)",
+                           value: "<155",
+                           score: 0,
+                        },
+                        {
+                           id: "1.9-2",
+                           label: "155-185 lbs. (70-84kg)",
+                           value: "155-185",
+                           score: 1,
+                        },
+                        {
+                           id: "1.9-3",
+                           label: "186-246 lbs. (84-112kg)",
+                           value: "186-246",
+                           score: 2,
+                        },
+                        {
+                           id: "1.9-4",
+                           label: "247+ lbs. (112kg)",
+                           value: "247+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.1,
+                     label: "5' 7\" (170cm)",
+                     options: [
+                        {
+                           id: "1.10-1",
+                           label: "< 159 lbs. (72kg)",
+                           value: "<159",
+                           score: 0,
+                        },
+                        {
+                           id: "1.10-2",
+                           label: "159-190 lbs. (72-86kg)",
+                           value: "159-190",
+                           score: 1,
+                        },
+                        {
+                           id: "1.10-3",
+                           label: "191-254 lbs. (87-115kg)",
+                           value: "191-254",
+                           score: 2,
+                        },
+                        {
+                           id: "1.10-4",
+                           label: "255+ lbs. (116kg)",
+                           value: "255+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.11,
+                     label: "5' 8\" (173cm)",
+                     options: [
+                        {
+                           id: "1.11-1",
+                           label: "< 164 lbs. (74kg)",
+                           value: "<164",
+                           score: 0,
+                        },
+                        {
+                           id: "1.11-2",
+                           label: "164-196 lbs. (74-89kg)",
+                           value: "164-196",
+                           score: 1,
+                        },
+                        {
+                           id: "1.11-3",
+                           label: "197-261 lbs. (89-118kg)",
+                           value: "197-261",
+                           score: 2,
+                        },
+                        {
+                           id: "1.11-4",
+                           label: "262+ lbs. (119kg)",
+                           value: "262+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.12,
+                     label: "5' 9\" (175cm)",
+                     options: [
+                        {
+                           id: "1.12-1",
+                           label: "< 169 lbs. (77kg)",
+                           value: "<169",
+                           score: 0,
+                        },
+                        {
+                           id: "1.12-2",
+                           label: "169-202 lbs. (77-92kg)",
+                           value: "169-202 lbs",
+                           score: 1,
+                        },
+                        {
+                           id: "1.12-3",
+                           label: "203-269 lbs. (92-122kg)",
+                           value: "203-269 lbs",
+                           score: 2,
+                        },
+                        {
+                           id: "1.12-4",
+                           label: "270+ lbs. (122kg)",
+                           value: "270+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.13,
+                     label: "5' 10\" (178cm)",
+                     options: [
+                        {
+                           id: "1.13-1",
+                           label: "< 174 lbs. (79kg)",
+                           value: "<174",
+                           score: 0,
+                        },
+                        {
+                           id: "1.13-2",
+                           label: "174-208 lbs. (79-94kg)",
+                           value: "174-208",
+                           score: 1,
+                        },
+                        {
+                           id: "1.13-3",
+                           label: "209-277 lbs. (95-126kg)",
+                           value: "209-277",
+                           score: 2,
+                        },
+                        {
+                           id: "1.13-4",
+                           label: "278+ lbs. (126kg)",
+                           value: "278+ lbs",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.14,
+                     label: "5' 11\" (180cm)",
+                     options: [
+                        {
+                           id: "1.14-1",
+                           label: "< 179 lbs. (81kg)",
+                           value: "<179",
+                           score: 0,
+                        },
+                        {
+                           id: "1.14-2",
+                           label: "179-214 lbs. (81-97kg)",
+                           value: "179-214",
+                           score: 1,
+                        },
+                        {
+                           id: "1.14-3",
+                           label: "215-285 lbs. (98-129kg)",
+                           value: "215-285",
+                           score: 2,
+                        },
+                        {
+                           id: "1.14-4",
+                           label: "286+ lbs. (130kg)",
+                           value: "286+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.15,
+                     label: "6' 0\" (183cm)",
+                     options: [
+                        {
+                           id: "1.15-1",
+                           label: "< 184 lbs. (83kg)",
+                           value: "<184",
+                           score: 0,
+                        },
+                        {
+                           id: "1.15-2",
+                           label: "184-220 lbs. (83-100kg)",
+                           value: "184-220",
+                           score: 1,
+                        },
+                        {
+                           id: "1.15-3",
+                           label: "221-293 lbs. (100-133kg)",
+                           value: "221-293",
+                           score: 2,
+                        },
+                        {
+                           id: "1.15-4",
+                           label: "294+ lbs. (133kg)",
+                           value: "294+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.16,
+                     label: "6' 1\" (185cm)",
+                     options: [
+                        {
+                           id: "1.16-1",
+                           label: "< 189 lbs. (86kg)",
+                           value: "<189",
+                           score: 0,
+                        },
+                        {
+                           id: "1.16-2",
+                           label: "189-226 lbs. (86-103kg)",
+                           value: "189-226",
+                           score: 1,
+                        },
+                        {
+                           id: "1.16-3",
+                           label: "227-301 lbs. (103-137kg)",
+                           value: "227-301",
+                           score: 2,
+                        },
+                        {
+                           id: "1.16-4",
+                           label: "302+ lbs. (137kg)",
+                           value: "302+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.17,
+                     label: "6' 2\" (188cm)",
+                     options: [
+                        {
+                           id: "1.17-1",
+                           label: "< 194 lbs. (88kg)",
+                           value: "<194",
+                           score: 0,
+                        },
+                        {
+                           id: "1.17-2",
+                           label: "194-232 lbs. (88-105kg)",
+                           value: "194-232",
+                           score: 1,
+                        },
+                        {
+                           id: "1.17-3",
+                           label: "233-310 lbs. (106-141kg)",
+                           value: "233-310",
+                           score: 2,
+                        },
+                        {
+                           id: "1.17-4",
+                           label: "311+ lbs. (141kg)",
+                           value: "311+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.18,
+                     label: "6' 3\" (191cm)",
+                     options: [
+                        {
+                           id: "1.18-1",
+                           label: "< 200 lbs. (91kg)",
+                           value: "<200",
+                           score: 0,
+                        },
+                        {
+                           id: "1.18-2",
+                           label: "200-239 lbs. (91-108kg)",
+                           value: "200-239",
+                           score: 1,
+                        },
+                        {
+                           id: "1.18-3",
+                           label: "240-318 lbs. (109-144kg)",
+                           value: "240-318",
+                           score: 2,
+                        },
+                        {
+                           id: "1.18-4",
+                           label: "319+ lbs. (145kg)",
+                           value: "319+",
+                           score: 3,
+                        },
+                     ],
+                  },
+                  {
+                     id: 1.19,
+                     label: "6' 4\" (193cm)",
+                     options: [
+                        {
+                           id: "1.19-1",
+                           label: "< 205 lbs. (93kg)",
+                           value: "<205",
+                           score: 0,
+                        },
+                        {
+                           id: "1.19-2",
+                           label: "205-245 lbs. (93-111kg)",
+                           value: "205-245",
+                           score: 1,
+                        },
+                        {
+                           id: "1.19-3",
+                           label: "246-327 lbs. (112-148kg)",
+                           value: "246-327",
+                           score: 2,
+                        },
+                        {
+                           id: "1.19-4",
+                           label: "328+ lbs. (149kg)",
+                           value: "328+",
+                           score: 3,
+                        },
+                     ],
+                  },
+               ],
 
-                  fields: [{
+               stepData: [
+                  {
+                     label: "Age",
+                     id: 1,
+                     fields: [
+                        {
+                           id: 1,
+                           title: "How old are you?",
+                           content: "The older you are, the higher your risk for type 2 diabetes.",
+                           img: "./assets/img/Birthday.png",
+                           value: "",
+                           valid: true,
+
+                           options: [
+                              {
+                                 answer: "I am younger than 40",
+                                 content:
+                                    "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+                                 id: "1.1",
+                                 label: "Younger than 40",
+                                 score: 0,
+                                 value: "Less than 40 years",
+                              },
+                              {
+                                 answer: "I am 40-49 years old.",
+                                 content:
+                                    "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+
+                                 id: "1.2",
+                                 label: "40-49 Years",
+                                 score: 1,
+                                 value: "40-49 years",
+                              },
+                              {
+                                 answer: "I am 50-59 years old.",
+                                 content:
+                                    "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+                                 id: "1.3",
+                                 label: "50-59 Years",
+                                 score: 2,
+                                 value: "50-59 years",
+                              },
+                              {
+                                 answer: "I am 60+ years old.",
+                                 content:
+                                    "<p>As you get older, your risk for type 2 diabetes increases. You can’t stop the aging process, but you can take steps to reduce your risk through lifestyle changes and/or medication at any age.</p>",
+                                 id: "1.4",
+                                 label: "60+ Years",
+                                 score: 3,
+                                 value: "60 years or older",
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     label: "Family History",
                      id: 2,
-                     title: " Do you have a mother, father, sister, or brother with diabetes?",
-                     content: "A family history of diabetes could contribute to your risk for type 2 diabetes.",
-                     img: "./assets/img/Family History.png",
-                     value: "",
-                     valid: true,
-                     options: [{
-                           answer: "I have a family history with diabetes.",
-                           content: "<p>There is a link between type 2 diabetes and family history. The risk of type 2 diabetes in people with family history of diabetes is related to environmental and lifestyle factors that family members share as well as to genetics.</p>",
-                           id: "2.1",
-                           label: "Yes",
-                           score: 1,
-                           value: "Yes",
-                        },
-                        {
-                           answer: "I have no family history with diabetes.",
-                           content: "<p>There is a link between type 2 diabetes and family history. The risk of type 2 diabetes in people with family history of diabetes is related to environmental and lifestyle factors that family members share as well as to genetics.</p>",
-                           id: "2.2",
-                           label: "No",
-                           score: 0,
-                           value: "No",
-                        },
-                     ],
-                  }, ],
-               },
-               {
-                  label: "Blood Pressure",
-                  id: 3,
 
-                  fields: [{
-                     id: 3,
-                     title: "Have you ever been diagnosed with high blood pressure?",
-                     content: "Having high blood pressure contributes to your overall risk for type 2 diabetes.",
-                     img: "./assets/img/BloodPressure.png",
-                     value: "",
-                     valid: true,
-                     options: [{
-                           answer: "I have a high blood pressure history.",
-                           content: "<p>High blood pressure not only raises your risk for type 2 diabetes, but also increases risk of heart attack, stroke, eye problems and kidney disease.</p>",
-                           id: "3.1",
-                           label: "Yes",
-                           score: 1,
-                           value: "Yes",
-                        },
+                     fields: [
                         {
-                           answer: "I have no history of high blood pressure.",
-                           content: "<p>High blood pressure not only raises your risk for type 2 diabetes, but also increases risk of heart attack, stroke, eye problems and kidney disease.</p>",
-                           id: "3.2",
-                           label: "No",
-                           score: 0,
-                           value: "No",
-                        },
-                     ],
-                  }, ],
-               },
-               {
-                  label: "RACE/ETHNICITY",
-                  id: 4,
-
-                  fields: [{
-                     id: 4,
-                     title: "What race or ethnicity best describes you?",
-                     content: "People from certain racial and ethnic groups are more likely to develop type 2 diabetes than others.",
-                     img: "./assets/img/Race.png",
-                     value: "",
-                     valid: true,
-                     options: [{
-                           id: "4.5",
-                           label: "American Indian or Alaska Native",
-                           score: 0,
-                           value: "american_indian",
-                        },
-                        {
-                           id: "4.4",
-                           label: "Asian American",
-                           score: 0,
-                           value: "asian_american",
-                        },
-                        {
-                           id: "4.3",
-                           label: "Black or African American",
-                           score: 0,
-                           value: "african_american",
-                        },
-                        {
-                           id: "4.2",
-                           label: "Hispanic or Latino",
-                           score: 0,
-                           value: "latino",
-                        },
-                        {
-                           id: "4.6",
-                           label: "Native Hawaiian or Other Pacific Islander",
-                           score: 0,
-                           value: "islander",
-                        },
-                        {
-                           id: "4.1",
-                           label: "White or Caucasian",
-                           score: 0,
-                           value: "white",
-                        },
-                        {
-                           id: "4.7",
-                           label: "Other",
-                           score: 0,
-                           value: "other",
-                        },
-                        {
-                           answer: "Don’t Want to Say",
-                           id: "4.8",
-                           label: "Don’t Want to Say",
-                           score: 0,
-                           value: "no_response",
-                        },
-                     ],
-                  }, ],
-               },
-               {
-                  label: "WELLNESS",
-                  id: 5,
-
-                  fields: [{
-                     id: 5,
-                     title: "Are you physically active?",
-                     content: "Being inactive can increase your risk for type 2 diabetes.",
-                     img: "./assets/img/Excercise.png",
-                     value: "",
-                     valid: true,
-                     options: [{
-                           answer: "I am physically active.",
-                           content: "<p>Exercising regularly lowers your risk for prediabetes and type 2 diabetes.</p>",
-                           id: "5.1",
-                           label: "Yes",
-                           score: 0,
-                           value: "Yes",
-                        },
-                        {
-                           answer: "I am physically inactive.",
-                           content: "<p>Exercising regularly lowers your risk for prediabetes and type 2 diabetes.</p>",
-                           id: "5.2",
-                           label: "No",
-                           score: 1,
-                           value: "No",
-                        },
-                     ],
-                  }, ],
-               },
-
-               {
-                  label: "GENDER",
-                  id: 6,
-
-                  fields: [{
-                     id: 6,
-                     title: "Are you a man or a woman?",
-                     img: "./assets/img/Gender.png",
-                     value: "",
-                     womanSubValue: "",
-
-                     valid: true,
-                     options: [{
-                           answer: "I am a man.",
-                           id: "6.1",
-                           content: "Men are more likely than women to have undiagnosed prediabetes; one reason may be that they are less likely to visit their doctors regularly.",
-
-                           label: "Man",
-                           score: 1,
-                           value: "Man",
-                        },
-                        {
-                           answer: "I am a woman ",
-                           content: "<p>Many women who have gestational diabetes go on to develop type 2 diabetes later in life.</p>",
-                           id: "6.2",
-                           label: "Woman",
-                           score: 0,
-                           value: "Woman",
-                           womanSub: [{
-                                 answer: "with a history of gestational diabetes.",
-                                 id: "7.1",
+                           id: 2,
+                           title: " Do you have a mother, father, sister, or brother with diabetes?",
+                           content: "A family history of diabetes could contribute to your risk for type 2 diabetes.",
+                           img: "./assets/img/Family History.png",
+                           value: "",
+                           valid: true,
+                           options: [
+                              {
+                                 answer: "I have a family history with diabetes.",
+                                 content:
+                                    "<p>There is a link between type 2 diabetes and family history. The risk of type 2 diabetes in people with family history of diabetes is related to environmental and lifestyle factors that family members share as well as to genetics.</p>",
+                                 id: "2.1",
                                  label: "Yes",
                                  score: 1,
                                  value: "Yes",
                               },
                               {
-                                 answer: "with no history of gestational diabetes.",
-                                 id: "7.2",
+                                 answer: "I have no family history with diabetes.",
+                                 content:
+                                    "<p>There is a link between type 2 diabetes and family history. The risk of type 2 diabetes in people with family history of diabetes is related to environmental and lifestyle factors that family members share as well as to genetics.</p>",
+                                 id: "2.2",
                                  label: "No",
                                  score: 0,
                                  value: "No",
@@ -1517,254 +1468,435 @@
                            ],
                         },
                      ],
-                  }, ],
-               },
-               {
-                  label: "BMI",
-                  id: 7,
+                  },
+                  {
+                     label: "Blood Pressure",
+                     id: 3,
 
-                  fields: [{
+                     fields: [
+                        {
+                           id: 3,
+                           title: "Have you ever been diagnosed with high blood pressure?",
+                           content: "Having high blood pressure contributes to your overall risk for type 2 diabetes.",
+                           img: "./assets/img/BloodPressure.png",
+                           value: "",
+                           valid: true,
+                           options: [
+                              {
+                                 answer: "I have a high blood pressure history.",
+                                 content: "<p>High blood pressure not only raises your risk for type 2 diabetes, but also increases risk of heart attack, stroke, eye problems and kidney disease.</p>",
+                                 id: "3.1",
+                                 label: "Yes",
+                                 score: 1,
+                                 value: "Yes",
+                              },
+                              {
+                                 answer: "I have no history of high blood pressure.",
+                                 content: "<p>High blood pressure not only raises your risk for type 2 diabetes, but also increases risk of heart attack, stroke, eye problems and kidney disease.</p>",
+                                 id: "3.2",
+                                 label: "No",
+                                 score: 0,
+                                 value: "No",
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     label: "RACE/ETHNICITY",
+                     id: 4,
+
+                     fields: [
+                        {
+                           id: 4,
+                           title: "What race or ethnicity best describes you?",
+                           content: "People from certain racial and ethnic groups are more likely to develop type 2 diabetes than others.",
+                           img: "./assets/img/Race.png",
+                           value: "",
+                           valid: true,
+                           options: [
+                              {
+                                 id: "4.5",
+                                 label: "American Indian or Alaska Native",
+                                 score: 0,
+                                 value: "american_indian",
+                              },
+                              {
+                                 id: "4.4",
+                                 label: "Asian American",
+                                 score: 0,
+                                 value: "asian_american",
+                              },
+                              {
+                                 id: "4.3",
+                                 label: "Black or African American",
+                                 score: 0,
+                                 value: "african_american",
+                              },
+                              {
+                                 id: "4.2",
+                                 label: "Hispanic or Latino",
+                                 score: 0,
+                                 value: "latino",
+                              },
+                              {
+                                 id: "4.6",
+                                 label: "Native Hawaiian or Other Pacific Islander",
+                                 score: 0,
+                                 value: "islander",
+                              },
+                              {
+                                 id: "4.1",
+                                 label: "White or Caucasian",
+                                 score: 0,
+                                 value: "white",
+                              },
+                              {
+                                 id: "4.7",
+                                 label: "Other",
+                                 score: 0,
+                                 value: "other",
+                              },
+                              {
+                                 answer: "Don’t Want to Say",
+                                 id: "4.8",
+                                 label: "Don’t Want to Say",
+                                 score: 0,
+                                 value: "no_response",
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     label: "WELLNESS",
+                     id: 5,
+
+                     fields: [
+                        {
+                           id: 5,
+                           title: "Are you physically active?",
+                           content: "Being inactive can increase your risk for type 2 diabetes.",
+                           img: "./assets/img/Excercise.png",
+                           value: "",
+                           valid: true,
+                           options: [
+                              {
+                                 answer: "I am physically active.",
+                                 content: "<p>Exercising regularly lowers your risk for prediabetes and type 2 diabetes.</p>",
+                                 id: "5.1",
+                                 label: "Yes",
+                                 score: 0,
+                                 value: "Yes",
+                              },
+                              {
+                                 answer: "I am physically inactive.",
+                                 content: "<p>Exercising regularly lowers your risk for prediabetes and type 2 diabetes.</p>",
+                                 id: "5.2",
+                                 label: "No",
+                                 score: 1,
+                                 value: "No",
+                              },
+                           ],
+                        },
+                     ],
+                  },
+
+                  {
+                     label: "GENDER",
+                     id: 6,
+
+                     fields: [
+                        {
+                           id: 6,
+                           title: "Are you a man or a woman?",
+                           img: "./assets/img/Gender.png",
+                           value: "",
+                           womanSubValue: "",
+
+                           valid: true,
+                           options: [
+                              {
+                                 answer: "I am a man.",
+                                 id: "6.1",
+                                 content: "Men are more likely than women to have undiagnosed prediabetes; one reason may be that they are less likely to visit their doctors regularly.",
+
+                                 label: "Man",
+                                 score: 1,
+                                 value: "Man",
+                              },
+                              {
+                                 answer: "I am a woman ",
+                                 content: "<p>Many women who have gestational diabetes go on to develop type 2 diabetes later in life.</p>",
+                                 id: "6.2",
+                                 label: "Woman",
+                                 score: 0,
+                                 value: "Woman",
+                                 womanSub: [
+                                    {
+                                       answer: "with a history of gestational diabetes.",
+                                       id: "7.1",
+                                       label: "Yes",
+                                       score: 1,
+                                       value: "Yes",
+                                    },
+                                    {
+                                       answer: "with no history of gestational diabetes.",
+                                       id: "7.2",
+                                       label: "No",
+                                       score: 0,
+                                       value: "No",
+                                    },
+                                 ],
+                              },
+                           ],
+                        },
+                     ],
+                  },
+                  {
+                     label: "BMI",
                      id: 7,
-                     title: "Tell us more about yourself",
-                     content: "The combination of your weight and height lets us know your Body Mass Index or BMI. People with higher BMIs are at a higher risk.",
-                     img: "./assets/img/BMI.png",
-                     value: "",
-                     valid: true,
-                     weightValue: "",
-                     heightValue: "",
-                  }, ],
+
+                     fields: [
+                        {
+                           id: 7,
+                           title: "Tell us more about yourself",
+                           content: "The combination of your weight and height lets us know your Body Mass Index or BMI. People with higher BMIs are at a higher risk.",
+                           img: "./assets/img/BMI.png",
+                           value: "",
+                           valid: true,
+                           weightValue: "",
+                           heightValue: "",
+                        },
+                     ],
+                  },
+               ],
+            },
+            computed: {
+               activeStepFields() {
+                  return this.stepData[this.activeStep - 1].fields;
                },
-            ],
-         },
-         computed: {
-            activeStepFields() {
-               return this.stepData[this.activeStep - 1].fields;
-            },
 
-            // isNextDisabled() {
-            //    const currentAFields = this.stepData.find((step) => step.id === this.activeStep).fields;
-            //    console.log(currentAFields, "currentAFields");
-            //    if (currentAFields) {
-            //       for (const field of currentAFields) {
-            //          // Check if the field is required and no value is selected
+               // isNextDisabled() {
+               //    const currentAFields = this.stepData.find((step) => step.id === this.activeStep).fields;
+               //    console.log(currentAFields, "currentAFields");
+               //    if (currentAFields) {
+               //       for (const field of currentAFields) {
+               //          // Check if the field is required and no value is selected
 
-            //          if (field.valid && !field.value) {
-            //             return true; // Disable "Next" button
-            //          }
-            //       }
+               //          if (field.valid && !field.value) {
+               //             return true; // Disable "Next" button
+               //          }
+               //       }
 
-            //       // No invalid fields found, enable "Next" button
-            //       return false;
-            //    }
+               //       // No invalid fields found, enable "Next" button
+               //       return false;
+               //    }
 
-            //    // No fields found, enable "Next" button
-            //    return false;
-            // },
-            isNextDisabled() {
-               const currentStepData = this.stepData.find((step) => step.id === this.activeStep);
+               //    // No fields found, enable "Next" button
+               //    return false;
+               // },
+               isNextDisabled() {
+                  const currentStepData = this.stepData.find((step) => step.id === this.activeStep);
 
-               if (currentStepData) {
-                  const currentAFields = currentStepData.fields;
+                  if (currentStepData) {
+                     const currentAFields = currentStepData.fields;
 
-                  for (const field of currentAFields) {
-                     // Check if the field is required and no value is selected
-                     if (field.valid && !field.value) {
-                        console.log(`Field ${field.title} is invalid. Disabling "Next" button.`);
-                        return true; // Disable "Next" button
+                     for (const field of currentAFields) {
+                        // Check if the field is required and no value is selected
+                        if (field.valid && !field.value) {
+                           console.log(`Field ${field.title} is invalid. Disabling "Next" button.`);
+                           return true; // Disable "Next" button
+                        }
+
+                        // Check if the field involves the "Woman" option
+                        if (field.value === "Woman" && field.womanSubValue === "") {
+                           return true;
+                           // Check if the "Woman" sub-option is required and no value is selected
+                        }
                      }
 
-                     // Check if the field involves the "Woman" option
-                     if (field.value === "Woman" && field.womanSubValue === "") {
-                        return true;
-                        // Check if the "Woman" sub-option is required and no value is selected
-                     }
+                     console.log("No invalid fields found. Enabling 'Next' button.");
+                     // No invalid fields found, enable "Next" button
+                     return false;
                   }
 
-                  console.log("No invalid fields found. Enabling 'Next' button.");
-                  // No invalid fields found, enable "Next" button
+                  console.log("No current step data found. Enabling 'Next' button.");
+                  // No fields found, enable "Next" button
                   return false;
-               }
-
-               console.log("No current step data found. Enabling 'Next' button.");
-               // No fields found, enable "Next" button
-               return false;
+               },
             },
-         },
 
-         methods: {
-            getFieldOptions(selectedHeight) {
-               const selectedHeightObject = this.height.find((h) => h.label === selectedHeight);
-               return selectedHeightObject ? selectedHeightObject.options : [];
-            },
-            handelSelect(e) {
-               if (e.heightValue && e.weightValue) {
-                  this.isNextButtonEnabled = false;
-               }
-            },
-            handleOptionChange(option) {
-               console.log(option);
-            },
-            nextStep() {
-               const currentStepFields = this.activeStepFields;
-
-               // Check if there is any data for the current step
-               const existingDataIndex = this.selectedValues.findIndex((data) => data.step === this.activeStep);
-
-               const matchingOptions = currentStepFields.map((field) => {
-                  if (this.activeStep === 7 && (field.heightValue !== undefined || field.weightValue !==
-                        undefined)) {
-                     // If it's the last step and heightValue or weightValue is defined
-                     const matchingHeight = this.height.find((heightOption) => heightOption.label === field
-                        .heightValue);
-
-                     if (matchingHeight) {
-                        // If a matching height is found, filter the weight options based on the selected height
-                        const filteredWeights = matchingHeight.options.filter((weightOption) => {
-                           return weightOption.value === field.weightValue;
-                        });
-
-                        return {
-                           id: field.id,
-                           question: field.title,
-                           height: field.heightValue,
-                           weight: field.weightValue,
-                           content: field.content,
-                           score: filteredWeights[0].score,
-                        };
-                     }
-                  } else if (field.id === 6 && field.value === "Woman") {
-                     const selectedWomanOption = field.options.find((option) => option.value === "Woman");
-                     const selectedWomanSubOption = selectedWomanOption.womanSub.find((subOption) =>
-                        subOption.value === field.womanSubValue);
-                     if (selectedWomanOption && selectedWomanSubOption) {
-                        return {
-                           id: selectedWomanOption.id,
-                           label: selectedWomanOption.label,
-                           value: selectedWomanOption.value,
-                           score: selectedWomanOption.score,
-                           content: selectedWomanOption.content,
-                           answer: selectedWomanOption.answer,
-
-                           question: field.title,
-                           womanSub: {
-                              id: selectedWomanSubOption.id,
-                              label: selectedWomanSubOption.label,
-                              value: selectedWomanSubOption.value,
-                              score: selectedWomanSubOption.score,
-                              answer: selectedWomanSubOption.answer,
-                              question: field.title,
-                           },
-                        };
-                     }
-                  } else {
-                     const selectedOption = field.options.find((option) => option.value === field.value);
-                     if (selectedOption) {
-                        return {
-                           id: selectedOption.id,
-                           label: selectedOption.label,
-                           value: selectedOption.value,
-                           score: selectedOption.score,
-                           content: selectedOption.content,
-                           question: field.title,
-                           answer: selectedOption.answer,
-                        };
-                     }
+            methods: {
+               getFieldOptions(selectedHeight) {
+                  const selectedHeightObject = this.height.find((h) => h.label === selectedHeight);
+                  return selectedHeightObject ? selectedHeightObject.options : [];
+               },
+               handelSelect(e) {
+                  if (e.heightValue && e.weightValue) {
+                     this.isNextButtonEnabled = false;
                   }
-                  return null;
-               });
+               },
+               handleOptionChange(option) {
+                  console.log(option);
+               },
+               nextStep() {
+                  const currentStepFields = this.activeStepFields;
 
-               console.log(this.selectedValues);
+                  // Check if there is any data for the current step
+                  const existingDataIndex = this.selectedValues.findIndex((data) => data.step === this.activeStep);
 
-               if (existingDataIndex !== -1) {
-                  // Update the existing entry if it exists
-                  console.log("existingDataIndex");
-                  this.$set(this.selectedValues, existingDataIndex, {
-                     step: this.activeStep,
-                     selectedOptions: matchingOptions.filter((option) => option !== null),
+                  const matchingOptions = currentStepFields.map((field) => {
+                     if (this.activeStep === 7 && (field.heightValue !== undefined || field.weightValue !== undefined)) {
+                        // If it's the last step and heightValue or weightValue is defined
+                        const matchingHeight = this.height.find((heightOption) => heightOption.label === field.heightValue);
+
+                        if (matchingHeight) {
+                           // If a matching height is found, filter the weight options based on the selected height
+                           const filteredWeights = matchingHeight.options.filter((weightOption) => {
+                              return weightOption.value === field.weightValue;
+                           });
+
+                           return {
+                              id: field.id,
+                              question: field.title,
+                              height: field.heightValue,
+                              weight: field.weightValue,
+                              content: field.content,
+                              score: filteredWeights[0].score,
+                           };
+                        }
+                     } else if (field.id === 6 && field.value === "Woman") {
+                        const selectedWomanOption = field.options.find((option) => option.value === "Woman");
+                        const selectedWomanSubOption = selectedWomanOption.womanSub.find((subOption) => subOption.value === field.womanSubValue);
+                        if (selectedWomanOption && selectedWomanSubOption) {
+                           return {
+                              id: selectedWomanOption.id,
+                              label: selectedWomanOption.label,
+                              value: selectedWomanOption.value,
+                              score: selectedWomanOption.score,
+                              content: selectedWomanOption.content,
+                              answer: selectedWomanOption.answer,
+
+                              question: field.title,
+                              womanSub: {
+                                 id: selectedWomanSubOption.id,
+                                 label: selectedWomanSubOption.label,
+                                 value: selectedWomanSubOption.value,
+                                 score: selectedWomanSubOption.score,
+                                 answer: selectedWomanSubOption.answer,
+                                 question: field.title,
+                              },
+                           };
+                        }
+                     } else {
+                        const selectedOption = field.options.find((option) => option.value === field.value);
+                        if (selectedOption) {
+                           return {
+                              id: selectedOption.id,
+                              label: selectedOption.label,
+                              value: selectedOption.value,
+                              score: selectedOption.score,
+                              content: selectedOption.content,
+                              question: field.title,
+                              answer: selectedOption.answer,
+                           };
+                        }
+                     }
+                     return null;
                   });
-               } else {
-                  // Add a new entry if it doesn't exist
-                  console.log("not existingDataIndex");
-                  this.selectedValues.push({
-                     step: this.activeStep,
-                     selectedOptions: matchingOptions.filter((option) => option !== null),
-                  });
-               }
-
-               if (this.activeStep === 7) {
-                  // All steps are completed, you can show a message or perform any final actions
-
-                  // let bmiMessageTitle = null;
-                  // let bmiMessageDescription = null;
-                  // const bmiOption = this.selectedValues.find((entry) => entry.step === 7).selectedOptions.find((option) => option.score !== undefined);
-                  // console.log(bmiOption);
-                  // if (bmiOption) {
-                  //    // BMI score is available
-                  //    const bmi = bmiOption.score;
-
-                  //    // Perform actions based on the BMI score
-
-                  //    if (bmi === 0) {
-                  //       bmiMessageTitle: "I have a healthy body mass index (BMI).";
-                  //       bmiMessageDescription: "BMI is a measure of your height vs. your weight. Having a higher BMI raises your risk for type 2 diabetes.", console.log(this.selectedValues);
-                  //    } else {
-                  // if score high
-                  // bmimassage:"I have a very high body mass index."
-                  //       // Add more conditions based on different BMI ranges if needed
-                  //       // Example: if (bmi < 18.5) { ... }
-                  //       //         else if (bmi >= 18.5 && bmi < 24.9) { ... }
-                  //       //         else if (bmi >= 25 && bmi < 29.9) { ... }
-                  //       //         else { ... }
-                  //    }
-                  // }
-
-                  // const bmiResult = {
-                  //    label: "BMI Result",
-                  //    bmiScore: bmiOption.score,
-                  //    bmiMessageTitle: bmiMessageTitle,
-                  //    bmiMessageDescription: bmiMessageDescription,
-                  // };
-                  // this.selectedValues.find((entry) => entry.step === 7).selectedOptions.push(bmiResult);
-
-                  this.isAllStepsCompleted = true;
-                  const totalS = this.selectedValues.reduce((accumulator, currentValue) => {
-                     // Extract the score from the selectedOptions array
-                     const score = currentValue.selectedOptions[0].score;
-
-                     // Add the score to the accumulator
-                     return accumulator + score;
-                  }, 0);
-                  this.totalScore = totalS;
 
                   console.log(this.selectedValues);
-               }
-               this.activeStep += 1;
 
-               console.log(this.selectedValues);
-            },
+                  if (existingDataIndex !== -1) {
+                     // Update the existing entry if it exists
+                     console.log("existingDataIndex");
+                     this.$set(this.selectedValues, existingDataIndex, {
+                        step: this.activeStep,
+                        selectedOptions: matchingOptions.filter((option) => option !== null),
+                     });
+                  } else {
+                     // Add a new entry if it doesn't exist
+                     console.log("not existingDataIndex");
+                     this.selectedValues.push({
+                        step: this.activeStep,
+                        selectedOptions: matchingOptions.filter((option) => option !== null),
+                     });
+                  }
 
-            areFieldsFilled(fields) {
-               return fields.every((field) => {
-                  // Check if the field has a value, you can customize this condition based on your data model
-                  return field.value !== undefined && field.value !== "";
-               });
-            },
-            previousStep() {
-               setTimeout(() => {
-                  this.activeStep -= 1;
-               }, 400);
-            },
-            // goToPreviousStep() {
-            //    // Check if the current step is not the first step
-            //    console.log("oooo", this.activeStep);
-            //    if (this.activeStep > 1) {
-            //       // Decrement the active step to go back
-            //       this.activeStep--;
-            //    }
-            // },
-         },
-      });
-   </script>
-</body>
+                  if (this.activeStep === 7) {
+                     // All steps are completed, you can show a message or perform any final actions
 
+                     // let bmiMessageTitle = null;
+                     // let bmiMessageDescription = null;
+                     // const bmiOption = this.selectedValues.find((entry) => entry.step === 7).selectedOptions.find((option) => option.score !== undefined);
+                     // console.log(bmiOption);
+                     // if (bmiOption) {
+                     //    // BMI score is available
+                     //    const bmi = bmiOption.score;
+
+                     //    // Perform actions based on the BMI score
+
+                     //    if (bmi === 0) {
+                     //       bmiMessageTitle: "I have a healthy body mass index (BMI).";
+                     //       bmiMessageDescription: "BMI is a measure of your height vs. your weight. Having a higher BMI raises your risk for type 2 diabetes.", console.log(this.selectedValues);
+                     //    } else {
+                     // if score high
+                     // bmimassage:"I have a very high body mass index."
+                     //       // Add more conditions based on different BMI ranges if needed
+                     //       // Example: if (bmi < 18.5) { ... }
+                     //       //         else if (bmi >= 18.5 && bmi < 24.9) { ... }
+                     //       //         else if (bmi >= 25 && bmi < 29.9) { ... }
+                     //       //         else { ... }
+                     //    }
+                     // }
+
+                     // const bmiResult = {
+                     //    label: "BMI Result",
+                     //    bmiScore: bmiOption.score,
+                     //    bmiMessageTitle: bmiMessageTitle,
+                     //    bmiMessageDescription: bmiMessageDescription,
+                     // };
+                     // this.selectedValues.find((entry) => entry.step === 7).selectedOptions.push(bmiResult);
+
+                     this.isAllStepsCompleted = true;
+                     const totalS = this.selectedValues.reduce((accumulator, currentValue) => {
+                        // Extract the score from the selectedOptions array
+                        const score = currentValue.selectedOptions[0].score;
+
+                        // Add the score to the accumulator
+                        return accumulator + score;
+                     }, 0);
+                     this.totalScore = totalS;
+
+                     console.log(this.selectedValues);
+                  }
+                  this.activeStep += 1;
+
+                  console.log(this.selectedValues);
+               },
+
+               areFieldsFilled(fields) {
+                  return fields.every((field) => {
+                     // Check if the field has a value, you can customize this condition based on your data model
+                     return field.value !== undefined && field.value !== "";
+                  });
+               },
+               previousStep() {
+                  setTimeout(() => {
+                     this.activeStep -= 1;
+                  }, 400);
+               },
+               // goToPreviousStep() {
+               //    // Check if the current step is not the first step
+               //    console.log("oooo", this.activeStep);
+               //    if (this.activeStep > 1) {
+               //       // Decrement the active step to go back
+               //       this.activeStep--;
+               //    }
+               // },
+            },
+         });
+      </script>
+   </body>
 </html>
