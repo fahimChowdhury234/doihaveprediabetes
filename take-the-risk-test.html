@@ -4,6 +4,19 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="google" content="notranslate" />
+      <meta name="generator" content="SEOmatic" />
+      <meta name="description" content="Reversing prediabetes starts here. 1 in 3 American adults has prediabetes. Find out if you’re at risk for prediabetes today so you can reverse it and…" />
+      <meta name="referrer" content="no-referrer-when-downgrade" />
+      <meta name="robots" content="all" />
+      <meta content="en_US" property="og:locale" />
+      <meta content="Whats Prediabetes? | whatsprediabetes.com" property="og:site_name" />
+      <meta content="website" property="og:type" />
+      <meta content="https://whatsprediabetes.com/" property="og:url" />
+      <meta content="Whats Prediabetes? | WhatsPrediabetes.com" property="og:title" />
+      <meta
+         content="Reversing prediabetes starts here. 1 in 3 American adults has prediabetes. Find out if you’re at risk for prediabetes today so you can reverse it and prevent type 2 diabetes."
+         property="og:description"
+      />
       <title>Take the prediabetes test</title>
       <!-- Font Link -->
       <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -1808,12 +1821,19 @@
                      this.totalScore = totalS;
 
                      this.isAllStepsCompleted = true;
-                     let lessThanFive = "mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf";
-                     let gatterThanFive = `mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${this.totalScore}of10_en.pdf`;
-                     console.log(this.totalScore);
-                     console.log(gatterThanFive, "gatterThanFive");
-                     console.log(lessThanFive, "lessThanFive");
+
+                     let pdf;
+                     let lessThanFive = "prediabetes-low-risk.pdf";
+                     let gatterThanFive = "prediabetes-high-risk.pdf";
+                     if (this.totalScore >= 5) {
+                        pdf = gatterThanFive;
+                     } else {
+                        pdf = lessThanFive;
+                     }
+
+                     console.log(pdf);
                   }
+
                   this.activeStep += 1;
                },
 
