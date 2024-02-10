@@ -1166,6 +1166,8 @@ figure {
 .forth-section h2 {
     line-height: 42px;
     font-family: 'Futura PT' !important;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .explore-health-tips-box {
