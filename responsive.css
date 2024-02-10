@@ -336,6 +336,8 @@
     .takeRisk {
         width: 100% !important;
         display: block;
+        font-size: 16px;
+        padding: 15px 24px;
     }
 
     .explore-health-tips-wrapper .col-md-6 {
