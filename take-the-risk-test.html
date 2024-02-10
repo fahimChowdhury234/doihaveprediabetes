@@ -1676,26 +1676,6 @@
                activeStepFields() {
                   return this.stepData[this.activeStep - 1].fields;
                },
-
-               // isNextDisabled() {
-               //    const currentAFields = this.stepData.find((step) => step.id === this.activeStep).fields;
-               //    console.log(currentAFields, "currentAFields");
-               //    if (currentAFields) {
-               //       for (const field of currentAFields) {
-               //          // Check if the field is required and no value is selected
-
-               //          if (field.valid && !field.value) {
-               //             return true; // Disable "Next" button
-               //          }
-               //       }
-
-               //       // No invalid fields found, enable "Next" button
-               //       return false;
-               //    }
-
-               //    // No fields found, enable "Next" button
-               //    return false;
-               // },
                isNextDisabled() {
                   const currentStepData = this.stepData.find((step) => step.id === this.activeStep);
 
@@ -1705,7 +1685,6 @@
                      for (const field of currentAFields) {
                         // Check if the field is required and no value is selected
                         if (field.valid && !field.value) {
-                           console.log(`Field ${field.title} is invalid. Disabling "Next" button.`);
                            return true; // Disable "Next" button
                         }
 
@@ -1715,13 +1694,9 @@
                            // Check if the "Woman" sub-option is required and no value is selected
                         }
                      }
-
-                     console.log("No invalid fields found. Enabling 'Next' button.");
                      // No invalid fields found, enable "Next" button
                      return false;
                   }
-
-                  console.log("No current step data found. Enabling 'Next' button.");
                   // No fields found, enable "Next" button
                   return false;
                },
@@ -1806,8 +1781,6 @@
                      return null;
                   });
 
-                  console.log(this.selectedValues);
-
                   if (existingDataIndex !== -1) {
                      // Update the existing entry if it exists
                      console.log("existingDataIndex");
@@ -1817,7 +1790,7 @@
                      });
                   } else {
                      // Add a new entry if it doesn't exist
-                     console.log("not existingDataIndex");
+
                      this.selectedValues.push({
                         step: this.activeStep,
                         selectedOptions: matchingOptions.filter((option) => option !== null),
@@ -1825,41 +1798,6 @@
                   }
 
                   if (this.activeStep === 7) {
-                     // All steps are completed, you can show a message or perform any final actions
-
-                     // let bmiMessageTitle = null;
-                     // let bmiMessageDescription = null;
-                     // const bmiOption = this.selectedValues.find((entry) => entry.step === 7).selectedOptions.find((option) => option.score !== undefined);
-                     // console.log(bmiOption);
-                     // if (bmiOption) {
-                     //    // BMI score is available
-                     //    const bmi = bmiOption.score;
-
-                     //    // Perform actions based on the BMI score
-
-                     //    if (bmi === 0) {
-                     //       bmiMessageTitle: "I have a healthy body mass index (BMI).";
-                     //       bmiMessageDescription: "BMI is a measure of your height vs. your weight. Having a higher BMI raises your risk for type 2 diabetes.", console.log(this.selectedValues);
-                     //    } else {
-                     // if score high
-                     // bmimassage:"I have a very high body mass index."
-                     //       // Add more conditions based on different BMI ranges if needed
-                     //       // Example: if (bmi < 18.5) { ... }
-                     //       //         else if (bmi >= 18.5 && bmi < 24.9) { ... }
-                     //       //         else if (bmi >= 25 && bmi < 29.9) { ... }
-                     //       //         else { ... }
-                     //    }
-                     // }
-
-                     // const bmiResult = {
-                     //    label: "BMI Result",
-                     //    bmiScore: bmiOption.score,
-                     //    bmiMessageTitle: bmiMessageTitle,
-                     //    bmiMessageDescription: bmiMessageDescription,
-                     // };
-                     // this.selectedValues.find((entry) => entry.step === 7).selectedOptions.push(bmiResult);
-
-                     this.isAllStepsCompleted = true;
                      const totalS = this.selectedValues.reduce((accumulator, currentValue) => {
                         // Extract the score from the selectedOptions array
                         const score = currentValue.selectedOptions[0].score;
@@ -1869,11 +1807,14 @@
                      }, 0);
                      this.totalScore = totalS;
 
-                     console.log(this.selectedValues);
+                     this.isAllStepsCompleted = true;
+                     let lessThanFive = "mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&amp;body=https://doihaveprediabetes.org/results/prediabetes_lowrisk_en.pdf";
+                     let gatterThanFive = `mailto:?subject=Your%20Prediabetes%20Risk%20Test%20Result&body=https://doihaveprediabetes.org/results/prediabetes_${this.totalScore}of10_en.pdf`;
+                     console.log(this.totalScore);
+                     console.log(gatterThanFive, "gatterThanFive");
+                     console.log(lessThanFive, "lessThanFive");
                   }
                   this.activeStep += 1;
-
-                  console.log(this.selectedValues);
                },
 
                areFieldsFilled(fields) {
