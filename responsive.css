@@ -15,6 +15,10 @@
         margin-bottom: 15px;
     }
 
+    .step-main-form {
+        height: auto;
+    }
+
     .step-from__left-side {
         display: none;
     }
